@@ -1,12 +1,32 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "starter-pack-revenue-cloud",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "salesforce-cpq@234.4"
+                },
+                {
+                    "package": "salesforce-billing@234.2"
+                },
+                {
+                    "package": "advanced-approvals@234.0"
+                }
+            ]
+        }
+    ],
+    "name": "Starter Pack - Revenue Cloud",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "53.0",
+    "packageAliases": {
+        "starter-pack-revenue-cloud": "0Ho8d000000wk32CAA",
+        "salesforce-cpq@234.4": "04t4N000000GkQ3QAK",
+        "salesforce-billing@234.2": "04t0K000001RuKpQAK",
+        "advanced-approvals@234.0": "04t4W000002d9sPQAQ"
     }
-  ],
-  "name": "usage-with-credits",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "53.0"
 }

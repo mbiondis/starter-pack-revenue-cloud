@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval__c</fullName>
+    <description>Displays the Approval Level for the Discounting chain as an icon.</description>
+    <externalId>false</externalId>
+    <formula>IF( Text(SBQQ__PricingMethod__c) &lt;&gt; &quot;Cost&quot; &amp;&amp; SBQQ__AdditionalDiscount__c == 0.0,&quot;&quot;,
+IF( ApprovalLevel__c = 0, (IMAGE(&apos;http://i.imgur.com/JhCARqi.png&apos;,&quot;&quot;,30,30)+&quot; OK&quot;),
+IF( ApprovalLevel__c = 1, (IMAGE(&apos;http://i.imgur.com/ACrfXdO.png&apos;,&quot;&quot;,30,30)+&quot; Manager&quot;),
+IF( ApprovalLevel__c = 2, (IMAGE(&apos;http://i.imgur.com/IwqGy9p.png&apos;,&quot;&quot;,30,30)+&quot; Director&quot;),
+IF( ApprovalLevel__c = 3, (IMAGE(&apos;http://i.imgur.com/mBBmLRl.png&apos;,&quot;&quot;,30,30)+&quot; VP&quot;), &quot;&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

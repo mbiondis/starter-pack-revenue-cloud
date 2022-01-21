@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Legal_Entity__c</fullName>
+    <fullName>LegalEntity__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>All Order Products default to this Legal Entity if nothing else is specified (used in Salesforce Billing).</description>
     <externalId>false</externalId>

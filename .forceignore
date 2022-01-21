@@ -17,21 +17,21 @@ package.xml
 # 1) Ignore all Lightning Pages, except...
 **/flexipages/**
 # custom SmartBytes ones
-!**/flexipages/SmartBytes_*.xml
+!**/flexipages/RevenueCloud_*.xml
 
 # 2) Ignore all Layouts, except...
 **/layouts/**
-# custom SmartBytes ones
-!**/layouts/*SmartBytes*.xml
+# custom Revenue Cloud ones
+!**/layouts/*Revenue Cloud*.xml
 
 # 3) Ignore Object metadata, except...
 **/objects/**/*meta.xml
 
 #   a) Custom List Views
-!**/objects/**/listViews/*SmartBytes*.xml
+!**/objects/**/listViews/*RevenueCloud*.xml
 
 #   b) Custom Compact Layouts
-!**/objects/**/compactLayouts/*SmartBytes*.xml
+!**/objects/**/compactLayouts/*ReveueCloud*.xml
 
 #   c) Default Lightning Page assignments
 #!**/objects/**/*object-meta.xml
@@ -54,7 +54,13 @@ package.xml
 **/remoteSiteSettings
 
 # 5) Ignore Custom Tabs from the CPQ package
-**/tabs/SBQQ__*
+#**/tabs/SBQQ__*
+
+# 6) Ignore Profiles
+#**/profiles
 
 # 7) Ignore Report Types from the CPQ package
 **/reportTypes/SBQQ__*
+
+# 8) Installed Packages
+**/installedPackages

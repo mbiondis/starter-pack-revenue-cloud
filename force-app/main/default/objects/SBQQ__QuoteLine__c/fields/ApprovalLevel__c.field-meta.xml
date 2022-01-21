@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalLevel__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Determines how high up the Discount chain you need to go to get final approval.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The value needs to be set externally (usually with a Price Rule).</inlineHelpText>
+    <label>Approval Level</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

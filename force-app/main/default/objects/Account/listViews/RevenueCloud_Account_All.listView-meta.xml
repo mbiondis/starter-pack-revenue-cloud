@@ -4,7 +4,7 @@
     <columns>ACCOUNT.NAME</columns>
     <columns>ACCOUNT.TYPE</columns>
     <columns>ACCOUNT.INDUSTRY</columns>
-    <columns>Legal_Entity__c</columns>
+    <columns>LegalEntity__c</columns>
     <columns>ACCOUNT.ADDRESS1_COUNTRY</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
