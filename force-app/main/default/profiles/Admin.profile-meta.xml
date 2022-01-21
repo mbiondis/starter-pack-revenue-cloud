@@ -43,4 +43,12 @@
     <layoutAssignments>
         <layout>blng__GLRule__c-Revenue Cloud</layout>
     </layoutAssignments>
+    <tabVisibilities>
+        <tab>SBQQ__Cost__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>SBQQ__LookupData__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
 </Profile>
