@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SBQQ__Field__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the field you want updated when the conditions are met.</inlineHelpText>
+    <label>Target Field</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SBQQ__TargetObject__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unit Price</fullName>
+                <default>false</default>
+                <label>Unit Price</label>
+            </value>
+            <value>
+                <fullName>Discount (%)</fullName>
+                <default>false</default>
+                <label>Discount (%)</label>
+            </value>
+            <value>
+                <fullName>Discount (Amt)</fullName>
+                <default>false</default>
+                <label>Discount (Amt)</label>
+            </value>
+            <value>
+                <fullName>Markup (%)</fullName>
+                <default>false</default>
+                <label>Markup (%)</label>
+            </value>
+            <value>
+                <fullName>Markup (Amt)</fullName>
+                <default>false</default>
+                <label>Markup (Amt)</label>
+            </value>
+            <value>
+                <fullName>Target</fullName>
+                <default>false</default>
+                <label>Target (%)</label>
+            </value>
+            <value>
+                <fullName>Norm</fullName>
+                <default>false</default>
+                <label>Norm (%)</label>
+            </value>
+            <value>
+                <fullName>Floor</fullName>
+                <default>false</default>
+                <label>Floor (%)</label>
+            </value>
+            <value>
+                <fullName>Explanation</fullName>
+                <default>false</default>
+                <label>Explanation</label>
+            </value>
+            <value>
+                <fullName>ApprovalLevel__c</fullName>
+                <default>false</default>
+                <label>Approval Level</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Quote</controllingFieldValue>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <controllingFieldValue>Product Option</controllingFieldValue>
+            <valueName>Unit Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote</controllingFieldValue>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <controllingFieldValue>Product Option</controllingFieldValue>
+            <valueName>Discount (%)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote</controllingFieldValue>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <controllingFieldValue>Product Option</controllingFieldValue>
+            <valueName>Discount (Amt)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote</controllingFieldValue>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <controllingFieldValue>Product Option</controllingFieldValue>
+            <valueName>Markup (%)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote</controllingFieldValue>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <controllingFieldValue>Product Option</controllingFieldValue>
+            <valueName>Markup (Amt)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Line</controllingFieldValue>
+            <valueName>ApprovalLevel__c</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Line Pricing Guidance</controllingFieldValue>
+            <valueName>Target</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Line Pricing Guidance</controllingFieldValue>
+            <valueName>Norm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Line Pricing Guidance</controllingFieldValue>
+            <valueName>Floor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Line Pricing Guidance</controllingFieldValue>
+            <valueName>Explanation</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

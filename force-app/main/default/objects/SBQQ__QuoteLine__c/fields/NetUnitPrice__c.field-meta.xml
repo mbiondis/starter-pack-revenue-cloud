@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetUnitPrice__c</fullName>
+    <description>It calculates the effective net unit price by dividing the Net Unit Price by the prorate multiplier.</description>
+    <externalId>false</externalId>
+    <formula>SBQQ__NetPrice__c /  SBQQ__ProrateMultiplier__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Net Unit Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

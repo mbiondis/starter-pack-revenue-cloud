@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <custom>false</custom>
+    <layoutAssignments>
+        <layout>Account-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ConsumptionSchedule-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Order-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OrderItem-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__DiscountSchedule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__LookupData__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__PriceRule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__ProductOption__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__Quote__c-Revenue Cloud %28Internal Sales%29</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__BillingRule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__FinanceBook__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__GLRule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+</Profile>
