@@ -7,7 +7,7 @@ This repo contains everything needed to use **Salesforce CPQ** and **Salesforce 
 
 - Install all Packages
 ```
-sfdx force:source:deploy -p force-app/main/default/installedPackages
+sfdx force:source:deploy -p installedPackages
 ```
 > This process usually takes 25 minutes (10min for CPQ + 10min for Billing + 5min for Advanced Approvals)
 - Push the repository metadata to the org

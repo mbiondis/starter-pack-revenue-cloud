@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLineGroup__c.LegalEntity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.LegalEntity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.Margin__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.NetUnitPrice__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__Quote__c.EditLinesFieldSetName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__Quote__c.DiscountMetric__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Starter Pack - Revenue Cloud - Quote Management</label>
+    <tabSettings>
+        <tab>SBQQ__Cost__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

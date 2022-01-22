@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.ApprovalLevel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.ApprovalThreshold_L1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.ApprovalThreshold_L2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SBQQ__QuoteLine__c.ApprovalThreshold_L3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__QuoteLine__c.Approval__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Starter Pack - Revenue Cloud - Approval Management</label>
+</PermissionSet>
