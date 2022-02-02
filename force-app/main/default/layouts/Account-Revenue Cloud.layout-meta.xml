@@ -39,11 +39,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OwnerId</field>
+                <field>LegalEntity__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>LegalEntity__c</field>
+                <field>PriceBook__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

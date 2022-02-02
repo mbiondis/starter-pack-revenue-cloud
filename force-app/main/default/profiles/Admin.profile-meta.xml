@@ -32,6 +32,9 @@
         <layout>SBQQ__ProductOption__c-Revenue Cloud</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SBQQ__ProductFeature__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SBQQ__Quote__c-Revenue Cloud %28Internal Sales%29</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -42,6 +45,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>blng__GLRule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__ConfigurationAttribute__c-Revenue Cloud - Configuration Attribute</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__QuoteTemplate__c-Revenue Cloud</layout>
     </layoutAssignments>
     <tabVisibilities>
         <tab>SBQQ__Cost__c</tab>

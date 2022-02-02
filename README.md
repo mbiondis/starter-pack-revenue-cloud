@@ -7,7 +7,7 @@ This repo contains everything needed to use **Salesforce CPQ** and **Salesforce 
 
 - Install all Packages
 ```
-sfdx force:source:deploy -p installedPackages
+sfdx force:source:deploy -p installedPackages -u <org alias>
 ```
 > This process usually takes 25 minutes (10min for CPQ + 10min for Billing + 5min for Advanced Approvals)
 - Push the repository metadata to the org
@@ -20,7 +20,7 @@ The package contains some custom fields that are accessed through the Revenue Cl
 
 - Assign the permission set group to your user
 ```
-sfdx force:user:permset:assign --permsetname RevenueCloud_Admin --targetusername <username/alias>
+sfdx force:user:permset:assign --permsetname StarterPack_RevenueCloud_Admin --targetusername <username/alias>
 ```
 
 ## Manual Org Setup
