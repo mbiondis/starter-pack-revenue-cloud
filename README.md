@@ -1,30 +1,25 @@
 # Revenue Cloud Starter Pack
 
-This repo contains everything needed to use **Salesforce CPQ** and **Salesforce Billing** in any org. While originally intended for Scratch Org development, its components can be used to adapt any org to a Revenue Cloud expert.
-
-## Installation
+This repo contains everything needed to use **Salesforce CPQ** and **Salesforce Billing** in any org.
 > Make sure to update the latest *{version number}* for each file in the `force-app/main/default/installedPackages` (details [here](https://install.steelbrick.com))
+## Installation
+You can either create a brand new Scratch Org to test out the functionality, or push the repo to a previously created org
+### New Scratch Org
+> Make sure you defined a default Dev Hub
+- Run the setup shell script
+```
+sh org_init.sh
+```
+- Choose a name for the scratch org
 
-- Install all Packages
+### Existing Org
+- Run the setup shell script
 ```
-sfdx force:source:deploy -p installedPackages -u <org alias>
-```
-> This process usually takes 25 minutes (10min for CPQ + 10min for Billing + 5min for Advanced Approvals)
-- Push the repository metadata to the org
-```
-sfdx force:source:beta:push
-```
-
-## Assign the Permission Sets
-The package contains some custom fields that are accessed through the Revenue Cloud Permission Set Group
-
-- Assign the permission set group to your user
-```
-sfdx force:user:permset:assign --permsetname StarterPack_RevenueCloud_Admin --targetusername <username/alias>
+sh org_create.sh <org alias>
 ```
 
 ## Manual Org Setup
-Edits to the managed package are not allowed using the `push` command, so they have to be done manually.
+> Edits to the managed package are not allowed using the `push` command, so they have to be done manually.
 
 - Go to **Setup > Installed Packages**
 - Click `Configure` next to **Salesforce CPQ**
