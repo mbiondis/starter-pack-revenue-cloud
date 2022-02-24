@@ -2,7 +2,7 @@
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Starter Pack - Revenue Cloud - Rule Management</label>
+    <label>Revenue Cloud - Rule Management</label>
     <tabSettings>
         <tab>SBQQ__LookupData__c</tab>
         <visibility>Visible</visibility>

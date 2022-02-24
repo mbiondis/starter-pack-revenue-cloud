@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Edit access to all fields and tabs necessary for a Revenue Cloud admin user.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Revenue Cloud - Admin</label>
+    <permissionSets>RevenueCloud_AccountManagement</permissionSets>
+    <permissionSets>RevenueCloud_ApprovalManagement</permissionSets>
+    <permissionSets>RevenueCloud_UsageManagement</permissionSets>
+    <permissionSets>RevenueCloud_OrderManagement</permissionSets>
+    <permissionSets>RevenueCloud_QuoteManagement</permissionSets>
+    <permissionSets>RevenueCloud_RuleManagement</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

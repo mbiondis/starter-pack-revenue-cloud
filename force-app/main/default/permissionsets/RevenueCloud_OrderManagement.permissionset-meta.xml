@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.LegalEntity__c</field>
+        <field>Order.AutoPost_Invoice__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.PriceBook__c</field>
+        <field>OrderItem.HasConsumptionSchedule__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>OrderItem.ProductName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Starter Pack - Revenue Cloud - Account Management</label>
+    <label>Revenue Cloud - Order Management</label>
 </PermissionSet>
