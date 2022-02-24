@@ -1,0 +1,4 @@
+<apex:page StandardController="Account" extensions="RevenueCloud_QuickQuote_Controller" action="{!createQuote}">
+    <!-- This page is blank because its only purpose is to call the Apex class that generates
+    the "Quick Quote" and returns a URL reference that redirects the user to the Quote Line Editor -->
+</apex:page>
