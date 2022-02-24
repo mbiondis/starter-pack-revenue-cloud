@@ -33,6 +33,18 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldItem>Record.SBQQ__Account__c</fieldItem>
+                <identifier>RecordSBQQ_Account_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.SBQQ__Opportunity2__c</fieldItem>
+                <identifier>RecordSBQQ_Opportunity2_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
                 <fieldItem>Record.SBQQ__Primary__c</fieldItem>
                 <identifier>RecordSBQQ__Primary__cField</identifier>
             </fieldInstance>
@@ -47,12 +59,6 @@
             <fieldInstance>
                 <fieldItem>Record.SBQQ__PriceBook__c</fieldItem>
                 <identifier>RecordSBQQ__PriceBook__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.SBQQ__GenerateContractedPrice__c</fieldItem>
-                <identifier>RecordSBQQ__GenerateContractedPrice__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-92c13751-f136-4ed2-b846-163c49a69dcc</name>
@@ -81,6 +87,12 @@
             <fieldInstance>
                 <fieldItem>Record.SBQQ__SalesRep__c</fieldItem>
                 <identifier>RecordSBQQ__SalesRep__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.SBQQ__GenerateContractedPrice__c</fieldItem>
+                <identifier>RecordSBQQ__GenerateContractedPrice__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-867d7ace-6773-4f56-889b-75f5789a8dea</name>

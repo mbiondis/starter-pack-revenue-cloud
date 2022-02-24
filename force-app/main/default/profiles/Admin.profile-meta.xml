@@ -52,6 +52,24 @@
     <layoutAssignments>
         <layout>SBQQ__QuoteTemplate__c-Revenue Cloud</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>SBQQ__OrderItemConsumptionSchedule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__Invoice__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__InvoiceLine__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__InvoicePlan__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__UsageSummary__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>blng__Usage__c-Revenue Cloud</layout>
+    </layoutAssignments>
     <tabVisibilities>
         <tab>SBQQ__Cost__c</tab>
         <visibility>DefaultOn</visibility>
