@@ -5,46 +5,55 @@
         <name>Set_LegalEntity_from_Order</name>
         <label>Set Legal Entity from Order</label>
         <locationX>578</locationX>
-        <locationY>398</locationY>
+        <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>OUT_LegalEntity</assignToReference>
+            <assignToReference>LegalEntity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>IN_OrderProduct.Order.Account.LegalEntity__c</elementReference>
+                <elementReference>$Record.Order.Account.LegalEntity__c</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Update_OrderProduct</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Set_LegalEntity_from_OrderProduct</name>
         <label>Set Legal Entity from Order Product</label>
         <locationX>50</locationX>
-        <locationY>278</locationY>
+        <locationY>431</locationY>
         <assignmentItems>
-            <assignToReference>OUT_LegalEntity</assignToReference>
+            <assignToReference>LegalEntity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>IN_OrderProduct.blng__BillingAccount__r.LegalEntity__c</elementReference>
+                <elementReference>$Record.blng__BillingAccount__r.LegalEntity__c</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Update_OrderProduct</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Set_LegalEntity_from_QuoteLine</name>
         <label>Set Legal Entity from Quote Line</label>
         <locationX>314</locationX>
-        <locationY>398</locationY>
+        <locationY>551</locationY>
         <assignmentItems>
-            <assignToReference>OUT_LegalEntity</assignToReference>
+            <assignToReference>LegalEntity</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>IN_OrderProduct.SBQQ__QuoteLine__r.LegalEntity__c</elementReference>
+                <elementReference>$Record.SBQQ__QuoteLine__r.LegalEntity__c</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Update_OrderProduct</targetReference>
+        </connector>
     </assignments>
     <decisions>
         <name>LegalEntity_defined_at_OrderProduct</name>
         <label>Legal Entity defined at Order Product?</label>
         <locationX>248</locationX>
-        <locationY>158</locationY>
+        <locationY>311</locationY>
         <defaultConnector>
             <targetReference>LegalEntity_defined_at_QuoteLine</targetReference>
         </defaultConnector>
@@ -53,7 +62,7 @@
             <name>Yes_BillingAccount_Defined</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>IN_OrderProduct.blng__BillingAccount__c</leftValueReference>
+                <leftValueReference>$Record.blng__BillingAccount__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -69,7 +78,7 @@
         <name>LegalEntity_defined_at_QuoteLine</name>
         <label>Legal Entity defined at Quote Line?</label>
         <locationX>446</locationX>
-        <locationY>278</locationY>
+        <locationY>431</locationY>
         <defaultConnector>
             <targetReference>Set_LegalEntity_from_Order</targetReference>
         </defaultConnector>
@@ -78,7 +87,7 @@
             <name>Yes_LegalEntity_QuoteLine</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>IN_OrderProduct.SBQQ__QuoteLine__r.LegalEntity__c</leftValueReference>
+                <leftValueReference>$Record.SBQQ__QuoteLine__r.LegalEntity__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -90,9 +99,8 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>Obtains the (Billing) Legal Entity to apply to an Order Product from one of its related objects.</description>
-    <interviewLabel>Inherit Legal Entity {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Inherit Legal Entity</label>
+    <interviewLabel>Revenue Cloud - Initialize - Order Product (Before) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Revenue Cloud - Initialize - Order Product (Before)</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -112,27 +120,43 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_OrderProduct</name>
+        <label>Update Order Product</label>
+        <locationX>248</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>blng__LegalEntity__c</field>
+            <value>
+                <elementReference>LegalEntity</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>122</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>LegalEntity_defined_at_OrderProduct</targetReference>
         </connector>
+        <object>OrderItem</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
     <variables>
-        <name>IN_OrderProduct</name>
+        <name>ConsumptionSchedule_Updated</name>
         <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>true</isInput>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
         <isOutput>false</isOutput>
-        <objectType>OrderItem</objectType>
+        <objectType>SBQQ__OrderItemConsumptionSchedule__c</objectType>
     </variables>
     <variables>
-        <name>OUT_LegalEntity</name>
+        <name>LegalEntity</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
-        <isOutput>true</isOutput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>

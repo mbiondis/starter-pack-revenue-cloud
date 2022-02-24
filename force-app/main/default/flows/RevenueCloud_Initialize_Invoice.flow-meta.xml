@@ -5,7 +5,7 @@
         <name>Post_Invoice</name>
         <label>Post Invoice</label>
         <locationX>50</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>Invoice_Status</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +21,7 @@
         <name>Auto_Post_Invoices</name>
         <label>Auto-Post Invoices?</label>
         <locationX>182</locationX>
-        <locationY>335</locationY>
+        <locationY>311</locationY>
         <defaultConnector>
             <targetReference>Update_Invoice</targetReference>
         </defaultConnector>
@@ -44,7 +44,7 @@
     </decisions>
     <description>Update key fields upon Invoice creation (usually &quot;Status&quot; and &quot;Invoice Date&quot;)</description>
     <interviewLabel>Initialize Invoice {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Initialize Invoice</label>
+    <label>Revenue Cloud - Initialize Invoice</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -68,7 +68,7 @@
         <name>Update_Invoice</name>
         <label>Update Invoice</label>
         <locationX>182</locationX>
-        <locationY>671</locationY>
+        <locationY>647</locationY>
         <inputAssignments>
             <field>blng__InvoiceStatus__c</field>
             <value>
@@ -93,7 +93,7 @@
         </filters>
         <object>blng__Invoice__c</object>
         <recordTriggerType>Create</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
     <variables>
