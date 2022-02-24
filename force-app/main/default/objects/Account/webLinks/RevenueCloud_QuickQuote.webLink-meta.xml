@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RevenueCloud_QuickQuote</fullName>
+    <availability>online</availability>
+    <description>Create a new Quote (CPQ) linked to an Opportunity, and open the Quote Line Editor.</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Quick Quote</masterLabel>
+    <openType>noSidebar</openType>
+    <page>RevenueCloud_QuickQuote_Generator</page>
+    <protected>false</protected>
+</WebLink>
