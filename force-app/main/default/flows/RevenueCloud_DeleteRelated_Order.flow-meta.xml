@@ -124,50 +124,6 @@
             <name>output</name>
         </outputParameters>
     </actionCalls>
-    <actionCalls>
-        <name>Get_OrderProduct</name>
-        <label>Get Order Product</label>
-        <locationX>983</locationX>
-        <locationY>1664</locationY>
-        <actionName>GetRecordsByApex</actionName>
-        <actionType>apex</actionType>
-        <connector>
-            <targetReference>Found_Records_OrderProduct</targetReference>
-        </connector>
-        <dataTypeMappings>
-            <typeName>U__output</typeName>
-            <typeValue>OrderItem</typeValue>
-        </dataTypeMappings>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>fieldsToQuery</name>
-            <value>
-                <stringValue>Id</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>filterOperator</name>
-            <value>
-                <stringValue>AND</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>filters</name>
-            <value>
-                <elementReference>Filters_Standard</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>objectApiName</name>
-            <value>
-                <stringValue>OrderItem</stringValue>
-            </value>
-        </inputParameters>
-        <outputParameters>
-            <assignToReference>Queue_OrderProduct</assignToReference>
-            <name>output</name>
-        </outputParameters>
-    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Add_Filters_Billing</name>
@@ -199,22 +155,6 @@
         </assignmentItems>
         <connector>
             <targetReference>Get_Contract</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Add_Filters_StandardObjects</name>
-        <label>Set Filters - Standard Objects</label>
-        <locationX>849</locationX>
-        <locationY>1664</locationY>
-        <assignmentItems>
-            <assignToReference>Filters_Standard</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Filter_Standard</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_OrderProduct</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -294,36 +234,6 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Filters_StandardObjects</name>
-        <label>Assign Filters - Standard Objects</label>
-        <locationX>849</locationX>
-        <locationY>1513</locationY>
-        <assignmentItems>
-            <assignToReference>Filter_Standard.filterField</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>OrderId</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Filter_Standard.operator</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>IN</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Filter_Standard.fieldCollectionValue</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Orders_ID</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Add_Filters_StandardObjects</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Assign_Test_Variable</name>
         <label>Add Test Variable</label>
         <locationX>655</locationX>
@@ -400,7 +310,7 @@
         <locationX>1099</locationX>
         <locationY>1355</locationY>
         <defaultConnector>
-            <targetReference>Assign_Filters_StandardObjects</targetReference>
+            <targetReference>Update_Order</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -440,28 +350,6 @@
             </conditions>
             <connector>
                 <targetReference>Disable_Billing_Triggers</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Found_Records_OrderProduct</name>
-        <label>Found Records?</label>
-        <locationX>1100</locationX>
-        <locationY>1666</locationY>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Yes_OrderProduct</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Queue_OrderProduct</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>DeleteRelated_OrderProduct</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -513,7 +401,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>Added Order update at the end of the flow</description>
+    <description>Added the default outcome in the Contract decision</description>
     <interviewLabel>Revenue Cloud - Delete Related - Order {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Revenue Cloud - Delete Related - Order</label>
     <loops>
@@ -555,7 +443,7 @@
         <locationX>1266</locationX>
         <locationY>1360</locationY>
         <connector>
-            <targetReference>Assign_Filters_StandardObjects</targetReference>
+            <targetReference>Update_Order</targetReference>
         </connector>
         <inputReference>Queue_Contract</inputReference>
     </recordDeletes>
@@ -594,7 +482,7 @@
         <name>Update_Order</name>
         <label>Order</label>
         <locationX>847</locationX>
-        <locationY>1854</locationY>
+        <locationY>1530</locationY>
         <inputReference>Queue_Order</inputReference>
     </recordUpdates>
     <start>
@@ -618,23 +506,6 @@
             <name>IN_Invoices</name>
             <value>
                 <elementReference>Queue_Invoice</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
-        <name>DeleteRelated_OrderProduct</name>
-        <label>Delete Related - Order Product</label>
-        <locationX>1240</locationX>
-        <locationY>1663</locationY>
-        <connector>
-            <targetReference>Update_Order</targetReference>
-        </connector>
-        <flowName>RevenueCloud_DeleteRelated_OrderProduct</flowName>
-        <inputAssignments>
-            <name>IN_OrderProducts</name>
-            <value>
-                <elementReference>Queue_OrderProduct</elementReference>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>

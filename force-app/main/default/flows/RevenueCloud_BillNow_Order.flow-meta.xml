@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Display_Message</name>
         <label>Display Message</label>
-        <locationX>182</locationX>
-        <locationY>974</locationY>
+        <locationX>536</locationX>
+        <locationY>1022</locationY>
         <actionName>c:showToast</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -31,8 +31,8 @@
     <actionCalls>
         <name>Refresh_Record</name>
         <label>Refresh Record</label>
-        <locationX>182</locationX>
-        <locationY>854</locationY>
+        <locationX>536</locationX>
+        <locationY>902</locationY>
         <actionName>c:refreshView</actionName>
         <actionType>component</actionType>
         <connector>
@@ -44,8 +44,8 @@
     <assignments>
         <name>Cannot_Order_Quote</name>
         <label>Cannot Order Quote</label>
-        <locationX>50</locationX>
-        <locationY>398</locationY>
+        <locationX>404</locationX>
+        <locationY>446</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -67,8 +67,8 @@
     <assignments>
         <name>Orders_Created</name>
         <label>Orders Created</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>668</locationX>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -90,10 +90,10 @@
     <decisions>
         <name>Orders_Activated</name>
         <label>Orders Activated?</label>
-        <locationX>182</locationX>
-        <locationY>278</locationY>
+        <locationX>536</locationX>
+        <locationY>326</locationY>
         <defaultConnector>
-            <targetReference>Check_BillNow</targetReference>
+            <targetReference>Cannot_Order_Quote</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -107,7 +107,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Cannot_Order_Quote</targetReference>
+                <targetReference>Check_BillNow</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -123,7 +123,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -136,8 +136,8 @@
     <recordLookups>
         <name>Get_Order</name>
         <label>Get Order</label>
-        <locationX>182</locationX>
-        <locationY>158</locationY>
+        <locationX>536</locationX>
+        <locationY>206</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Orders_Activated</targetReference>
@@ -160,8 +160,8 @@
     <recordUpdates>
         <name>Check_BillNow</name>
         <label>Check Bill Now</label>
-        <locationX>314</locationX>
-        <locationY>398</locationY>
+        <locationX>668</locationX>
+        <locationY>446</locationY>
         <connector>
             <targetReference>Orders_Created</targetReference>
         </connector>
@@ -170,8 +170,8 @@
     <screens>
         <name>Finish</name>
         <label>Finish</label>
-        <locationX>182</locationX>
-        <locationY>734</locationY>
+        <locationX>536</locationX>
+        <locationY>782</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -190,13 +190,13 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>56</locationX>
-        <locationY>0</locationY>
+        <locationX>410</locationX>
+        <locationY>48</locationY>
         <connector>
             <targetReference>Get_Order</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>Message_Text</name>
         <dataType>String</dataType>

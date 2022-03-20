@@ -122,7 +122,13 @@ public with sharing class GetRecordsByApex {
             collection += CLOSE_PARANTHESES;
             filterString += collection;
         } else {
-            filterString += getQuotedValue(filter.fieldValue);
+            if(filter.fieldValue == 'TRUE' || filter.fieldValue == 'FALSE' || filter.fieldValue.contains('__c') || filter.operator == '<' || filter.operator == '>'){
+                filterString += filter.fieldValue;
+            }
+            else {
+                filterString += getQuotedValue(filter.fieldValue);
+            }
+                
         }
         return filterString;
     }
