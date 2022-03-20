@@ -70,6 +70,18 @@
     <layoutAssignments>
         <layout>blng__Usage__c-Revenue Cloud</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>sbaa__ApprovalChain__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>sbaa__ApprovalRule__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>sbaa__ApprovalVariable__c-Revenue Cloud</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>sbaa__Approver__c-Revenue Cloud</layout>
+    </layoutAssignments>
     <tabVisibilities>
         <tab>SBQQ__Cost__c</tab>
         <visibility>DefaultOn</visibility>
