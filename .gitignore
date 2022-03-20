@@ -60,3 +60,6 @@ scripts/
 
 # Husky
 .husky/
+
+CPQB_*
+q2c*

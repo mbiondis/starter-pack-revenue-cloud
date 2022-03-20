@@ -98,3 +98,8 @@ fi
 
 echo " "
 echo "******* Scratch org created successfully..."
+
+# Install packages
+echo " "
+echo "******* Installing packages (this might up to 30min)..."
+sfdx force:source:deploy -p installedPackages -u "${orgAlias}"

@@ -13,3 +13,16 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+force-app/main/default/pages/q2c.page
+
+force-app/main/default/classes/q2c_controller.cls
+force-app/main/default/classes/CPQB_AccountUtilsController.cls
+force-app/main/default/classes/CPQB_RecordReset.cls
+
+force-app/main/default/aura/controlNavigation
+force-app/main/default/aura/closeAndRefresh
+force-app/main/default/aura/loadWebPage
+force-app/main/default/aura/updateScreen
+
+#force-app/main/default/objects/SBQQ__PriceAction__c/fields/SBQQ__Field__c.field-meta.xml
