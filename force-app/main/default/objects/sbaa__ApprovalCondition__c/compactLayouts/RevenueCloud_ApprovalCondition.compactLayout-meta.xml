@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RevenueCloud_ApprovalCondition</fullName>
+    <fields>sbaa__ApprovalRule__c</fields>
+    <fields>sbaa__TestedField__c</fields>
+    <fields>sbaa__TestedVariable__c</fields>
+    <fields>sbaa__Operator__c</fields>
+    <fields>sbaa__FilterType__c</fields>
+    <fields>sbaa__FilterField__c</fields>
+    <fields>sbaa__FilterValue__c</fields>
+    <label>Revenue Cloud - Approval Condition</label>
+</CompactLayout>

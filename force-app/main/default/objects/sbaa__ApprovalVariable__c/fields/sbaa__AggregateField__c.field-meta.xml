@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sbaa__AggregateField__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Field that&apos;s acted upon by the aggregate function.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field that&apos;s acted upon by the aggregate function.</inlineHelpText>
+    <label>Aggregate Field</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quantity</fullName>
+                <default>false</default>
+                <label>Quantity</label>
+            </value>
+            <value>
+                <fullName>List_Total__c</fullName>
+                <default>false</default>
+                <label>List_Total__c</label>
+            </value>
+            <value>
+                <fullName>Total Price</fullName>
+                <default>false</default>
+                <label>Total Price</label>
+            </value>
+            <value>
+                <fullName>Subtotal</fullName>
+                <default>false</default>
+                <label>Subtotal</label>
+            </value>
+            <value>
+                <fullName>SBQQ__Quantity__c</fullName>
+                <default>false</default>
+                <label>SBQQ__Quantity__c</label>
+            </value>
+            <value>
+                <fullName>blng__Quantity__c</fullName>
+                <default>false</default>
+                <label>blng__Quantity__c</label>
+            </value>
+            <value>
+                <fullName>ApprovalLevel__c</fullName>
+                <default>false</default>
+                <label>ApprovalLevel__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

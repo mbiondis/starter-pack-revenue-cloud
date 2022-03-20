@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sbaa__TargetObject__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Select the object you want to aggregate.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the object you want to aggregate.</inlineHelpText>
+    <label>Target Object</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Opportunity Product</fullName>
+                <default>false</default>
+                <label>Opportunity Product</label>
+            </value>
+            <value>
+                <fullName>SBQQ__Quote__c</fullName>
+                <default>false</default>
+                <label>SBQQ__Quote__c</label>
+            </value>
+            <value>
+                <fullName>SBQQ__QuoteLine__c</fullName>
+                <default>false</default>
+                <label>SBQQ__QuoteLine__c</label>
+            </value>
+            <value>
+                <fullName>blng__Invoice__c</fullName>
+                <default>false</default>
+                <label>blng__Invoice__c</label>
+            </value>
+            <value>
+                <fullName>blng__InvoiceLine__c</fullName>
+                <default>false</default>
+                <label>blng__InvoiceLine__c</label>
+            </value>
+            <value>
+                <fullName>SBQQ__QuoteTerm__c</fullName>
+                <default>false</default>
+                <label>SBQQ__QuoteTerm__c</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

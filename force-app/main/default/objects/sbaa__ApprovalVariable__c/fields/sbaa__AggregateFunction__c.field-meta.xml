@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sbaa__AggregateFunction__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Aggregate function used to calculate this variable.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Aggregate function used to calculate this variable.</inlineHelpText>
+    <label>Aggregate Function</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Count</fullName>
+                <default>false</default>
+                <label>Count</label>
+            </value>
+            <value>
+                <fullName>Sum</fullName>
+                <default>false</default>
+                <label>Sum</label>
+            </value>
+            <value>
+                <fullName>Average</fullName>
+                <default>false</default>
+                <label>Average</label>
+            </value>
+            <value>
+                <fullName>Min</fullName>
+                <default>false</default>
+                <label>Min</label>
+            </value>
+            <value>
+                <fullName>Max</fullName>
+                <default>false</default>
+                <label>Max</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

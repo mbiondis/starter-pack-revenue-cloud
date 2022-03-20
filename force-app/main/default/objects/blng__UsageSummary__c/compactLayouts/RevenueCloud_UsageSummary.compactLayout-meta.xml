@@ -5,7 +5,7 @@
     <fields>Product__c</fields>
     <fields>blng__UnitOfMeasure__c</fields>
     <fields>blng__TotalQuantity__c</fields>
-    <fields>Subtotal__c</fields>
+    <fields>TotalPrice__c</fields>
     <fields>blng__SummaryStartDate__c</fields>
     <fields>blng__SummaryEndDate__c</fields>
     <fields>blng__Status__c</fields>
