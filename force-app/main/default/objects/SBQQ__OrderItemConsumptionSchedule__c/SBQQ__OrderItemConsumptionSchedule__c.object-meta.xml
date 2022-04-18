@@ -166,7 +166,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Order Product Consumption Schedules</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

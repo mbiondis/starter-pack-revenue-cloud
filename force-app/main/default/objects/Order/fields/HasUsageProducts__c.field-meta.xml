@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasUsageProducts__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to True IF an Order Product&apos;s (ChargeType = Recurring AND HasConsumptionSchedule) OR (ChargeType = Usage)</description>
+    <externalId>false</externalId>
+    <label>Has Usage Products</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

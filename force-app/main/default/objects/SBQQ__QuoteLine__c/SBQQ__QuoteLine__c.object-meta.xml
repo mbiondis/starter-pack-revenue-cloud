@@ -128,46 +128,61 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>RevenueCloud_InvoicePlan</content>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>RevenueCloud_InvoicePlan</content>
         <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>SBQQ__QuoteLineHelp</customHelpPage>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>Individual line item on a quote.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
-    <label>Invoice Plan</label>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Quote Line</label>
     <nameField>
-        <label>Invoice Plan Name</label>
-        <type>Text</type>
+        <displayFormat>QL-{0000000}</displayFormat>
+        <label>Line Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Invoice Plans</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
-    <startsWith>Vowel</startsWith>
+    <pluralLabel>Quote Lines</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>SBQQ__Quote__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__Group__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__Quantity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__NetTotal__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Quote__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Group__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Product__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Quantity__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__NetTotal__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>SBQQ__Quote__c</searchFilterFields>
+        <searchFilterFields>SBQQ__Group__c</searchFilterFields>
+        <searchFilterFields>SBQQ__Product__c</searchFilterFields>
+        <searchFilterFields>SBQQ__Quantity__c</searchFilterFields>
+        <searchFilterFields>SBQQ__NetTotal__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusProposal__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  SBQQ__Status__c  ,
+    &quot;Draft&quot;, IMAGE(&quot;https://i.ibb.co/vqQsJv5/btn-draft.png&quot;,&quot;Draft&quot;,20,60),
+    &quot;Presented&quot;, IMAGE(&quot;https://i.ibb.co/hcb6Fzk/btn-presented.png&quot;, &quot;Presented&quot;,20,60),
+    &quot;Accepted&quot;, IMAGE(&quot;https://i.ibb.co/N1Qh233/btn-accepted.png&quot;, &quot;Accepted&quot;,20,60),
+    &quot;Rejected&quot;, IMAGE(&quot;https://i.ibb.co/Jmcrh77/btn-rejected.png&quot;, &quot;Rejected&quot;,20,60),
+    &quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status (Proposal)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

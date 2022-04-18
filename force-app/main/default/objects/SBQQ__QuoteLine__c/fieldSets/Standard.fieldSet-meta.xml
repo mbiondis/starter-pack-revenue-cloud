@@ -43,6 +43,16 @@
         <isRequired>false</isRequired>
     </displayedFields>
     <displayedFields>
+        <field>SBQQ__ProrateMultiplier__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>SBQQ__NetPrice__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
         <field>SBQQ__NetTotal__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

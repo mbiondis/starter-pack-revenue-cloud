@@ -168,7 +168,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Template Sections</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

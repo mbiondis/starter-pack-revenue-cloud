@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusBalance__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(blng__InvoiceStatus__c, &apos;Cancelled&apos;),IMAGE(&quot;https://i.ibb.co/VtsJpNh/button-cancelled-blue.png&quot;, &quot;Cancelled&quot;,20,60),
+IF((blng__Balance__c = 0), Image(&quot;https://i.ibb.co/K7JkbQy/btn-paid.png&quot;,&quot;Paid&quot;,20,60) ,
+IF(TODAY() &gt; blng__DueDate__c &amp;&amp; (blng__Balance__c &gt; 0),
+Image(&quot;https://i.ibb.co/fCc4hNQ/btn-overdue.png&quot;,&quot;Overdue&quot;,20,60),
+Image(&quot;https://i.ibb.co/pyv35Cb/btn-unpaid.png&quot;,&quot;Unpaid&quot;,20,60)
+)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status (Balance)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

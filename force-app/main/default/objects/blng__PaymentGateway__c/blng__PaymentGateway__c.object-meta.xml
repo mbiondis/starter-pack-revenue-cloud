@@ -129,7 +129,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>RevenueCloud_InvoicePlan</content>
+        <content>RevenueCloud_PaymentGateway</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -137,7 +137,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>RevenueCloud_InvoicePlan</content>
+        <content>RevenueCloud_PaymentGateway</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -150,24 +150,28 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
+    <description>Configuration object. The administrator should create one Account for the appropriate Payment Gateway.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Invoice Plan</label>
+    <label>Payment Gateway</label>
     <nameField>
-        <label>Invoice Plan Name</label>
+        <label>Payment Gateway Name</label>
+        <trackHistory>true</trackHistory>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Invoice Plans</pluralLabel>
-    <searchLayouts/>
+    <pluralLabel>Payment Gateways</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>blng__Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>blng__Default__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
 </CustomObject>

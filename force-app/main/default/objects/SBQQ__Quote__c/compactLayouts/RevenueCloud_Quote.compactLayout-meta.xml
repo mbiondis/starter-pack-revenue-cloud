@@ -6,5 +6,7 @@
     <fields>SBQQ__Opportunity2__c</fields>
     <fields>SBQQ__NetAmount__c</fields>
     <fields>SBQQ__PriceBook__c</fields>
+    <fields>StatusProposal__c</fields>
+    <fields>StatusApproval__c</fields>
     <label>Revenue Cloud - Quote</label>
 </CompactLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RevenueCloud_Invoice</fullName>
+    <fields>Name</fields>
+    <fields>blng__InvoiceDate__c</fields>
+    <fields>blng__TotalAmount__c</fields>
+    <fields>StatusBalance__c</fields>
+    <fields>StatusInvoice__c</fields>
+    <fields>blng__Account__c</fields>
+    <fields>blng__Order__c</fields>
+    <label>Revenue Cloud - Invoice</label>
+</CompactLayout>

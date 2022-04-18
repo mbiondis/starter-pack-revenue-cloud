@@ -169,7 +169,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Usages</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

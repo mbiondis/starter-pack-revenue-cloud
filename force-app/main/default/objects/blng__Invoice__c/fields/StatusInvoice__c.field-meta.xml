@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusInvoice__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;/flow/RevenueCloud_Invoice_TriggerAction?Id=&apos; &amp; Id  &amp; &apos;&amp;retURL=&apos; &amp; Id, 
+
+  CASE(blng__InvoiceStatus__c,
+    &quot;Draft&quot;, IMAGE(&quot;https://i.ibb.co/vqQsJv5/btn-draft.png&quot;,&quot;Draft&quot;,20,60), 
+    &quot;Posted&quot;, IMAGE(&quot;https://i.ibb.co/5W7rc44/btn-posted.png&quot;, &quot;Posted&quot;,20,60),
+    &quot;Rebilled&quot;, IMAGE(&quot;https://i.ibb.co/T1M4XRR/btn-rebilled.png&quot;,&quot;Rebilled&quot;,20,60),
+    &quot;Cancelled&quot;,IMAGE(&quot;https://i.ibb.co/R3DpCSv/btn-canceled.png&quot;,&quot;Cancelled&quot;,20,60),
+    &quot;Post In progress&quot;, IMAGE(&quot;https://i.ibb.co/JnvdP6K/btn-posting.png&quot;,&quot;Post in Progress&quot;,20,60),
+    &quot;Error&quot;,IMAGE(&quot;https://i.ibb.co/VWcsqm0/btn-error.png&quot;,&quot;Error&quot;,20,60),
+    IMAGE(&quot;https://i.ibb.co/JnvdP6K/btn-posting.png&quot;,&quot;Post in Progress&quot;,20,60)
+  ) 
+
+, &quot;_self&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If &quot;Draft&quot;, click to &quot;Post&quot;
+If &quot;Posted&quot;, click to &quot;Cancel &amp; Rebill&quot;</inlineHelpText>
+    <label>Status (Invoice)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

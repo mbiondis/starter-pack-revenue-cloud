@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusAutoPost__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;/flow/RevenueCloud_Order_TriggerAction?Id=&apos; &amp; Id &amp; &apos;&amp;ActionType=AutoPost&apos; &amp; &apos;&amp;retURL=&apos; &amp; Id,
+
+IF( AutoPost_Invoice__c ,
+IMAGE(&quot;https://i.ibb.co/HFyW4R3/toggle-on.png&quot;, &quot;on&quot;,20,40),
+IMAGE(&quot;https://i.ibb.co/b5kpPGk/toggle-off.png&quot;,&quot;off&quot;,20,40)
+)
+
+, &quot;_self&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status (Auto-Post)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActivePeriod__c</fullName>
+    <externalId>false</externalId>
+    <formula>blng__SummaryEndDate__c =
+(IF( ISPICKVAL(blng__OrderProduct__r.blng__HoldBilling__c,&quot;Yes&quot;),
+blng__OrderProduct__r.SBQQ__RequiredBy__r.blng__NextBillingDate__c,
+blng__OrderProduct__r.blng__NextBillingDate__c) - 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Active Period</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -4,8 +4,10 @@
     <fields>OrderNumber</fields>
     <fields>AccountId</fields>
     <fields>SBQQ__Quote__c</fields>
-    <fields>EffectiveDate</fields>
     <fields>TotalAmount</fields>
+    <fields>EffectiveDate</fields>
+    <fields>StatusOrder__c</fields>
+    <fields>StatusAutoPost__c</fields>
     <fields>SBQQ__TaxAmount__c</fields>
     <label>Revenue Cloud - Order</label>
 </CompactLayout>
