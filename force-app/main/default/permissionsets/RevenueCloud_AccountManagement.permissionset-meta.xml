@@ -4,10 +4,6 @@
         <apexClass>RevenueCloud_QuickQuote_Controller</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <pageAccesses>
-        <apexPage>RevenueCloud_QuickQuote_Generator</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
     <fieldPermissions>
         <editable>true</editable>
@@ -21,4 +17,17 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Revenue Cloud - Account Management</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Account</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <pageAccesses>
+        <apexPage>RevenueCloud_QuickQuote_Generator</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
 </PermissionSet>

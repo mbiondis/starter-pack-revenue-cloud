@@ -5,9 +5,10 @@
     <label>Revenue Cloud - Admin</label>
     <permissionSets>RevenueCloud_AccountManagement</permissionSets>
     <permissionSets>RevenueCloud_ApprovalManagement</permissionSets>
-    <permissionSets>RevenueCloud_UsageManagement</permissionSets>
+    <permissionSets>RevenueCloud_InvoiceManagement</permissionSets>
     <permissionSets>RevenueCloud_OrderManagement</permissionSets>
     <permissionSets>RevenueCloud_QuoteManagement</permissionSets>
     <permissionSets>RevenueCloud_RuleManagement</permissionSets>
+    <permissionSets>RevenueCloud_UsageManagement</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
