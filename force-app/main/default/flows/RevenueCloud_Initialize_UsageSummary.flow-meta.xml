@@ -2,7 +2,7 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
     <interviewLabel>RevenueCloud_Initialize_UsageSummary {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Revenue Cloud - Initialize Usage Summary</label>
+    <label>Revenue Cloud - Initialize - Usage Summary</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

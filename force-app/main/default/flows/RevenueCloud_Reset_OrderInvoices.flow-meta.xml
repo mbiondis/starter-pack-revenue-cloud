@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Disable_Billing_Triggers</name>
+        <label>Disable Billing Triggers</label>
+        <locationX>176</locationX>
+        <locationY>854</locationY>
+        <actionName>SetBillingConfig</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_OrderProducts</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>triggerState</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Display_Message</name>
         <label>Display Success Message</label>
         <locationX>176</locationX>
-        <locationY>758</locationY>
+        <locationY>1574</locationY>
         <actionName>c:showToast</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -29,10 +47,28 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <actionCalls>
+        <name>Enable_Billing_Triggers</name>
+        <label>Enable Billing Triggers</label>
+        <locationX>176</locationX>
+        <locationY>1094</locationY>
+        <actionName>SetBillingConfig</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_UsageSummaries</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>triggerState</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Refresh_Record</name>
         <label>Refresh Record</label>
         <locationX>176</locationX>
-        <locationY>638</locationY>
+        <locationY>1454</locationY>
         <actionName>c:refreshView</actionName>
         <actionType>component</actionType>
         <connector>
@@ -41,9 +77,91 @@
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
     </actionCalls>
     <apiVersion>53.0</apiVersion>
-    <description>Corrected the fact that Order Products and Usage Summaries are stuck in &quot;In Progress&quot; Invoice Run Processing Status</description>
+    <assignments>
+        <name>Add_to_UpdateQueue</name>
+        <label>Add to Update Queue</label>
+        <locationX>264</locationX>
+        <locationY>638</locationY>
+        <assignmentItems>
+            <assignToReference>Queue_OrderProduct</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_through_OrderProducts</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_OrderProducts</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Revert_BillingFields</name>
+        <label>Revert Billing Fields</label>
+        <locationX>264</locationX>
+        <locationY>518</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__NextBillingDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_through_OrderProducts.OriginalNextBillingDate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__InvoiceRunProcessingStatus__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Pending Billing</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__LastChargeToDate__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__PendingBillings__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_through_OrderProducts.TotalPrice</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__BilledAmountwithouttax__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__BilledTax__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_OrderProducts.blng__NextChargeDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_through_OrderProducts.OriginalNextBillingDate__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_to_UpdateQueue</targetReference>
+        </connector>
+    </assignments>
+    <description>Added trigger logic</description>
     <interviewLabel>Revenue Cloud - Reset - Order (Invoices) {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Revenue Cloud - Reset - Order (Invoices)</label>
+    <loops>
+        <name>Loop_through_OrderProducts</name>
+        <label>Loop through Order Products</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <collectionReference>Get_OrderProduct</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Revert_BillingFields</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Disable_Billing_Triggers</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -63,13 +181,14 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
-    <recordUpdates>
-        <name>Update_OrderProducts</name>
-        <label>Update Order Products</label>
+    <recordLookups>
+        <name>Get_OrderProduct</name>
+        <label>Get Order Product</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Update_UsageSummaries</targetReference>
+            <targetReference>Loop_through_OrderProducts</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -79,26 +198,25 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
-        <filters>
-            <field>blng__InvoiceRunProcessingStatus__c</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <stringValue>Pending Billing</stringValue>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>blng__InvoiceRunProcessingStatus__c</field>
-            <value>
-                <stringValue>Pending Billing</stringValue>
-            </value>
-        </inputAssignments>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_OrderProducts</name>
+        <label>Update Order Products</label>
+        <locationX>176</locationX>
+        <locationY>974</locationY>
+        <connector>
+            <targetReference>Enable_Billing_Triggers</targetReference>
+        </connector>
+        <inputReference>Queue_OrderProduct</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_UsageSummaries</name>
         <label>Update Usage Summaries</label>
         <locationX>176</locationX>
-        <locationY>398</locationY>
+        <locationY>1214</locationY>
         <connector>
             <targetReference>Finish</targetReference>
         </connector>
@@ -125,11 +243,12 @@
         </inputAssignments>
         <object>blng__UsageSummary__c</object>
     </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>Finish</name>
         <label>Finish</label>
         <locationX>176</locationX>
-        <locationY>518</locationY>
+        <locationY>1334</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -161,9 +280,21 @@
         <locationX>176</locationX>
         <locationY>158</locationY>
         <connector>
-            <targetReference>Update_OrderProducts</targetReference>
+            <targetReference>Get_OrderProduct</targetReference>
         </connector>
         <flowName>RevenueCloud_DeleteRelated_Order</flowName>
+        <inputAssignments>
+            <name>IN_Delete_Contract</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>IN_Delete_OrderProduct</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <name>IN_Order</name>
             <value>
@@ -217,14 +348,6 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>Order_Queue_Deactivation</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Order</objectType>
     </variables>
     <variables>
         <name>Queue_OrderProduct</name>

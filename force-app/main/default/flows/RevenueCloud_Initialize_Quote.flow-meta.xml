@@ -199,7 +199,7 @@
         <expression>DATE(YEAR(TODAY()),1,1)</expression>
     </formulas>
     <interviewLabel>Initialize Quote {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Revenue Cloud - Initialize Quote</label>
+    <label>Revenue Cloud - Initialize - Quote</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

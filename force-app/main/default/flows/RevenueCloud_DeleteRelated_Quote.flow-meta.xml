@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Disable_Billing_Triggers</name>
+        <label>Disable Billing Triggers</label>
+        <locationX>1321</locationX>
+        <locationY>1276</locationY>
+        <actionName>SetBillingConfig</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Deactivate_Orders</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>triggerState</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Enable_Billing_Triggers</name>
+        <label>Enable Billing Triggers</label>
+        <locationX>922</locationX>
+        <locationY>1276</locationY>
+        <actionName>SetBillingConfig</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>triggerState</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Get_Order</name>
         <label>Get Order</label>
         <locationX>963</locationX>
@@ -75,6 +108,22 @@
         </assignmentItems>
         <connector>
             <targetReference>Loop_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Add_to_DeactivatedOrder_Queue</name>
+        <label>Add to Deactivated Order Queue</label>
+        <locationX>1479</locationX>
+        <locationY>1109</locationY>
+        <assignmentItems>
+            <assignToReference>Queue_Order_Draft</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_Through_Orders</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_Through_Orders</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -153,6 +202,22 @@
         </assignmentItems>
         <connector>
             <targetReference>Copy_ID_to_CollectionVariable</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Status_Draft</name>
+        <label>Set Status to Draft</label>
+        <locationX>1479</locationX>
+        <locationY>976</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_Through_Orders.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_to_DeactivatedOrder_Queue</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -256,6 +321,20 @@
             <targetReference>Assign_Filters_CPQ</targetReference>
         </noMoreValuesConnector>
     </loops>
+    <loops>
+        <name>Loop_Through_Orders</name>
+        <label>Loop Through Orders</label>
+        <locationX>1319</locationX>
+        <locationY>1054</locationY>
+        <collectionReference>Queue_Order</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Set_Status_Draft</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Disable_Billing_Triggers</targetReference>
+        </noMoreValuesConnector>
+    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -278,12 +357,12 @@
     <recordDeletes>
         <name>Delete_Order</name>
         <label>Order</label>
-        <locationX>1335</locationX>
-        <locationY>1054</locationY>
+        <locationX>1052</locationX>
+        <locationY>1276</locationY>
         <connector>
-            <targetReference>Update_Quote</targetReference>
+            <targetReference>Enable_Billing_Triggers</targetReference>
         </connector>
-        <inputReference>Queue_Order</inputReference>
+        <inputReference>Queue_Order_Draft</inputReference>
     </recordDeletes>
     <recordLookups>
         <name>Get_Single_Record</name>
@@ -307,11 +386,14 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Update_Quote</name>
-        <label>Quote</label>
-        <locationX>844</locationX>
-        <locationY>1226</locationY>
-        <inputReference>Queue_Quote</inputReference>
+        <name>Deactivate_Orders</name>
+        <label>Deactivate Order</label>
+        <locationX>1187</locationX>
+        <locationY>1276</locationY>
+        <connector>
+            <targetReference>Delete_Order</targetReference>
+        </connector>
+        <inputReference>Queue_Order_Draft</inputReference>
     </recordUpdates>
     <start>
         <locationX>607</locationX>
@@ -327,7 +409,7 @@
         <locationX>1209</locationX>
         <locationY>1054</locationY>
         <connector>
-            <targetReference>Delete_Order</targetReference>
+            <targetReference>Loop_Through_Orders</targetReference>
         </connector>
         <flowName>RevenueCloud_DeleteRelated_Order</flowName>
         <inputAssignments>
@@ -418,6 +500,14 @@
         <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
+        <objectType>Order</objectType>
+    </variables>
+    <variables>
+        <name>Queue_Order_Draft</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
         <objectType>Order</objectType>
     </variables>
     <variables>

@@ -346,22 +346,6 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Edit_Record</name>
-        <label>Edit Record</label>
-        <locationX>1010</locationX>
-        <locationY>622</locationY>
-        <assignmentItems>
-            <assignToReference>Loop_Records.blng__InvoiceStatus__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Draft</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Copy_ID_to_CollectionVariable</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Use_InputVariable</name>
         <label>Use Input Variable</label>
         <locationX>820</locationX>
@@ -499,7 +483,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>Split the Transaction into its own section</description>
+    <description>Removed the Invoice Status assignment</description>
     <interviewLabel>Revenue Cloud - Delete Related - Invoice {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Revenue Cloud - Delete Related - Invoice</label>
     <loops>
@@ -510,7 +494,7 @@
         <collectionReference>Invoices</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Edit_Record</targetReference>
+            <targetReference>Copy_ID_to_CollectionVariable</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>AssignFilters_Payment</targetReference>
@@ -595,6 +579,7 @@
         <object>blng__Invoice__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
         <locationX>607</locationX>
         <locationY>48</locationY>

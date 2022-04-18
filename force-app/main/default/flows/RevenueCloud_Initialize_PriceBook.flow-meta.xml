@@ -186,7 +186,7 @@
         <expression>DATE(YEAR(TODAY()),1,1)</expression>
     </formulas>
     <interviewLabel>Initialize Price Book {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Revenue Cloud - Initialize Price Book</label>
+    <label>Revenue Cloud - Initialize - Price Book</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

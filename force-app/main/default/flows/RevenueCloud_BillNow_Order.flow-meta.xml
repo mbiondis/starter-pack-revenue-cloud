@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Display_Message</name>
         <label>Display Message</label>
-        <locationX>536</locationX>
-        <locationY>1022</locationY>
+        <locationX>380</locationX>
+        <locationY>1430</locationY>
         <actionName>c:showToast</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -31,8 +31,8 @@
     <actionCalls>
         <name>Refresh_Record</name>
         <label>Refresh Record</label>
-        <locationX>536</locationX>
-        <locationY>902</locationY>
+        <locationX>380</locationX>
+        <locationY>1310</locationY>
         <actionName>c:refreshView</actionName>
         <actionType>component</actionType>
         <connector>
@@ -44,8 +44,8 @@
     <assignments>
         <name>Cannot_Order_Quote</name>
         <label>Cannot Order Quote</label>
-        <locationX>404</locationX>
-        <locationY>446</locationY>
+        <locationX>578</locationX>
+        <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -67,8 +67,8 @@
     <assignments>
         <name>Orders_Created</name>
         <label>Orders Created</label>
-        <locationX>668</locationX>
-        <locationY>566</locationY>
+        <locationX>50</locationX>
+        <locationY>878</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -87,11 +87,67 @@
             <targetReference>Finish</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Unposted_Invoices</name>
+        <label>Unposted Invoices</label>
+        <locationX>314</locationX>
+        <locationY>758</locationY>
+        <assignmentItems>
+            <assignToReference>Message_Text</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Post all invoices first</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Message_Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>warning</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Finish</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>If there are un-posted Invoices, the Billing triggers will not have updated the Next Billing Date, so Bill Now will have no effect (unless the Override Next Billing Date has been changed).</description>
+        <name>AllInvoicesPosted_or_DatesOverriden</name>
+        <label>All Invoices Posted or Dates Overriden?</label>
+        <locationX>182</locationX>
+        <locationY>638</locationY>
+        <defaultConnector>
+            <targetReference>Unposted_Invoices</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_PostedOrDatesOverriden</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Draft_Invoices</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Overriden_OrderProducts</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_BillNow</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Orders_Activated</name>
         <label>Orders Activated?</label>
-        <locationX>536</locationX>
-        <locationY>326</locationY>
+        <locationX>380</locationX>
+        <locationY>278</locationY>
         <defaultConnector>
             <targetReference>Cannot_Order_Quote</targetReference>
         </defaultConnector>
@@ -107,7 +163,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Check_BillNow</targetReference>
+                <targetReference>Get_Draft_Invoices</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -123,7 +179,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -134,10 +190,38 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
+        <name>Get_Draft_Invoices</name>
+        <label>Get Draft Invoices</label>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Overriden_OrderProducts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>blng__Order__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>blng__InvoiceStatus__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>blng__Invoice__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Order</name>
         <label>Get Order</label>
-        <locationX>536</locationX>
-        <locationY>206</locationY>
+        <locationX>380</locationX>
+        <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Orders_Activated</targetReference>
@@ -157,21 +241,63 @@
         <queriedFields>blng__BillNow__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Overriden_OrderProducts</name>
+        <label>Get Overriden Order Products</label>
+        <locationX>182</locationX>
+        <locationY>518</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AllInvoicesPosted_or_DatesOverriden</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OrderId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>blng__OverrideNextBillingDate__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Check_BillNow</name>
         <label>Check Bill Now</label>
-        <locationX>668</locationX>
-        <locationY>446</locationY>
+        <locationX>50</locationX>
+        <locationY>758</locationY>
         <connector>
             <targetReference>Orders_Created</targetReference>
         </connector>
-        <inputReference>Get_Order</inputReference>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>blng__BillNow__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
     </recordUpdates>
     <screens>
         <name>Finish</name>
         <label>Finish</label>
-        <locationX>536</locationX>
-        <locationY>782</locationY>
+        <locationX>380</locationX>
+        <locationY>1190</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -190,13 +316,13 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>410</locationX>
-        <locationY>48</locationY>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Order</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>Message_Text</name>
         <dataType>String</dataType>
