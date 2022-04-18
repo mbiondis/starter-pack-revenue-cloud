@@ -36,7 +36,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
-                    <value>ADVGRID</value>
+                    <value>NONE</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>rowsToDisplay</name>
@@ -65,9 +65,9 @@
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>Revenue Cloud - Order Product Consumption Schedule</masterLabel>
+    <masterLabel>Revenue Cloud - Payment Gateway</masterLabel>
     <parentFlexiPage>flexipage__default_rec_L</parentFlexiPage>
-    <sobjectType>SBQQ__OrderItemConsumptionSchedule__c</sobjectType>
+    <sobjectType>blng__PaymentGateway__c</sobjectType>
     <template>
         <name>flexipage:recordHomeTemplateDesktop</name>
     </template>

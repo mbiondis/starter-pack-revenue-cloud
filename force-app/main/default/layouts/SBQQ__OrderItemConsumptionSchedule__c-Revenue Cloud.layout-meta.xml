@@ -172,10 +172,24 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>SBQQ__ProcessingOrder__c</fields>
+        <fields>SBQQ__PricingMethod__c</fields>
+        <fields>SBQQ__LowerBound__c</fields>
+        <fields>SBQQ__UpperBound__c</fields>
+        <fields>SBQQ__Price__c</fields>
         <relatedList>SBQQ__OrderItemConsumptionRate__c.SBQQ__OrderItemConsumptionSchedule__c</relatedList>
+        <sortField>SBQQ__ProcessingOrder__c</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>ProductName__c</fields>
+        <fields>blng__TotalQuantity__c</fields>
+        <fields>blng__UnitOfMeasure__c</fields>
+        <fields>TotalPrice__c</fields>
+        <fields>blng__SummaryStartDate__c</fields>
+        <fields>blng__SummaryEndDate__c</fields>
+        <fields>blng__Status__c</fields>
         <relatedList>blng__UsageSummary__c.blng__OrderItemConsumptionSchedule__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -184,7 +198,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0C0000010tVw</masterLabel>
+        <masterLabel>00h25000002aph5</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

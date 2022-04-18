@@ -255,8 +255,13 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>SBQQ__EditOrderProducts</actionName>
-            <actionType>CustomButton</actionType>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Order.UploadUsage</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
@@ -265,17 +270,17 @@
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Order.ResetInvoices</actionName>
-            <actionType>QuickAction</actionType>
+            <actionName>SBQQ__EditOrderProducts</actionName>
+            <actionType>CustomButton</actionType>
             <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Clone</actionName>
-            <actionType>StandardButton</actionType>
+            <actionName>Order.ResetInvoices</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Deactivate</actionName>
+            <actionName>Clone</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>5</sortOrder>
         </platformActionListItems>
@@ -283,16 +288,6 @@
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Order.UploadUsage</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
@@ -314,14 +309,15 @@
         <fields>blng__Subtotal__c</fields>
         <fields>blng__TotalAmount__c</fields>
         <fields>blng__Balance__c</fields>
-        <fields>blng__StatusFlag__c</fields>
+        <fields>StatusBalance__c</fields>
+        <fields>StatusInvoice__c</fields>
         <relatedList>blng__Invoice__c.blng__Order__c</relatedList>
         <sortField>NAME</sortField>
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Product__c</fields>
+        <fields>ProductName__c</fields>
         <fields>blng__Quantity__c</fields>
         <fields>blng__UnitOfMeasure__c</fields>
         <fields>blng__Subtotal__c</fields>
@@ -332,7 +328,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Product__c</fields>
+        <fields>ProductName__c</fields>
         <fields>blng__TotalQuantity__c</fields>
         <fields>blng__UnitOfMeasure__c</fields>
         <fields>TotalPrice__c</fields>
@@ -365,7 +361,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0C0000010tXv</masterLabel>
+        <masterLabel>00h260000029Kia</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
