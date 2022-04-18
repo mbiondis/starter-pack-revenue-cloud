@@ -1,0 +1,2 @@
+Name,SBQQ__TargetObject__c,SBQQ__AggregateField__c,SBQQ__AggregateFunction__c,SBQQ__FilterField__c,SBQQ__Operator__c,SBQQ__FilterValue__c,SBQQ__CompositeOperator__c,SBQQ__ConstraintField__c,SBQQ__ValueElement__c,Errors,Id
+Quote - Number of Subscriptions,Quote Line,Quantity,Sum,SBQQ__DefaultSubscriptionTerm__c,greater than,0,,,,,a1C26000001aOV4EAM

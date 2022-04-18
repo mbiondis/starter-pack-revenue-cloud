@@ -1,0 +1,6 @@
+Name,blng__Active__c,blng__CancellationRule__c,blng__BillingFinanceBook__r.Name,blng__BillingGLRule__r.Name,blng__BillingLegalEntity__r.Name,blng__BillingRule__r.Name,blng__CancellationInvoicePlan__r.Name,blng__InvoicePlan__r.Name
+Invoice - Milestone Billing - UK,TRUE,LIFO by Order Product Creation Date,Accounting - UK,Billing - Standard,UK,Invoice - Milestone Billing,,Milestone Billing
+Invoice - Standard - UK,TRUE,LIFO by Order Product Creation Date,Accounting - UK,Billing - Standard,UK,Invoice - Standard,,
+Invoice - Subscription - UK,TRUE,LIFO by Order Product Creation Date,Accounting - UK,Billing - Standard,UK,Invoice - Subscription,,
+Invoice - Usage - UK,TRUE,LIFO by Order Product Creation Date,Accounting - UK,Billing - Standard,UK,Invoice - Usage,,
+Invoice - Services - UK,TRUE,LIFO by Order Product Creation Date,Accounting - UK,Billing - Standard,UK,Invoice - Services,,

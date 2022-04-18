@@ -1,0 +1,40 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, SBQQ__TargetObject__c, SBQQ__AggregateField__c, SBQQ__AggregateFunction__c, SBQQ__FilterField__c, SBQQ__Operator__c, SBQQ__FilterValue__c, SBQQ__CombineWith__c, SBQQ__CompositeOperator__c, SBQQ__ConstraintField__c, SBQQ__ValueElement__c FROM SBQQ__SummaryVariable__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__Code__c, SBQQ__ConsumptionRateFields__c, SBQQ__ConsumptionScheduleFields__c, SBQQ__GroupFields__c, SBQQ__QuoteFields__c, SBQQ__QuoteLineFields__c FROM SBQQ__CustomScript__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Category__c, SBQQ__Value__c, SBQQ__Type__c, SBQQ__Product__c, SBQQ__Required__c, SBQQ__Message__c FROM SBQQ__LookupData__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Category__c;SBQQ__Value__c;SBQQ__Type__c;SBQQ__Product__r.Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__Active__c, SBQQ__AdvancedCondition__c, SBQQ__ConditionsMet__c, SBQQ__ConfiguratorEvaluationEvent__c, SBQQ__EvaluationEvent__c, SBQQ__EvaluationOrder__c, SBQQ__LookupObject__c, SBQQ__TargetObject__c FROM SBQQ__PriceRule__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__Type__c, SBQQ__Scope__c, SBQQ__EvaluationEvent__c, SBQQ__EvaluationOrder__c, SBQQ__Active__c, SBQQ__ConditionsMet__c, SBQQ__AdvancedCondition__c, SBQQ__ErrorMessage__c, SBQQ__LookupObject__c, SBQQ__LookupTypeField__c, SBQQ__LookupProductField__c, SBQQ__LookupRequiredField__c, SBQQ__LookupMessageField__c FROM SBQQ__ProductRule__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__ProductRule__c, SBQQ__Product__c, SBQQ__Active__c, SBQQ__AscendingNestedLevel__c, SBQQ__DescendingActionNesting__c, SBQQ__DescendingNestedLevel__c, SBQQ__ProductFeature__c FROM SBQQ__ConfigurationRule__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__ProductRule__r.Name;SBQQ__Product__r.Name;SBQQ__ProductFeature__r.Name",
+      "excluded": false
+    }
+  ]
+}

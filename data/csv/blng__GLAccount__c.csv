@@ -1,0 +1,7 @@
+Name,blng__Active__c,blng__GLAccountDescription__c,blng__GLAccountNumber__c,blng__Notes__c
+Tax Debit Account - UK,true,,2002,
+Tax Credit Account - UK,true,,2001,
+Revenue Debit Account - UK,true,,1002,
+Revenue Credit Account - UK,true,,1001,
+Billing Credit Account - UK,true,,0001,
+Billing Debit Account - UK,true,,0002,

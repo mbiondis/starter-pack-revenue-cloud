@@ -1,0 +1,22 @@
+{
+  "objects": [
+      {
+        "query": "SELECT SBQQ__OrderItemConsumptionSchedule__c, SBQQ__ProcessingOrder__c, SBQQ__LowerBound__c, SBQQ__UpperBound__c, SBQQ__Price__c,  SBQQ__PricingMethod__c, SBQQ__Description__c FROM SBQQ__OrderItemConsumptionRate__c",
+        "operation": "Upsert",
+        "externalId": "Name",
+        "excluded": false
+      },
+    {
+      "query": "SELECT  FROM OrderItem",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT DiscountMetric__c, EditLinesFieldSetName__c, Name, SBQQ__Account__c,  SBQQ__BillingCity__c, SBQQ__BillingCountry__c, SBQQ__BillingFrequency__c, SBQQ__BillingName__c, SBQQ__BillingPostalCode__c, SBQQ__BillingState__c, SBQQ__BillingStreet__c, SBQQ__ConsumptionRateOverride__c, SBQQ__ContractingMethod__c, SBQQ__CustomerAmount__c, SBQQ__CustomerDiscount__c, SBQQ__DefaultTemplate__c, SBQQ__DeliveryMethod__c, SBQQ__DistributorDiscount__c, SBQQ__Distributor__c, SBQQ__DocumentStatus__c, SBQQ__EmailTemplateId__c, SBQQ__EndDate__c, SBQQ__ExpirationDate__c, SBQQ__FirstSegmentTermEndDate__c, SBQQ__GenerateContractedPrice__c, SBQQ__Introduction__c, SBQQ__Key__c, SBQQ__LastCalculatedOn__c, SBQQ__LastSavedOn__c, SBQQ__LineItemCount__c, SBQQ__LineItemsGrouped__c, SBQQ__LineItemsPrinted__c, SBQQ__ListAmount__c, SBQQ__MarkupRate__c, SBQQ__MasterContract__c, SBQQ__MasterEvergreenContract__c, SBQQ__NetAmount__c, SBQQ__Notes__c, SBQQ__Opportunity2__c, SBQQ__OrderByQuoteLineGroup__c, SBQQ__OrderBy__c, SBQQ__OrderGroupID__c, SBQQ__Ordered__c, SBQQ__OriginalQuote__c, SBQQ__PaperSize__c, SBQQ__PartnerDiscount__c, SBQQ__Partner__c, SBQQ__PaymentTerms__c, SBQQ__PriceBook__c, SBQQ__PricebookId__c, SBQQ__PrimaryContact__c, SBQQ__Primary__c, SBQQ__ProrationDayOfMonth__c, SBQQ__QuoteLanguage__c, SBQQ__QuoteProcessId__c, SBQQ__QuoteTemplateId__c, SBQQ__RegularAmount__c, SBQQ__RenewalTerm__c, SBQQ__RenewalUpliftRate__c, SBQQ__SalesRep__c, SBQQ__ShippingCity__c, SBQQ__ShippingCountry__c, SBQQ__ShippingName__c, SBQQ__ShippingPostalCode__c, SBQQ__ShippingState__c, SBQQ__ShippingStreet__c, SBQQ__Source__c, SBQQ__StartDate__c, SBQQ__Status__c, SBQQ__SubscriptionTerm__c, SBQQ__TargetCustomerAmount__c, SBQQ__Type__c, SBQQ__Unopened__c, SBQQ__WatermarkShown__c FROM SBQQ__Quote__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

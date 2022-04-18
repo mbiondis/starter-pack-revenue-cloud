@@ -1,0 +1,49 @@
+{
+  "steps": [
+    {
+      "filename": "01_Billing_Primitive.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "01_Billing_Secondary.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "02_Sales_Primitive.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "03_Product_Primitive.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "03_Product_Secondary.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "04_Pricing_Primitive.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "05_Logic_Primary.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "05_Logic_Secondary.json",
+      "operation": "Upsert",
+      "excluded": false
+    },
+    {
+      "filename": "06_Document_Primitive.json",
+      "operation": "Upsert",
+      "excluded": false
+    }
+  ]
+}

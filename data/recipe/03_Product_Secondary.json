@@ -1,0 +1,40 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, ProductCode, Description, Family, SBQQ__PricingMethod__c, SBQQ__ChargeType__c, SBQQ__BillingFrequency__c, SBQQ__BillingType__c, SBQQ__SubscriptionTerm__c, SBQQ__SubscriptionType__c, SBQQ__SubscriptionPricing__c, SBQQ__SubscriptionBase__c, SBQQ__SubscriptionCategory__c, SBQQ__SubscriptionPercent__c, SBQQ__SubscriptionTarget__c, SBQQ__DynamicPricingConstraint__c, SBQQ__ProductPictureID__c, SBQQ__ConfigurationType__c, SBQQ__ConfigurationEvent__c, IsActive, SBQQ__Component__c, SBQQ__DiscountSchedule__c, SBQQ__TermDiscountSchedule__c, SBQQ__TermDiscountLevel__c, SBQQ__DefaultPricingTable__c, blng__BillingRule__c, blng__RevenueRecognitionRule__c, blng__TaxRule__c, SBQQ__Taxable__c, SBQQ__NonDiscountable__c, SBQQ__NonPartnerDiscountable__c, SBQQ__PricingMethodEditable__c, SBQQ__AssetAmendmentBehavior__c, SBQQ__AssetConversion__c, SBQQ__BatchQuantity__c, SBQQ__BlockPricingField__c, SBQQ__CompoundDiscountRate__c, SBQQ__ConfiguredCodePattern__c, SBQQ__ConfiguredDescriptionPattern__c, SBQQ__CostEditable__c, SBQQ__CostSchedule__c, SBQQ__CustomerCommunityAvailability__c, SBQQ__DefaultQuantity__c, SBQQ__DescriptionLocked__c, SBQQ__EnableLargeConfiguration__c, SBQQ__ExcludeFromMaintenance__c, SBQQ__ExcludeFromOpportunity__c, SBQQ__ExternallyConfigurable__c, SBQQ__GenerateContractedPrice__c, SBQQ__Hidden__c, SBQQ__HidePriceInSearchResults__c, SBQQ__IncludeInMaintenance__c, SBQQ__NewQuoteGroup__c, SBQQ__OptionLayout__c, SBQQ__OptionSelectionMethod__c, SBQQ__Optional__c, SBQQ__PriceEditable__c, SBQQ__PricingGuidance__c, SBQQ__QuantityEditable__c, SBQQ__QuantityScale__c, SBQQ__ReconfigurationDisabled__c, SBQQ__RenewalProduct__c, SBQQ__SortOrder__c, SBQQ__Specifications__c, SBQQ__TaxCode__c, SBQQ__UpgradeCredit__c, SBQQ__UpgradeRatio__c, SBQQ__UpgradeSource__c, SBQQ__UpgradeTarget__c FROM Product2",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__ConfiguredSKU__c, Name, SBQQ__Category__c, SBQQ__Number__c, SBQQ__MinOptionCount__c, SBQQ__MaxOptionCount__c, SBQQ__OptionSelectionMethod__c, SBQQ__ConfigurationFieldSet__c, SBQQ__DiscountSchedule__c, SBQQ__DynamicProductFilterFieldSet__c, SBQQ__DynamicProductLookupFieldSet__c FROM SBQQ__ProductFeature__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__ConfiguredSKU__r.Name;Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__ConfiguredSKU__c, SBQQ__Feature__c, SBQQ__OptionalSKU__c, SBQQ__Number__c, SBQQ__Type__c, SBQQ__Selected__c, SBQQ__Required__c, SBQQ__QuantityEditable__c, SBQQ__Quantity__c, SBQQ__MinQuantity__c, SBQQ__MaxQuantity__c, SBQQ__UnitPrice__c, SBQQ__Discount__c, SBQQ__DiscountAmount__c, SBQQ__DiscountSchedule__c, SBQQ__DiscountedByPackage__c, SBQQ__Bundled__c, SBQQ__System__c, SBQQ__AppliedImmediately__c, SBQQ__AppliedImmediatelyContext__c, SBQQ__ComponentCodePosition__c, SBQQ__ComponentCode__c, SBQQ__ComponentDescriptionPosition__c, SBQQ__ComponentDescription__c, SBQQ__DefaultPricingTable__c, SBQQ__ExistingQuantity__c, SBQQ__QuoteLineVisibility__c, SBQQ__RenewalProductOption__c, SBQQ__SubscriptionScope__c, SBQQ__UpliftedByPackage__c FROM SBQQ__ProductOption__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__ConfiguredSKU__r.Name;SBQQ__Feature__r.Name;SBQQ__ProductName__c;SBQQ__Number__c",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__ConfiguredSKU__c, Name, SBQQ__Type__c, SBQQ__OptionConstraintGroup__c, SBQQ__ConstrainedOption__c, SBQQ__ConstrainingOption__c, SBQQ__Active__c, SBQQ__CheckPriorPurchases__c FROM SBQQ__OptionConstraint__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__Product__c, SBQQ__TargetField__c, SBQQ__Feature__c, SBQQ__Position__c,  SBQQ__DisplayOrder__c, SBQQ__ColumnOrder__c, SBQQ__Required__c, SBQQ__AppliedImmediately__c, SBQQ__ApplyToProductOptions__c,SBQQ__AutoSelect__c, SBQQ__Hidden__c, SBQQ__DefaultField__c, SBQQ__DefaultObject__c, SBQQ__HiddenValues__c, SBQQ__ShownValues__c, RecordTypeId FROM SBQQ__ConfigurationAttribute__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__AppliedImmediately__c, SBQQ__ApplyToProductOptions__c, SBQQ__AttributeSet__c, SBQQ__Attribute__c, SBQQ__AutoSelect__c, SBQQ__HiddenValues__c, SBQQ__Hidden__c, SBQQ__Required__c, SBQQ__Sequence__c, SBQQ__ShownValues__c, SBQQ__TargetField__c FROM SBQQ__ProductAttribute__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "objects": [
+    {
+      "query": "SELECT SBQQ__FilterType__c, SBQQ__FilterValue__c, SBQQ__FilterVariable__c, SBQQ__Index__c, SBQQ__Operator__c, SBQQ__Rule__c, SBQQ__TestedAttribute__c, SBQQ__TestedField__c, SBQQ__TestedObject__c, SBQQ__TestedVariable__c FROM SBQQ__ErrorCondition__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Rule__r.Name;SBQQ__TestedObject__c;SBQQ__TestedField__c;SBQQ__TestedVariable__r.Name;SBQQ__TestedAttribute__r.Name;SBQQ__FilterType__c;SBQQ__Operator__c;SBQQ__FilterValue__c;SBQQ__FilterVariable__c",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__FilterField__c, SBQQ__FilterValue__c, SBQQ__Operator__c, SBQQ__Product__c, SBQQ__Required__c, SBQQ__Rule__c, SBQQ__Type__c, SBQQ__ValueAttribute__c, SBQQ__ValueField__c, SBQQ__ValueObject__c FROM SBQQ__ProductAction__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Rule__r.Name;SBQQ__Type__c;SBQQ__Product__r.Name;SBQQ__FilterField__c;SBQQ__Operator__c;SBQQ__FilterValue__c;SBQQ__ValueObject__c;SBQQ__ValueField__c;SBQQ__ValueAttribute__r.Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Field__c, SBQQ__FilterFormula__c, SBQQ__FilterType__c, SBQQ__FilterVariable__c, SBQQ__Index__c, SBQQ__Object__c, SBQQ__Operator__c, SBQQ__Rule__c, SBQQ__TestedFormula__c, SBQQ__TestedVariable__c, SBQQ__Value__c FROM SBQQ__PriceCondition__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Field__c, SBQQ__Formula__c, SBQQ__Rule__c, SBQQ__SourceLookupField__c, SBQQ__SourceVariable__c, SBQQ__TargetObject__c, SBQQ__ValueField__c, SBQQ__Value__c FROM SBQQ__PriceAction__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__TargetObject__c;SBQQ__Field__c;SBQQ__ValueField__c;SBQQ__Value__c;SBQQ__Formula__c;SBQQ__SourceLookupField__c;SBQQ__SourceVariable__r.Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__ProductRule__c, SBQQ__PriceRule2__c, SBQQ__MatchType__c, SBQQ__Operator__c, SBQQ__TestedObject__c, SBQQ__TestedField__c, SBQQ__TestedValue__c, SBQQ__LookupField__c FROM SBQQ__LookupQuery_Value__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__ProductRule__r.Name;SBQQ__PriceRule2__r.Name;SBQQ__Operator__c;SBQQ__LookupField__c",
+      "excluded": false,
+      "useFieldMapping": true,
+      "fieldMapping": [
+        {
+          "targetObject": "SBQQ__LookupQuery__c"
+        }
+      ]
+    },
+    {
+      "query": "SELECT SBQQ__ProductRule__c, SBQQ__PriceRule2__c, SBQQ__MatchType__c, SBQQ__Operator__c, SBQQ__TestedConfigurationAttribute__c, SBQQ__LookupField__c FROM SBQQ__LookupQuery_ConfigurationAttribute__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__ProductRule__r.Name;SBQQ__PriceRule2__r.Name;SBQQ__Operator__c;SBQQ__LookupField__c",
+      "excluded": false,
+      "useFieldMapping": true,
+      "fieldMapping": [
+        {
+          "targetObject": "SBQQ__LookupQuery__c"
+        }
+      ]
+    },
+    {
+      "query": "SELECT Name, SBQQ__Code__c, SBQQ__ConsumptionRateFields__c, SBQQ__ConsumptionScheduleFields__c, SBQQ__GroupFields__c, SBQQ__QuoteFields__c, SBQQ__QuoteLineFields__c FROM SBQQ__CustomScript__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

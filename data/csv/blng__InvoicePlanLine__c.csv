@@ -1,0 +1,3 @@
+Name,blng__Type__c,blng__Percentage__c,blng__FlatAmount__c,blng__CommencementDate__c,blng__CommencementDateOffset__c,blng__CommencementDateOffsetUnits__c,blng__ProcessingOrder__c,blng__ServicePeriodStart__c,blng__ServicePeriodEnd__c,blng__InvoicePlan__r.Name
+50% After 3 Months,Remainder,,,Order Product Activation,3,Months,2,,,Milestone Billing
+50% Upfront,Percent,50,,Order Product Activation,0,Months,1,,,Milestone Billing

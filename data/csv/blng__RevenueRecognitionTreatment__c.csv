@@ -1,0 +1,3 @@
+Name,blng__Active__c,blng__FlatAmount__c,blng__Percentage__c,blng__ProcessingOrder__c,blng__RevenueAgreementAssociation__c,blng__RevenueScheduleAmount__c,blng__RevenueScheduleCreationAction__c,blng__Type__c,blng__RevenueDistributionMethod__r.Name,blng__RevenueFinanceBook__r.Name,blng__RevenueGLRule__r.Name,blng__RevenueLegalEntity__r.Name,blng__RevenueRecognitionRule__r.Name
+Order Based - 100% Upfront - UK,true,,100,1,Not Applicable,Transaction Amount,Order Activation,Percentage,Order Based - Full Recognition,Revenue - UK,Revenue - Standard,UK,Order Based - 100% Upfront
+Order Based - 100% Rateable - UK,true,,100,1,Not Applicable,Transaction Amount,Order Activation,Percentage,Order Based - Monthly,Revenue - UK,Revenue - Standard,UK,Order Based - 100% Rateable

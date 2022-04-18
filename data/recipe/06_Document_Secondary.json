@@ -1,0 +1,10 @@
+{
+    "objects": [
+        {
+            "query": "SELECT Name, SBQQ__Active__c, SBQQ__AdvancedCondition__c, SBQQ__Body__c, SBQQ__ConditionsMet__c, SBQQ__Locked__c, SBQQ__ParentTerm__c, SBQQ__PrintOrder__c, SBQQ__Status__c, SBQQ__TemplateContent__c FROM SBQQ__QuoteTerm__c WHERE SBQQ__ParentTerm__c != null",
+            "operation": "Upsert",
+            "externalId": "Name",
+            "excluded": false
+        }
+    ]
+}

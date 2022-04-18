@@ -1,0 +1,4 @@
+Name,blng__City__c,blng__Country__c,blng__Priority__c,blng__Rate__c,blng__State__c,blng__TaxCode__c,blng__ZipCode__c,blng__LegalEntity__c,Errors,Id
+UK - Standard,,United Kingdom,0,20,,Standard,,a2326000004nHW5AAM,,a2V26000000NKyFEAW
+UK - Zero,,United Kingdom,0,0,,Zero,,a2326000004nHW5AAM,,a2V26000000NKyGEAW
+UK - Reduced,,United Kingdom,0,5,,Reduced,,a2326000004nHW5AAM,,a2V26000000NKyHEAW

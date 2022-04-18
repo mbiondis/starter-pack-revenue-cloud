@@ -1,0 +1,3 @@
+Name,blng__Active__c,blng__PeriodType__c,blng__FinancePeriodDuration__c,blng__Notes__c
+Revenue - UK,true,Revenue,Monthly,
+Accounting - UK,true,Accounting,Monthly,

@@ -1,0 +1,2 @@
+Name,blng__Type__c,blng__Percentage__c,blng__FlatAmount__c,blng__CommencementDate__c,blng__CommencementDateOffset__c,blng__CommencementDateOffsetUnits__c,blng__ProcessingOrder__c,blng__ServicePeriodStart__c,blng__ServicePeriodEnd__c,blng__InvoicePlan__c,Errors,Id
+50% Upfront,Percent,50,,Order Product Activation,0,Months,1,,,a1z26000002Gw6xAAC,,a1y26000001hXkOAAU

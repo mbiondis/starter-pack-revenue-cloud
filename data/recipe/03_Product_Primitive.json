@@ -1,0 +1,34 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, SBQQ__Description__c, SBQQ__Explanation__c, SBQQ__IncludePriorPurchases__c, SBQQ__IsActive__c, SBQQ__Summary__c, SBQQ__Type__c, SBQQ__Unit__c FROM SBQQ__PricingGuidance__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__PricingGuidance__c, SBQQ__LowerBound__c, SBQQ__UpperBound__c, SBQQ__FloorDiscount__c, SBQQ__NormDiscount__c, SBQQ__TargetDiscount__c FROM SBQQ__PricingGuidanceTier__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__PricingGuidance__r.Name;SBQQ__LowerBound__c;SBQQ__UpperBound__c",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, SBQQ__Type__c, SBQQ__DiscountUnit__c, SBQQ__QuoteLineQuantityField__c, SBQQ__ConstraintField__c, SBQQ__CrossOrders__c, SBQQ__CrossProducts__c, SBQQ__ExcludedPricebookIds__c, SBQQ__IncludeBundledProducts__c,SBQQ__OverrideBehavior__c, SBQQ__PriceScale__c,  SBQQ__UsePriceForAmount__c, SBQQ__Description__c FROM SBQQ__DiscountSchedule__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Schedule__c, SBQQ__Number__c, Name, SBQQ__LowerBound__c, SBQQ__UpperBound__c, SBQQ__Discount__c, SBQQ__DiscountAmount__c, SBQQ__Price__c FROM SBQQ__DiscountTier__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Schedule__r.Name;Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name FROM SBQQ__AttributeSet__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

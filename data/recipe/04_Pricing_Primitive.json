@@ -1,0 +1,46 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, IsActive, IsStandard FROM Pricebook2 WHERE IsStandard = true",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Pricebook2Id, Product2Id, UnitPrice, IsActive FROM PricebookEntry",
+      "operation": "Upsert",
+      "externalId": "Pricebook2.Name;Product2.Name;UnitPrice",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Name, Type, BillingTerm, BillingTermUnit, UnitOfMeasure, MatchingAttribute, SBQQ__Category__c, RatingMethod, Description FROM ConsumptionSchedule",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT ConsumptionScheduleId, ProcessingOrder, PricingMethod, LowerBound, UpperBound, Price, Description FROM ConsumptionRate",
+      "operation": "Upsert",
+      "externalId": "ConsumptionSchedule.Name;ProcessingOrder;LowerBound;UpperBound;PricingMethod;Price",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Product__c, SBQQ__UnitCost__c, SBQQ__Active__c FROM SBQQ__Cost__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Product__r.Name;SBQQ__UnitCost__c",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Product__c, Name, SBQQ__LowerBound__c, SBQQ__UpperBound__c, SBQQ__Price__c, SBQQ__EffectiveDate__c, SBQQ__PriceBook2__c FROM SBQQ__BlockPrice__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Product__r.Name;Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT SBQQ__Product__c, Name, SBQQ__Type__c, SBQQ__UnitPrice__c, SBQQ__DefaultQuantity__c, SBQQ__QuantityScale__c, SBQQ__QuantityEditable__c, SBQQ__CostEditable__c, SBQQ__NonDiscountable__c, SBQQ__NonPartnerDiscountable__c, SBQQ__PriceEditable__c, SBQQ__Taxable__c, SBQQ__DiscountSchedule__c, SBQQ__TermDiscountSchedule__c, SBQQ__PriceBook__c FROM SBQQ__Dimension__c",
+      "operation": "Upsert",
+      "externalId": "SBQQ__Product__r.Name;Name",
+      "excluded": false
+    }
+  ]
+}

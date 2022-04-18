@@ -1,0 +1,16 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, Type, Industry, LegalEntity__c, AnnualRevenue, Rating, Phone, Website, NumberOfEmployees, blng__BillToContact__c, ShippingAddress, BillingAddress, BillingCountry, BillingAddress, BillingCity, BillingPostalCode, BillingState, BillingStreet, ShippingCountry, ShippingAddress, ShippingCity, ShippingPostalCode, ShippingState, ShippingStreet FROM Account",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    },
+    {
+      "query": "SELECT Salutation, FirstName, LastName, AccountId, Email FROM Contact",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "objects": [
+    {
+      "query": "SELECT blng__BillingTransaction__c, blng__ChargeDate__c, blng__EndDate__c, blng__InvoiceLine__c, blng__Notes__c, blng__OrderProduct__c, blng__Quantity__c, blng__StartDate__c, blng__Subtotal__c, blng__TaxAmount__c, blng__UniqueId__c, blng__UnitPrice__c FROM blng__SubInvoiceLine__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "excluded": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Name,blng__Active__c,blng__Notes__c,blng__CreditGLAccount__r.Name,blng__DebitGLAccount__r.Name,blng__GLLegalEntity__r.Name,blng__GLRule__r.Name
+Revenue GL Treatment - UK,true,,Revenue Credit Account - UK,Revenue Debit Account - UK,UK,Revenue - Standard
+Billing GL Treatment - UK,true,,Billing Credit Account - UK,Billing Debit Account - UK,UK,Billing - Standard
+Standard Tax - UK,true,,Tax Credit Account - UK,Tax Debit Account - UK,UK,Tax - Standard

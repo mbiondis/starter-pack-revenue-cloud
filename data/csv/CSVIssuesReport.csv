@@ -1,0 +1,2 @@
+Date update,Child sObject,Child field,Child value,Parent sObject,Parent field,Parent value,Error
+2022-03-25  10:17:08.180,Account,Rating,,,,,COLUMN DEFINED IN THE SCRIPT IS MISSING IN THE CSV FILE

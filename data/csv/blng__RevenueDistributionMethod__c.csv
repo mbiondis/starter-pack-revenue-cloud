@@ -1,0 +1,3 @@
+Name,blng__Active__c,blng__DistributionMethod__c,blng__FullRecognitionDate__c,blng__MonthlyRecognitionProration__c,blng__Notes__c,blng__RevenueScheduleTermEndDate__c,blng__RevenueScheduleTermStartDate__c,blng__RevenueTransactionCreationProcess__c,blng__Type__c
+Order Based - Full Recognition,true,Full Recognition,Order Product Start Date,Number of Days,,,,Automatic,Order
+Order Based - Monthly,true,Monthly,,Number of Days,,Order Product End Date,Order Product Start Date,Automatic,Order
