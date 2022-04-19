@@ -17,7 +17,7 @@ sh org_init.sh
 ```
 sh org_setup.sh <org alias>
 ```
-
+> If you want to load sample data (billing rules, quote templates, etc.), add the `--dataload` flag after the alias
 ## Manual Org Setup
 > Edits to the managed package are not allowed using the `push` command, so they have to be done manually.
 
