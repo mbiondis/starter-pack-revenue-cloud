@@ -19,6 +19,17 @@ force-app/main/default/pages/q2c.page
 force-app/main/default/classes/q2c_controller.cls
 force-app/main/default/classes/CPQB_AccountUtilsController.cls
 force-app/main/default/classes/CPQB_RecordReset.cls
+force-app/main/default/classes/QuoteExtController.cls
+force-app/main/default/classes/QuoteExtController.cls-meta.xml
+force-app/main/default/classes/QuoteExtControllerTests.cls
+force-app/main/default/classes/QuoteExtControllerTests.cls-meta.xml
+force-app/main/default/pages/RecallQuote.page
+force-app/main/default/pages/RecallQuote.page-meta.xml
+force-app/main/default/pages/SubmitQuote.page
+force-app/main/default/pages/SubmitQuote.page-meta.xml
+force-app/main/default/objects/SBQQ__Quote__c/webLinks/Recall_Approval.webLink-meta.xml
+force-app/main/default/objects/SBQQ__Quote__c/webLinks/Submit_for_Approval.webLink-meta.xml
+
 
 force-app/main/default/aura/controlNavigation
 force-app/main/default/aura/closeAndRefresh

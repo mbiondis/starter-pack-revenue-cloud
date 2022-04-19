@@ -42,12 +42,12 @@ $RECYCLE.BIN/
 # Local environment variables
 .env
 
-# Data
-data/
-#**/data/logs
-#**/data/source
-#**/data/target
-#**/data/binary_cache
+# Data Migration
+## Steps
+data/Step_*/csv/binary cache
+data/Step_*/csv/logs
+data/Step_*/csv/source
+data/Step_*/csv/target
 
 # VSCode
 .vscode/
