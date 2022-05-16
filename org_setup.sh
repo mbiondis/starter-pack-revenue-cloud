@@ -9,11 +9,11 @@ echo "******* Pushing source code..."
 #sfdx force:source:push -u "${orgAlias}"
 
 # Dependencies
-sfdx force:package:install --package flow-refresh-and-close -u "${orgAlias}"
-sfdx force:package:install --package get-records-by-apex -u "${orgAlias}"
+#sfdx force:package:install --package flow-refresh-and-close -u "${orgAlias}"
+#sfdx force:package:install --package get-records-by-apex -u "${orgAlias}"
 
-# Revenue Cloud Starter Pack (04t8d000000cfN1AAI)
-sfdx force:package:install --package Revenue Cloud Starter Pack -u "${orgAlias}"
+# Revenue Cloud Starter Pack (04t8d000000cfROAAY)
+#sfdx force:package:install --package 04t8d000000cfROAAY -u "${orgAlias}"
 
 echo " "
 echo "******* Assigning permisission sets..."
