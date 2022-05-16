@@ -8,8 +8,7 @@
       "query": "SELECT Name, Description, NamespacePrefix, DeveloperName, SobjectType FROM RecordType",
       "operation": "Upsert",
       "externalId": "NamespacePrefix;DeveloperName;SobjectType",
-      "excluded": false
-    },
+      "excluded": false},
     {
       "query": "SELECT Name, blng__Active__c, blng__Country__c, blng__State__c, blng__County__c, blng__City__c, blng__ZipPostalCode__c, blng__Street1__c, blng__Street2__c, blng__Notes__c FROM blng__LegalEntity__c",
       "operation": "Upsert",
