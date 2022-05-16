@@ -7,11 +7,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>blng__UsageSummary__c.ParentNumber__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>blng__UsageSummary__c.ProductName__c</field>
         <readable>true</readable>
     </fieldPermissions>

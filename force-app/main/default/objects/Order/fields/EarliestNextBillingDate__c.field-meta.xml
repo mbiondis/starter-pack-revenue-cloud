@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EarliestNextBillingDate__c</fullName>
+    <externalId>false</externalId>
+    <label>Earliest Next Billing Date</label>
+    <summarizedField>OrderItem.blng__NextBillingDate__c</summarizedField>
+    <summaryFilterItems>
+        <field>OrderItem.blng__NextBillingDate__c</field>
+        <operation>notEqual</operation>
+        <value></value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>OrderItem.blng__HoldBilling__c</field>
+        <operation>equals</operation>
+        <value>No</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OrderItem.OrderId</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

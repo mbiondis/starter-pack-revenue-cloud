@@ -22,6 +22,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Quote__c.ApprovalStatus__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SBQQ__Quote__c.DiscountMetric__c</field>
         <readable>true</readable>
@@ -39,11 +44,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SBQQ__Quote__c.StatusProposal__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SBQQ__Quote__c.ApprovalStatus__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>

@@ -1,7 +1,7 @@
 {
   "orgName": "Parallax Inc",
   "edition": "Enterprise",
-  "features": ["EnableSetPasswordInApi","CPQ","FinanceLogging"],
+  "features": ["EnableSetPasswordInApi", "CPQ", "FinanceLogging"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -13,6 +13,6 @@
       "sessionSettings": {
         "forceLogoutOnSessionTimeout": false
       }
-  }
+    }
   }
 }

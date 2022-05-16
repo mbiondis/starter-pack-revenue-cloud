@@ -2,11 +2,6 @@
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldPermissions>
         <editable>false</editable>
-        <field>blng__Invoice__c.InvoiceDateSummary__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>blng__Invoice__c.StatusBalance__c</field>
         <readable>true</readable>
     </fieldPermissions>

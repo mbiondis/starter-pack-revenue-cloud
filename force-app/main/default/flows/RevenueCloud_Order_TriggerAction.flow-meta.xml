@@ -61,8 +61,8 @@
     <decisions>
         <name>Select_ActionType</name>
         <label>Select Action Type</label>
-        <locationX>528</locationX>
-        <locationY>336</locationY>
+        <locationX>503</locationX>
+        <locationY>355</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Status_Toggle</name>
@@ -75,7 +75,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Confirmation_Screen</targetReference>
+                <targetReference>Check_Status</targetReference>
             </connector>
             <label>Status</label>
         </rules>
@@ -103,7 +103,7 @@
     <formulas>
         <name>AutoPost_Toggled</name>
         <dataType>Boolean</dataType>
-        <expression>NOT({!Get_Order.AutoPost_Invoice__c})</expression>
+        <expression>NOT({!Get_Order.AutoPostInvoice__c})</expression>
     </formulas>
     <interviewLabel>Revenue Cloud - Order - Trigger Action</interviewLabel>
     <label>Revenue Cloud - Order - Trigger Action</label>
@@ -154,7 +154,7 @@
         <object>Order</object>
         <queriedFields>Id</queriedFields>
         <queriedFields>Status</queriedFields>
-        <queriedFields>AutoPost_Invoice__c</queriedFields>
+        <queriedFields>AutoPostInvoice__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
@@ -178,7 +178,7 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>AutoPost_Invoice__c</field>
+            <field>AutoPostInvoice__c</field>
             <value>
                 <elementReference>AutoPost_Toggled</elementReference>
             </value>
@@ -214,27 +214,6 @@
         <object>Order</object>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
-    <screens>
-        <name>Confirmation_Screen</name>
-        <label>Confirmation Screen</label>
-        <locationX>327</locationX>
-        <locationY>450</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <backButtonLabel>No</backButtonLabel>
-        <connector>
-            <targetReference>Check_Status</targetReference>
-        </connector>
-        <fields>
-            <name>Confirmation_Message</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;You&apos;re about to {!Action} an Order. Do you want to continue?&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <nextOrFinishButtonLabel>Yes</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
     <start>
         <locationX>410</locationX>
         <locationY>48</locationY>
@@ -242,7 +221,7 @@
             <targetReference>Get_Order</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>ActionType</name>
         <dataType>String</dataType>

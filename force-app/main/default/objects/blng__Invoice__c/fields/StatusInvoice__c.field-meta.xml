@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>StatusInvoice__c</fullName>
     <externalId>false</externalId>
-    <formula>HYPERLINK(&apos;/flow/RevenueCloud_Invoice_TriggerAction?Id=&apos; &amp; Id  &amp; &apos;&amp;retURL=&apos; &amp; Id, 
+    <formula>HYPERLINK(&apos;/flow/RevenueCloud_PostInvoice?recordId=&apos; &amp; Id  &amp; &apos;&amp;retURL=&apos; &amp; Id, 
 
   CASE(blng__InvoiceStatus__c,
     &quot;Draft&quot;, IMAGE(&quot;https://i.ibb.co/vqQsJv5/btn-draft.png&quot;,&quot;Draft&quot;,20,60), 

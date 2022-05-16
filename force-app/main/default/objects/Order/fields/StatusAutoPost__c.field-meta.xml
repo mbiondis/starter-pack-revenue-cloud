@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>HYPERLINK(&apos;/flow/RevenueCloud_Order_TriggerAction?Id=&apos; &amp; Id &amp; &apos;&amp;ActionType=AutoPost&apos; &amp; &apos;&amp;retURL=&apos; &amp; Id,
 
-IF( AutoPost_Invoice__c ,
+IF( AutoPostInvoice__c ,
 IMAGE(&quot;https://i.ibb.co/HFyW4R3/toggle-on.png&quot;, &quot;on&quot;,20,40),
 IMAGE(&quot;https://i.ibb.co/b5kpPGk/toggle-off.png&quot;,&quot;off&quot;,20,40)
 )

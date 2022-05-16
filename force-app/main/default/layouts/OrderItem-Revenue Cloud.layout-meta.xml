@@ -7,19 +7,13 @@
         <label>Product Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>OrderId</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Product2Id</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__Activated__c</field>
+                <behavior>Readonly</behavior>
+                <field>OrderItemNumber</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Quantity</field>
@@ -33,6 +27,28 @@
                 <field>TotalPrice</field>
             </layoutItems>
         </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Activated__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__BillingAccount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>OrderId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>SBQQ__QuoteLine__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>SBQQ__RequiredBy__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
@@ -40,30 +56,22 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Description Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>SBQQ__QuoteLine__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>SBQQ__RequiredBy__c</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
+        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Billing Information</label>
+        <label>Sell Model</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__ChargeType__c</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__BillingFrequency__c</field>
@@ -72,19 +80,17 @@
                 <behavior>Edit</behavior>
                 <field>SBQQ__BillingType__c</field>
             </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__SubscriptionPricing__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__SubscriptionTerm__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__HoldBilling__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__InvoiceGrouping__c</field>
+                <field>SBQQ__SubscriptionType__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -93,21 +99,58 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Invoice Run Info</label>
+        <label>Usage (legacy)</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__PriceSchedule__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__IncludedUsage__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__UsageFloorQuantity__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Invoicing</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__HoldBilling__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__InvoiceRunProcessingStatus__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>blng__InvoiceRun__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__InvoiceRunProcessingStatus__c</field>
+                <field>blng__InvoiceRunStartDate__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__InvoiceRunStartDate__c</field>
+                <field>blng__InvoiceGrouping__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__InvoiceGroupId__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__GroupId__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -116,15 +159,19 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Billing Metrics</label>
+        <label>Billing Balance</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__BillableUnitPrice__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>blng__BilledAmountwithouttax__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>blng__TotalBilling__c</field>
+                <behavior>Edit</behavior>
+                <field>blng__BilledTax__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -134,15 +181,15 @@
                 <behavior>Readonly</behavior>
                 <field>blng__CanceledBillings__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__TotalBilling__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__BillingAccount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BilledTax__c</field>
+                <field>blng__OverrideBillableUnitPrice__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -151,7 +198,55 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Date Information</label>
+        <label>Tax Calculation</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__TaxPercentageApplied__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__TaxAmount__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Revenue Recognition Calculation</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__AllocatedRevenueAmount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueExpectedAmount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueLiabilityAmount__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__OverrideInitialRevenueStartDate__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__OverrideInitialRevenueEndDate__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Product Dates</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -164,6 +259,28 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SBQQ__TerminatedDate__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__BillThroughDateOverride__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Billing Dates</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__NextBillingDate__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -181,27 +298,8 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__NextBillingDate__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>blng__OverrideNextBillingDate__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BillThroughDateOverride__c</field>
-            </layoutItems>
-            <layoutItems>
-                <emptySpace>true</emptySpace>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__OverrideInitialRevenueStartDate__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__OverrideInitialRevenueEndDate__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -209,43 +307,12 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Price Information</label>
+        <label>Tax Rule</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__BillableUnitPrice__c</field>
+                <field>blng__LegalEntity__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__OverrideBillableUnitPrice__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__UnproratedNetPrice__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__TaxAmount__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__PriceSchedule__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>HasConsumptionSchedule__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Tax Information</label>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>blng__TaxRule__c</field>
@@ -262,19 +329,15 @@
                 <behavior>Edit</behavior>
                 <field>blng__TaxErrorMessage__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__LegalEntity__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__TaxStreet__c</field>
+                <field>SBQQ__TaxCode__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__TaxCity__c</field>
+                <field>blng__TaxCountry__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -282,7 +345,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__TaxCountry__c</field>
+                <field>blng__TaxCity__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -295,7 +358,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Billing Rule Information</label>
+        <label>Billing Rule</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -318,7 +381,7 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>GL Rule Information</label>
+        <label>GL Rule</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -345,19 +408,11 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Revenue Recognition Information</label>
+        <label>Revenue Recognition Rule</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>blng__RevenueRecognitionRule__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__AllocatedRevenueAmount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__RevenueLiabilityAmount__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -365,53 +420,7 @@
                 <behavior>Edit</behavior>
                 <field>blng__RevenueScheduleStatus__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__RevenueExpectedAmount__c</field>
-            </layoutItems>
         </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Calculation Grouping Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__GroupId__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns/>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Usage Billing Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__IncludedUsage__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__UsageFloorQuantity__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Quote and Subscription Information</label>
-        <layoutColumns/>
-        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -554,7 +563,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h260000029Kib</masterLabel>
+        <masterLabel>00h25000002sQ1t</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

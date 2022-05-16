@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AutoPostInvoice__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If selected, all new invoices are posted upon creation (both with Bill Now and Invoice Scheduler).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use for demo purposes only.</inlineHelpText>
+    <label>Auto-Post Invoice</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

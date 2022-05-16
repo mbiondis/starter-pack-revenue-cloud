@@ -4,8 +4,8 @@
     <assignments>
         <name>Assign_Account_BillTo_Contact</name>
         <label>Assign Account Bill To Contact</label>
-        <locationX>248</locationX>
-        <locationY>1007</locationY>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>$Record.SBQQ__PrimaryContact__c</assignToReference>
             <operator>Assign</operator>
@@ -18,27 +18,11 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Account_Default_PriceBook</name>
-        <label>Assign Account Default</label>
-        <locationX>50</locationX>
-        <locationY>575</locationY>
-        <assignmentItems>
-            <assignToReference>PriceBook</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.SBQQ__Account__r.PriceBook__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Blank_Contact</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <description>Use the start of the year to simplify demos.</description>
         <name>Set_Year_Start</name>
         <label>Set Year Start</label>
-        <locationX>248</locationX>
-        <locationY>1343</locationY>
+        <locationX>50</locationX>
+        <locationY>767</locationY>
         <assignmentItems>
             <assignToReference>StartDate</assignToReference>
             <operator>Assign</operator>
@@ -54,8 +38,8 @@
         <description>Use 12 months because it&apos;s the most common contract duration</description>
         <name>Set_Yearly_Term</name>
         <label>Set Yearly Term</label>
-        <locationX>248</locationX>
-        <locationY>1679</locationY>
+        <locationX>50</locationX>
+        <locationY>1103</locationY>
         <assignmentItems>
             <assignToReference>SubscriptionTerm</assignToReference>
             <operator>Assign</operator>
@@ -70,8 +54,8 @@
     <decisions>
         <name>Blank_Contact</name>
         <label>Blank Contact</label>
-        <locationX>380</locationX>
-        <locationY>887</locationY>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
         <defaultConnector>
             <targetReference>Blank_StartDate</targetReference>
         </defaultConnector>
@@ -93,35 +77,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Blank_PriceBook</name>
-        <label>Blank Price Book</label>
-        <locationX>380</locationX>
-        <locationY>335</locationY>
-        <defaultConnector>
-            <targetReference>Blank_Contact</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Yes_Blank_PriceBook</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>StartDate</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Has_Account_Default</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Blank_StartDate</name>
         <label>Blank Start Date</label>
-        <locationX>380</locationX>
-        <locationY>1223</locationY>
+        <locationX>182</locationX>
+        <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Blank_SubscriptionTerm</targetReference>
         </defaultConnector>
@@ -145,8 +104,8 @@
     <decisions>
         <name>Blank_SubscriptionTerm</name>
         <label>Blank Subscription Term</label>
-        <locationX>380</locationX>
-        <locationY>1559</locationY>
+        <locationX>182</locationX>
+        <locationY>983</locationY>
         <defaultConnector>
             <targetReference>Update_Quote_Defaults</targetReference>
         </defaultConnector>
@@ -167,39 +126,14 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Has_Account_Default</name>
-        <label>Has Account Default?</label>
-        <locationX>182</locationX>
-        <locationY>455</locationY>
-        <defaultConnector>
-            <targetReference>Assign_Global_Default_PriceBook</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>Yes_Default_PriceBook</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.SBQQ__Account__r.PriceBook__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Assign_Account_Default_PriceBook</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
     <description>Initializes the following Quote (CPQ) values if left blank: Price Book, Primary Contact, Start Date, Subscription Term.</description>
     <formulas>
         <name>StartDate_YearStart</name>
         <dataType>Date</dataType>
         <expression>DATE(YEAR(TODAY()),1,1)</expression>
     </formulas>
-    <interviewLabel>Initialize Quote {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Revenue Cloud - Initialize - Quote</label>
+    <interviewLabel>Revenue Cloud - Initialize Quote {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Revenue Cloud - Initialize Quote</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -219,40 +153,11 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordLookups>
-        <name>Assign_Global_Default_PriceBook</name>
-        <label>Assign Global Default</label>
-        <locationX>314</locationX>
-        <locationY>575</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Blank_Contact</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>IsStandard</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <object>Pricebook2</object>
-        <outputAssignments>
-            <assignToReference>PriceBook</assignToReference>
-            <field>Id</field>
-        </outputAssignments>
-    </recordLookups>
     <recordUpdates>
         <name>Update_Quote_Defaults</name>
         <label>Update Quote Defaults</label>
-        <locationX>380</locationX>
-        <locationY>1895</locationY>
-        <inputAssignments>
-            <field>SBQQ__PriceBook__c</field>
-            <value>
-                <elementReference>PriceBook</elementReference>
-            </value>
-        </inputAssignments>
+        <locationX>182</locationX>
+        <locationY>1319</locationY>
         <inputAssignments>
             <field>SBQQ__PrimaryContact__c</field>
             <value>
@@ -274,26 +179,16 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>254</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Blank_PriceBook</targetReference>
+            <targetReference>Blank_Contact</targetReference>
         </connector>
         <object>SBQQ__Quote__c</object>
         <recordTriggerType>Create</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
-    <variables>
-        <name>PriceBook</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <elementReference>$Record.SBQQ__PriceBook__c</elementReference>
-        </value>
-    </variables>
     <variables>
         <name>PrimaryContact</name>
         <dataType>String</dataType>

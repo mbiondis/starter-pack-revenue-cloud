@@ -10,12 +10,29 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>blng__Invoice__c.PostInvoice</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.blng__InvoiceStatus__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Draft</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
                             <value>CustomButton.blng__Invoice__c.blng__Payment_Virtual_Terminal</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.blng__InvoiceStatus__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Posted</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>CustomButton.blng__Invoice__c.blng__Cancel_Rebill</value>
                             <visibilityRule>
-                                <booleanFilter>1 AND 2</booleanFilter>
+                                <booleanFilter>1 AND 2 AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.blng__Payments__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -26,10 +43,12 @@
                                     <operator>EQUAL</operator>
                                     <rightValue>0</rightValue>
                                 </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.blng__InvoiceStatus__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Draft</rightValue>
+                                </criteria>
                             </visibilityRule>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>blng__Invoice__c.blng__Cancel_Rebill</value>
                         </valueListItems>
                         <valueListItems>
                             <value>CustomButton.blng__Invoice__c.blng__ConvertNegativeLines</value>

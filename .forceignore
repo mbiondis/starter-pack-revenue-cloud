@@ -36,4 +36,6 @@ force-app/main/default/aura/closeAndRefresh
 force-app/main/default/aura/loadWebPage
 force-app/main/default/aura/updateScreen
 
+force-app/main/default/profiles
+
 #force-app/main/default/objects/SBQQ__PriceAction__c/fields/SBQQ__Field__c.field-meta.xml

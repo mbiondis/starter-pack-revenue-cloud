@@ -2,6 +2,8 @@
 <CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>RevenueCloud_OrderProduct</fullName>
     <fields>Product2Id</fields>
+    <fields>OrderItemNumber</fields>
+    <fields>SBQQ__ChargeType__c</fields>
     <fields>UnitPrice</fields>
     <fields>Quantity</fields>
     <fields>TotalPrice</fields>

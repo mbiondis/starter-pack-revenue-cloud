@@ -2,11 +2,11 @@
 
 # Function arguments
 orgAlias=$1
-isScratchOrg=$2
+dataLoad=$2
 
 echo " "
 echo "******* Pushing source code..."
-sfdx force:source:push -u "${orgAlias}" -f
+#sfdx force:source:push -u "${orgAlias}"
 
 echo " "
 echo "******* Assigning permisission sets..."
@@ -23,11 +23,12 @@ sfdx force:user:permset:assign -n "AdvancedApprovalsAdmin" -u "${orgAlias}"
 sfdx force:user:permset:assign -n "RevenueCloud_Admin" -u "${orgAlias}"
 
 # Load Sample Data (only in scratch org)
-if [ -n "${isScratchOrg}"]
+if [-n "${dataLoad}"]
 then
+    echo "******* Loading data..."
     sfdx sfdmu:run -s csvfile -p data/csv -u "${orgAlias}"
 fi
 
-echo " "
-echo "******* Opening the environment..."
-sfdx force:org:open -u "${orgAlias}" -p "/lightning/setup/ImportedPackage/home"
+#echo " "
+#echo "******* Opening the environment..."
+#sfdx force:org:open -u "${orgAlias}" -p "/lightning/setup/ImportedPackage/home"

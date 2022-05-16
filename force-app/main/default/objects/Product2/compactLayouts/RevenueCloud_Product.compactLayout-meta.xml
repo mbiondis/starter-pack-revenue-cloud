@@ -3,8 +3,10 @@
     <fullName>RevenueCloud_Product</fullName>
     <fields>Name</fields>
     <fields>SBQQ__ChargeType__c</fields>
+    <fields>StandardPrice__c</fields>
     <fields>ProductCode</fields>
     <fields>Family</fields>
+    <fields>SBQQ__Component__c</fields>
     <fields>IsActive</fields>
     <label>Revenue Cloud - Product</label>
 </CompactLayout>

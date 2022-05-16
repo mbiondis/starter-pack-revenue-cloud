@@ -3,10 +3,10 @@
     <apiVersion>54.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <label>RecallQuote</label>
+    <label>Recall Quote</label>
     <packageVersions>
-        <majorNumber>234</majorNumber>
-        <minorNumber>4</minorNumber>
+        <majorNumber>236</majorNumber>
+        <minorNumber>1</minorNumber>
         <namespace>SBQQ</namespace>
     </packageVersions>
 </ApexPage>

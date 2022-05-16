@@ -4,16 +4,48 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>actionNames</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__EditLines</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__GenerateDocument</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.Preview_Approval</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__ModifyQuoteTerms</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>SBQQ__Quote__c.OrderNow</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__ImportLines</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__CloneWithRelated</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Edit</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Delete</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsConfiguration</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>enableActionsInNative</name>
-                    <value>false</value>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideChatterActions</name>

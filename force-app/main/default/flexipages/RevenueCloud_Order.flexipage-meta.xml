@@ -21,19 +21,9 @@
                         </valueListItems>
                         <valueListItems>
                             <value>Order.UploadUsage</value>
-                            <visibilityRule>
-                                <criteria>
-                                    <leftValue>{!Record.HasUsageProducts__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>true</rightValue>
-                                </criteria>
-                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>CustomButton.Order.SBQQ__EditOrderProducts</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Order.ResetInvoices</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Clone</value>
@@ -76,16 +66,6 @@
         </itemInstances>
         <name>header</name>
         <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>force:detailPanel</componentName>
-                <identifier>force_detailPanel</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>detailTabContent</name>
-        <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
@@ -229,17 +209,17 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>body</name>
-                    <value>detailTabContent</value>
+                    <name>cardTitle</name>
+                    <value>Usage Uploader</value>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Standard.Tab.detail</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>detailTab</identifier>
+                <componentName>revenueCloud_UsageUploader</componentName>
+                <identifier>c_revenueCloud_UsageUploader1</identifier>
             </componentInstance>
         </itemInstances>
+        <name>Facet-943609c6-d7c0-4cdb-8403-3512d9d52c3a</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -272,6 +252,20 @@
                 <identifier>customTab2</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-943609c6-d7c0-4cdb-8403-3512d9d52c3a</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Usage Uploader</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab1</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>maintabs</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -289,10 +283,20 @@
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>Revenue Cloud - Order</masterLabel>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>force:detailPanel</componentName>
+                <identifier>force_detailPanel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Usage with Credits - Order</masterLabel>
     <sobjectType>Order</sobjectType>
     <template>
-        <name>flexipage:recordHomeSingleColTemplateDesktop</name>
+        <name>flexipage:recordHomeTemplateDesktop</name>
     </template>
     <type>RecordPage</type>
 </FlexiPage>

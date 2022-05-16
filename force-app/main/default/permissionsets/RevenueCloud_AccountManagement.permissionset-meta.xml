@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <classAccesses>
-        <apexClass>RevenueCloud_QuickQuote_Controller</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <description>Gives access to custom fields, objects, apps, and many more included in the starter pack.</description>
     <fieldPermissions>
         <editable>true</editable>
@@ -26,8 +22,4 @@
         <object>Account</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <pageAccesses>
-        <apexPage>RevenueCloud_QuickQuote_Generator</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
 </PermissionSet>

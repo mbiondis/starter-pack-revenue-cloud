@@ -47,11 +47,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>UnitOfMeasure</field>
+                <field>MatchingAttribute</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MatchingAttribute</field>
+                <field>UnitOfMeasure</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -126,7 +126,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0C0000013VPW</masterLabel>
+        <masterLabel>00h25000002sQ1q</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
