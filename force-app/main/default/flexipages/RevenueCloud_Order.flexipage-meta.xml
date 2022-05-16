@@ -209,20 +209,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>cardTitle</name>
-                    <value>Usage Uploader</value>
-                </componentInstanceProperties>
-                <componentName>revenueCloud_UsageUploader</componentName>
-                <identifier>c_revenueCloud_UsageUploader1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-943609c6-d7c0-4cdb-8403-3512d9d52c3a</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>active</name>
                     <value>true</value>
                 </componentInstanceProperties>
@@ -250,20 +236,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>customTab2</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-943609c6-d7c0-4cdb-8403-3512d9d52c3a</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Usage Uploader</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab1</identifier>
             </componentInstance>
         </itemInstances>
         <name>maintabs</name>
