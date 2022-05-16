@@ -8,6 +8,13 @@ echo " "
 echo "******* Pushing source code..."
 #sfdx force:source:push -u "${orgAlias}"
 
+# Dependencies
+sfdx force:package:install --package flow-refresh-and-close -u "${orgAlias}"
+sfdx force:package:install --package get-records-by-apex -u "${orgAlias}"
+
+# Revenue Cloud Starter Pack (04t8d000000cfN1AAI)
+sfdx force:package:install --package Revenue Cloud Starter Pack -u "${orgAlias}"
+
 echo " "
 echo "******* Assigning permisission sets..."
 
@@ -22,12 +29,13 @@ sfdx force:user:permset:assign -n "AdvancedApprovalsAdmin" -u "${orgAlias}"
 # Assign Starter Pack Permission Set Group
 sfdx force:user:permset:assign -n "RevenueCloud_Admin" -u "${orgAlias}"
 
+
 # Load Sample Data (only in scratch org)
-if [-n "${dataLoad}"]
-then
+#if [-n "${dataLoad}"]
+#then
     echo "******* Loading data..."
     sfdx sfdmu:run -s csvfile -p data/csv -u "${orgAlias}"
-fi
+#fi
 
 #echo " "
 #echo "******* Opening the environment..."
