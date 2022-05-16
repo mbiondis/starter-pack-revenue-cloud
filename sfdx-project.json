@@ -3,7 +3,7 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "starter-pack-revenue-cloud",
+            "package": "Revenue Cloud Starter Pack",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "dependencies": [
@@ -15,19 +15,25 @@
                 },
                 {
                     "package": "advanced-approvals@234.0"
+                },
+                {
+                    "package": "flow-refresh-and-close"
                 }
             ]
         }
     ],
-    "name": "Starter Pack - Revenue Cloud",
+    "name": "Revenue Cloud Starter Pack",
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "53.0",
     "packageAliases": {
-        "starter-pack-revenue-cloud": "0Ho8d000000wk32CAA",
+        "Revenue Cloud Starter Pack": "0Ho8d000000wk32CAA",
         "salesforce-cpq@234.4": "04t4N000000GkQ3QAK",
         "salesforce-billing@234.2": "04t0K000001RuKpQAK",
         "advanced-approvals@234.0": "04t4W000002d9sPQAQ",
+        "flow-refresh-and-close": "04t8d000000cfMwAAI",
+        "get-records-by-apex": "04t8d000000cfMrAAI",
+        "flow-actions-base-pack": "04t8b000001Eh4YAAS",
         "dunning-collections": "04t3i000002SXYUAA4",
         "launch-flow-modal": "04t2E000003VsuMQAS"
     }
