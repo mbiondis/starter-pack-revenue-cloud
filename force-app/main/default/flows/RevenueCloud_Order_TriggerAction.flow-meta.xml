@@ -4,8 +4,8 @@
     <assignments>
         <name>Set_Activated</name>
         <label>Set to Activated</label>
-        <locationX>187</locationX>
-        <locationY>688</locationY>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
         <assignmentItems>
             <assignToReference>Status</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Set_Draft</name>
         <label>Set to Draft</label>
-        <locationX>451</locationX>
-        <locationY>688</locationY>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
         <assignmentItems>
             <assignToReference>Status</assignToReference>
             <operator>Assign</operator>
@@ -36,8 +36,8 @@
     <decisions>
         <name>Check_Status</name>
         <label>Check Status</label>
-        <locationX>319</locationX>
-        <locationY>568</locationY>
+        <locationX>182</locationX>
+        <locationY>398</locationY>
         <defaultConnector>
             <targetReference>Set_Draft</targetReference>
         </defaultConnector>
@@ -61,8 +61,8 @@
     <decisions>
         <name>Select_ActionType</name>
         <label>Select Action Type</label>
-        <locationX>503</locationX>
-        <locationY>355</locationY>
+        <locationX>644</locationX>
+        <locationY>278</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Status_Toggle</name>
@@ -94,6 +94,21 @@
             </connector>
             <label>Auto-Post</label>
         </rules>
+        <rules>
+            <name>Contract</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ActionType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contract</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Toggle_Contract</targetReference>
+            </connector>
+            <label>Contract</label>
+        </rules>
     </decisions>
     <formulas>
         <name>Action</name>
@@ -104,6 +119,11 @@
         <name>AutoPost_Toggled</name>
         <dataType>Boolean</dataType>
         <expression>NOT({!Get_Order.AutoPostInvoice__c})</expression>
+    </formulas>
+    <formulas>
+        <name>Contracted_Toggled</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT({!Get_Order.SBQQ__Contracted__c})</expression>
     </formulas>
     <interviewLabel>Revenue Cloud - Order - Trigger Action</interviewLabel>
     <label>Revenue Cloud - Order - Trigger Action</label>
@@ -116,7 +136,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -129,20 +149,13 @@
     <recordLookups>
         <name>Get_Order</name>
         <label>Get Order</label>
-        <locationX>536</locationX>
-        <locationY>206</locationY>
+        <locationX>644</locationX>
+        <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Select_ActionType</targetReference>
         </connector>
         <filterLogic>or</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Id</elementReference>
-            </value>
-        </filters>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -155,26 +168,20 @@
         <queriedFields>Id</queriedFields>
         <queriedFields>Status</queriedFields>
         <queriedFields>AutoPostInvoice__c</queriedFields>
+        <queriedFields>SBQQ__Contracted__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
         <name>Toggle_AutoPost</name>
         <label>Toggle Auto-Post</label>
-        <locationX>747</locationX>
-        <locationY>643</locationY>
+        <locationX>578</locationX>
+        <locationY>398</locationY>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
                 <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -186,18 +193,32 @@
         <object>Order</object>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_Status</name>
-        <label>Update Status</label>
-        <locationX>328</locationX>
-        <locationY>817</locationY>
+        <name>Toggle_Contract</name>
+        <label>Toggle Contract</label>
+        <locationX>842</locationX>
+        <locationY>398</locationY>
         <filterLogic>or</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Id</elementReference>
+                <elementReference>recordId</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <field>SBQQ__Contracted__c</field>
+            <value>
+                <elementReference>Contracted_Toggled</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Status</name>
+        <label>Update Status</label>
+        <locationX>182</locationX>
+        <locationY>734</locationY>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -215,22 +236,15 @@
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>410</locationX>
-        <locationY>48</locationY>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Order</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>ActionType</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>true</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>Id</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
