@@ -10,16 +10,16 @@
                             <value>CustomButton.SBQQ__Quote__c.SBQQ__EditLines</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>CustomButton.SBQQ__Quote__c.SBQQ__GenerateDocument</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>CustomButton.SBQQ__Quote__c.Preview_Approval</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>CustomButton.SBQQ__Quote__c.SBQQ__ModifyQuoteTerms</value>
+                            <value>SBQQ__Quote__c.Order</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>SBQQ__Quote__c.OrderNow</value>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__GenerateDocument</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CustomButton.SBQQ__Quote__c.SBQQ__ModifyQuoteTerms</value>
                         </valueListItems>
                         <valueListItems>
                             <value>CustomButton.SBQQ__Quote__c.SBQQ__ImportLines</value>
