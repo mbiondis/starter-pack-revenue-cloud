@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE( 
+  BLANKVALUE(ImageURL__c, &quot;https://cdn.icon-icons.com/icons2/2699/PNG/512/salesforce_logo_icon_170764.png&quot;),
+  &quot;Product Image&quot;,
+  IF(ImageWidth__c  == 0, 40, ImageWidth__c),
+  IF(ImageHeight__c == 0, 40, ImageHeight__c)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Image</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
