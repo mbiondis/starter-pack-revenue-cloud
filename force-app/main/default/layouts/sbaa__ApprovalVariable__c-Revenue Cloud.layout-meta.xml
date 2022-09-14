@@ -38,11 +38,11 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>sbaa__Operator__c</field>
+                <field>sbaa__FilterField__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>sbaa__FilterField__c</field>
+                <field>sbaa__Operator__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -120,7 +120,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0C00000116xj</masterLabel>
+        <masterLabel>00h8E000002GKoN</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

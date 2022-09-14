@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customButtons>blng__RevenueAdjustment</customButtons>
+    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -7,46 +9,54 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__MatchingAttribute__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SBQQ__UnitOfMeasure__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
-                <field>SBQQ__Type__c</field>
+                <field>blng__TotalRevenueAmount__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__Category__c</field>
+                <behavior>Readonly</behavior>
+                <field>blng__Adjustments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__LegalEntity__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueRecognitionGLRule__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueRecognitionGLTreatment__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__ConsumptionSchedule__c</field>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueFinanceBook__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueDistributionMethod__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueRecognitionRule__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>SBQQ__OrderItem__c</field>
+                <field>blng__RevenueRecognitionTreatment__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__BillingTerm__c</field>
+                <behavior>Edit</behavior>
+                <field>blng__RevenueTransactionStatus__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__BillingTermUnit__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>SBQQ__RatingMethod__c</field>
+                <behavior>Edit</behavior>
+                <field>blng__Notes__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -55,44 +65,21 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Tax Information</label>
+        <label>Revenue Dates</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__TaxRule__c</field>
+                <field>blng__RevenueStartDate__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__TaxTreatment__c</field>
+                <field>blng__RevenueEndDate__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__LegalEntity__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Billing Rule Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BillingRule__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BillingTreatment__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__FinanceBookAccounting__c</field>
+                <field>blng__FullRecognitionDate__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -101,25 +88,21 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>GL Rule Information</label>
+        <label>Summary Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BillingGLRule__c</field>
+                <behavior>Readonly</behavior>
+                <field>blng__RecognizedRevenueLastClosedPeriod__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__TaxGLRule__c</field>
+                <behavior>Readonly</behavior>
+                <field>blng__Available__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__BillingGLTreatment__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>blng__TaxGLTreatment__c</field>
+                <behavior>Readonly</behavior>
+                <field>blng__Unrecognized__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -128,19 +111,63 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Revenue Recognition Information</label>
+        <label>Source Records</label>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>blng__RevenueRecognitionRule__c</field>
+                <field>blng__OrderProduct__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__InvoiceLine__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__CreditNoteLine__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>blng__DebitNoteLine__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Revenue Metrics</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__AllocatedRevenueAmount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__RevenueExpectedAmount__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__DeferredBalance__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__EstimatedRevenueTransactionCount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>blng__RevenueLiabilityAmount__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
+        <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
         <label>System Information</label>
         <layoutColumns>
@@ -153,6 +180,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>LastModifiedById</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -167,26 +198,40 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>blng__TotalRevenueAmount__c</fields>
+    </miniLayout>
+    <platformActionList>
+        <actionListContext>Record</actionListContext>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>blng__RevenueAdjustment</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>1</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Clone</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>2</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+    </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>SBQQ__ProcessingOrder__c</fields>
-        <fields>SBQQ__PricingMethod__c</fields>
-        <fields>SBQQ__LowerBound__c</fields>
-        <fields>SBQQ__UpperBound__c</fields>
-        <fields>SBQQ__Price__c</fields>
-        <relatedList>SBQQ__OrderItemConsumptionRate__c.SBQQ__OrderItemConsumptionSchedule__c</relatedList>
-        <sortField>SBQQ__ProcessingOrder__c</sortField>
-        <sortOrder>Asc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>blng__TotalQuantity__c</fields>
-        <fields>blng__UnitOfMeasure__c</fields>
-        <fields>blng__Subtotal__c</fields>
-        <fields>blng__SummaryStartDate__c</fields>
-        <fields>blng__SummaryEndDate__c</fields>
+        <fields>blng__RevenueAmount__c</fields>
+        <fields>blng__FinancePeriod__c.blng__PeriodStartDate__c</fields>
+        <fields>blng__FinancePeriod__c.blng__PeriodEndDate__c</fields>
+        <fields>blng__RevenueFinanceBook__c</fields>
         <fields>blng__Status__c</fields>
-        <relatedList>blng__UsageSummary__c.blng__OrderItemConsumptionSchedule__c</relatedList>
+        <relatedList>blng__RevenueTransaction__c.blng__RevenueSchedule__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -194,7 +239,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h25000002sQ1y</masterLabel>
+        <masterLabel>00h8E000002OUBj</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

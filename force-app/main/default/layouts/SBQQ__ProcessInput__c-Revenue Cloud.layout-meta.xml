@@ -11,14 +11,55 @@
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__Label__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__DisplayOrder__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__DefaultField__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>sbaa__TargetObject__c</field>
+                <field>SBQQ__Active__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__QuoteProcess__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__ConditionsMet__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Product Filter</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ProductField__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Operator__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>SBQQ__InputField__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>OneColumn</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -30,16 +71,14 @@
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>LastModifiedById</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
         </layoutColumns>
-        <style>OneColumn</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
@@ -71,20 +110,17 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>sbaa__ApprovalStep__c</fields>
-        <fields>sbaa__Approver__c</fields>
-        <fields>sbaa__Active__c</fields>
-        <relatedList>sbaa__ApprovalRule__c.sbaa__ApprovalChain__c</relatedList>
-        <sortField>sbaa__ApprovalStep__c</sortField>
-        <sortOrder>Asc</sortOrder>
+        <fields>SBQQ__MasterProcessInput__c</fields>
+        <fields>SBQQ__Operator__c</fields>
+        <fields>SBQQ__Value__c</fields>
+        <relatedList>SBQQ__ProcessInputCondition__c.SBQQ__ProcessInput__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>sbaa__ApprovalStep__c</fields>
-        <fields>sbaa__Approver__c</fields>
-        <fields>sbaa__Actions__c</fields>
-        <relatedList>sbaa__Approval__c.sbaa__ApprovalChain__c</relatedList>
+        <fields>SBQQ__ProcessInput__c</fields>
+        <fields>SBQQ__Operator__c</fields>
+        <fields>SBQQ__Value__c</fields>
+        <relatedList>SBQQ__ProcessInputCondition__c.SBQQ__MasterProcessInput__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -92,7 +128,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h8E000002Gfgy</masterLabel>
+        <masterLabel>00h8E000002Gbne</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

@@ -11,11 +11,35 @@
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__Default__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ProductAutoSelected__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__GuidedOnly__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>sbaa__TargetObject__c</field>
+                <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ProductConfigurationInitializer__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__ProductSearchExecutor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SBQQ__SortOrder__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -30,16 +54,14 @@
                 <behavior>Readonly</behavior>
                 <field>CreatedById</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>LastModifiedById</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
         </layoutColumns>
-        <style>OneColumn</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
@@ -71,20 +93,20 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>sbaa__ApprovalStep__c</fields>
-        <fields>sbaa__Approver__c</fields>
-        <fields>sbaa__Active__c</fields>
-        <relatedList>sbaa__ApprovalRule__c.sbaa__ApprovalChain__c</relatedList>
-        <sortField>sbaa__ApprovalStep__c</sortField>
+        <fields>SBQQ__DisplayOrder__c</fields>
+        <fields>SBQQ__Label__c</fields>
+        <fields>SBQQ__ProductField__c</fields>
+        <fields>SBQQ__Operator__c</fields>
+        <fields>SBQQ__InputField__c</fields>
+        <fields>SBQQ__DefaultField__c</fields>
+        <fields>SBQQ__Active__c</fields>
+        <relatedList>SBQQ__ProcessInput__c.SBQQ__QuoteProcess__c</relatedList>
+        <sortField>SBQQ__DisplayOrder__c</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>sbaa__ApprovalStep__c</fields>
-        <fields>sbaa__Approver__c</fields>
-        <fields>sbaa__Actions__c</fields>
-        <relatedList>sbaa__Approval__c.sbaa__ApprovalChain__c</relatedList>
+        <relatedList>SBQQ__QuoteLineGroup__c.SBQQ__QuoteProcess__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -92,7 +114,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h8E000002Gfgy</masterLabel>
+        <masterLabel>00h8E000002Gbuk</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
