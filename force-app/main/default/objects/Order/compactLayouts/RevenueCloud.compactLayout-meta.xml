@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>RevenueCloud_Order</fullName>
+    <fullName>RevenueCloud</fullName>
     <fields>OrderNumber</fields>
     <fields>AccountId</fields>
     <fields>SBQQ__Quote__c</fields>
@@ -9,5 +9,5 @@
     <fields>StatusOrder__c</fields>
     <fields>StatusAutoPost__c</fields>
     <fields>SBQQ__TaxAmount__c</fields>
-    <label>Revenue Cloud - Order</label>
+    <label>Revenue Cloud</label>
 </CompactLayout>

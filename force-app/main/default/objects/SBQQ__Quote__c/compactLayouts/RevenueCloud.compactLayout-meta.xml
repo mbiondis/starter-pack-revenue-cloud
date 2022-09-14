@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>RevenueCloud_Quote</fullName>
+    <fullName>RevenueCloud</fullName>
     <fields>Name</fields>
     <fields>SBQQ__Account__c</fields>
     <fields>SBQQ__Opportunity2__c</fields>
@@ -8,5 +8,5 @@
     <fields>SBQQ__PriceBook__c</fields>
     <fields>StatusProposal__c</fields>
     <fields>StatusApproval__c</fields>
-    <label>Revenue Cloud - Quote</label>
+    <label>Revenue Cloud</label>
 </CompactLayout>
