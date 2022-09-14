@@ -168,7 +168,7 @@
             <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Order Based - 100% Upfront</stringValue>
+                <stringValue>Invoice Based - Usage</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
