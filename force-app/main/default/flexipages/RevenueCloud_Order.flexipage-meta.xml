@@ -10,12 +10,12 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Order.BillNow</value>
+                            <value>CustomButton.Order.SBQQ__EditOrderProducts</value>
                             <visibilityRule>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Activated</rightValue>
+                                    <rightValue>Draft</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -30,12 +30,12 @@
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
-                            <value>CustomButton.Order.SBQQ__EditOrderProducts</value>
+                            <value>Order.BillNow</value>
                             <visibilityRule>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Draft</rightValue>
+                                    <rightValue>Activated</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
