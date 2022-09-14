@@ -13,13 +13,4 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Revenue Cloud - Account Management</label>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Account</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
 </PermissionSet>
