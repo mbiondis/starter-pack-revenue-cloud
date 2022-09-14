@@ -44,10 +44,10 @@ $RECYCLE.BIN/
 
 # Data Migration
 ## Steps
-data/Step_*/csv/binary cache
-data/Step_*/csv/logs
-data/Step_*/csv/source
-data/Step_*/csv/target
+data/**/csv/binary cache
+data/**/csv/logs
+data/**/csv/source
+data/**/csv/target
 
 # VSCode
 .vscode/
@@ -61,5 +61,10 @@ scripts/
 # Husky
 .husky/
 
-CPQB_*
-q2c*
+org_*
+cumulusci.yml
+orgs
+robot
+datasets
+.github
+.cci
