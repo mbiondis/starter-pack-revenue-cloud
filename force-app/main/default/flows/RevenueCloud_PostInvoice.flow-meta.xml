@@ -1,45 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionCalls>
-        <name>DisplayMessage</name>
-        <label>Display Message</label>
-        <locationX>380</locationX>
-        <locationY>1190</locationY>
-        <actionName>c:showToast</actionName>
-        <actionType>component</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>duration</name>
-            <value>
-                <stringValue>5</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>message</name>
-            <value>
-                <elementReference>MessageText</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>type</name>
-            <value>
-                <elementReference>MessageType</elementReference>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
-    <actionCalls>
-        <name>RefreshRecord</name>
-        <label>Refresh Record</label>
-        <locationX>380</locationX>
-        <locationY>1070</locationY>
-        <actionName>c:refreshView</actionName>
-        <actionType>component</actionType>
-        <connector>
-            <targetReference>DisplayMessage</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-    </actionCalls>
     <apiVersion>54.0</apiVersion>
     <assignments>
         <name>Invoice_not_in_Draft</name>
@@ -266,19 +226,13 @@
         <locationY>950</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>RefreshRecord</targetReference>
-        </connector>
+        <allowPause>false</allowPause>
         <fields>
-            <name>FinishNavigation</name>
-            <extensionName>c:finishNavigation</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <name>OutcomeMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!MessageText}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
-        <showFooter>false</showFooter>
+        <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
     <start>

@@ -1,51 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Display_Message</name>
-        <label>Display Message</label>
-        <locationX>182</locationX>
-        <locationY>1094</locationY>
-        <actionName>c:showToast</actionName>
-        <actionType>component</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>duration</name>
-            <value>
-                <stringValue>5</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>message</name>
-            <value>
-                <elementReference>Message_Text</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>type</name>
-            <value>
-                <elementReference>Message_Type</elementReference>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
-    <actionCalls>
-        <name>Refresh_Record</name>
-        <label>Refresh Record</label>
-        <locationX>182</locationX>
-        <locationY>974</locationY>
-        <actionName>c:refreshView</actionName>
-        <actionType>component</actionType>
+        <name>Get_Quotes</name>
+        <label>Get Quotes</label>
+        <locationX>543</locationX>
+        <locationY>317</locationY>
+        <actionName>GetRecordsFromIds</actionName>
+        <actionType>apex</actionType>
         <connector>
-            <targetReference>Display_Message</targetReference>
+            <targetReference>Get_Orders</targetReference>
         </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <dataTypeMappings>
+            <typeName>U__records</typeName>
+            <typeValue>SBQQ__Quote__c</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>fieldNames</name>
+            <value>
+                <stringValue>Id,SBQQ__Account__c,SBQQ__StartDate__c,SBQQ__Ordered__c,SBQQ__OrderBy__c,SBQQ__OrderByQuoteLineGroup__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputIds</name>
+            <value>
+                <elementReference>ids</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>objectName</name>
+            <value>
+                <stringValue>SBQQ__Quote__c</stringValue>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>Quotes</assignToReference>
+            <name>records</name>
+        </outputParameters>
     </actionCalls>
     <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Cannot_Order_Quote</name>
         <label>Cannot Order Quote</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>584</locationX>
+        <locationY>1171</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -60,15 +58,63 @@
                 <stringValue>error</stringValue>
             </value>
         </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Load_OrderTypes</name>
+        <label>Load Order Types</label>
+        <locationX>452</locationX>
+        <locationY>604</locationY>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Complete</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Description</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>All products are included (creates multiple Orders when Order By field is populated)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:layers</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Empty</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Description</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Blank Order whose products need to be added with the Edit Order Products action</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OrderTypes_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:steps</stringValue>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>Finish</targetReference>
+            <targetReference>SelectOrderType</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Orders_Created</name>
         <label>Orders Created</label>
-        <locationX>314</locationX>
-        <locationY>638</locationY>
+        <locationX>380</locationX>
+        <locationY>1172</locationY>
         <assignmentItems>
             <assignToReference>Message_Text</assignToReference>
             <operator>Assign</operator>
@@ -83,31 +129,46 @@
                 <stringValue>success</stringValue>
             </value>
         </assignmentItems>
-        <connector>
-            <targetReference>Finish</targetReference>
-        </connector>
     </assignments>
     <decisions>
-        <name>Orders_Present</name>
-        <label>Orders Present?</label>
-        <locationX>182</locationX>
-        <locationY>398</locationY>
+        <name>EmptyOrder_Decision</name>
+        <label>Empty Order?</label>
+        <locationX>444</locationX>
+        <locationY>861</locationY>
+        <defaultConnector>
+            <targetReference>IsOrdered</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>OrderType.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Empty</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Order</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsOrdered</name>
+        <label>Is Ordered?</label>
+        <locationX>576</locationX>
+        <locationY>1005</locationY>
         <defaultConnector>
             <targetReference>Check_Ordered_Flag</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
-            <name>Yes_OrdersPresent</name>
-            <conditionLogic>or</conditionLogic>
+            <name>Yes_Ordered</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Orders</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Quote.SBQQ__Ordered__c</leftValueReference>
+                <leftValueReference>Quote.SBQQ__Ordered__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -115,6 +176,31 @@
             </conditions>
             <connector>
                 <targetReference>Cannot_Order_Quote</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SingleRecord_Decision</name>
+        <label>Single Record?</label>
+        <locationX>446</locationX>
+        <locationY>205</locationY>
+        <defaultConnector>
+            <targetReference>Get_Quotes</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_SingleRecord</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a12</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Quote</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -131,7 +217,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -141,33 +227,68 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Order</name>
+        <label>Create Order</label>
+        <locationX>309</locationX>
+        <locationY>1003</locationY>
+        <connector>
+            <targetReference>Orders_Created</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Quote.SBQQ__Account__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EffectiveDate</field>
+            <value>
+                <elementReference>Quote.SBQQ__StartDate__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SBQQ__Quote__c</field>
+            <value>
+                <elementReference>Quote.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
         <name>Get_Orders</name>
         <label>Get Orders</label>
-        <locationX>182</locationX>
-        <locationY>278</locationY>
+        <locationX>452</locationX>
+        <locationY>478</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Orders_Present</targetReference>
+            <targetReference>Load_OrderTypes</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>SBQQ__Quote__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>recordId</elementReference>
+                <elementReference>Quote.Id</elementReference>
             </value>
         </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Order</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputReference>Orders</outputReference>
+        <queriedFields>Id</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>Get_Quote</name>
         <label>Get Quote</label>
-        <locationX>182</locationX>
-        <locationY>158</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <locationX>358</locationX>
+        <locationY>317</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Orders</targetReference>
         </connector>
@@ -179,15 +300,20 @@
                 <elementReference>recordId</elementReference>
             </value>
         </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>SBQQ__Quote__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputReference>Quote</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>SBQQ__Account__c</queriedFields>
+        <queriedFields>SBQQ__StartDate__c</queriedFields>
+        <queriedFields>SBQQ__Ordered__c</queriedFields>
+        <queriedFields>SBQQ__OrderBy__c</queriedFields>
+        <queriedFields>SBQQ__OrderByQuoteLineGroup__c</queriedFields>
     </recordLookups>
     <recordUpdates>
         <name>Check_Ordered_Flag</name>
         <label>Check Ordered Flag</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>453</locationX>
+        <locationY>1003</locationY>
         <connector>
             <targetReference>Orders_Created</targetReference>
         </connector>
@@ -208,20 +334,92 @@
         <object>SBQQ__Quote__c</object>
     </recordUpdates>
     <screens>
-        <name>Finish</name>
-        <label>Finish</label>
-        <locationX>182</locationX>
-        <locationY>854</locationY>
+        <name>SelectOrderType</name>
+        <label>Select Order Type</label>
+        <locationX>452</locationX>
+        <locationY>730</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
-            <targetReference>Refresh_Record</targetReference>
+            <targetReference>EmptyOrder_Decision</targetReference>
         </connector>
         <fields>
-            <name>nav</name>
-            <extensionName>c:finishNavigation</extensionName>
+            <name>OrderType</name>
+            <extensionName>c:fsc_quickChoiceFSC</extensionName>
             <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>displayMode</name>
+                <value>
+                    <stringValue>Visual</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>numberOfColumns</name>
+                <value>
+                    <stringValue>1</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>includeIcons</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>navOnSelect</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>iconSize</name>
+                <value>
+                    <stringValue>medium</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>inputMode</name>
+                <value>
+                    <stringValue>Dual String Collections</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceIcons</name>
+                <value>
+                    <elementReference>OrderTypes_Icons</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceLabels</name>
+                <value>
+                    <elementReference>OrderTypes_Labels</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceValues</name>
+                <value>
+                    <elementReference>OrderTypes_Description</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>masterLabel</name>
+                <value>
+                    <stringValue>Order Type</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isResponsive</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -230,13 +428,28 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>56</locationX>
-        <locationY>0</locationY>
+        <locationX>328</locationX>
+        <locationY>48</locationY>
         <connector>
-            <targetReference>Get_Quote</targetReference>
+            <targetReference>SingleRecord_Decision</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>currentItem_Get_Unordered_Quotes</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
+    </variables>
+    <variables>
+        <name>ids</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>Message_Text</name>
         <dataType>String</dataType>
@@ -250,6 +463,51 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Orders</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order</objectType>
+    </variables>
+    <variables>
+        <name>OrderTypes_Description</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderTypes_Icons</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderTypes_Labels</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Quote</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
+    </variables>
+    <variables>
+        <name>Quotes</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
     </variables>
     <variables>
         <name>recordId</name>

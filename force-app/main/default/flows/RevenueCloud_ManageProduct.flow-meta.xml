@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Count_ConsumptionSchedules</name>
         <label>Count Consumption Schedules</label>
-        <locationX>2727</locationX>
-        <locationY>4587</locationY>
+        <locationX>2625</locationX>
+        <locationY>5350</locationY>
         <actionName>CountRecordsAndFields</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -41,12 +41,12 @@
     <actionCalls>
         <name>Count_ProductOptions</name>
         <label>Count Product Options</label>
-        <locationX>4258</locationX>
-        <locationY>4888</locationY>
+        <locationX>4040</locationX>
+        <locationY>5748</locationY>
         <actionName>CountRecordsAndFields</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Has_UsageMeters</targetReference>
+            <targetReference>Extract_ProductIds_from_ProductOptions_0</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>T__inputCollection</typeName>
@@ -79,8 +79,8 @@
     <actionCalls>
         <name>Dedupe_PriceBookEntries</name>
         <label>Dedupe Price Book Entries</label>
-        <locationX>3606</locationX>
-        <locationY>2366</locationY>
+        <locationX>3504</locationX>
+        <locationY>3129</locationY>
         <actionName>DedupeRecordCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -115,8 +115,8 @@
     <actionCalls>
         <name>Deduplicate_ConsumptionRates</name>
         <label>Deduplicate Consumption Rates</label>
-        <locationX>3190</locationX>
-        <locationY>7704</locationY>
+        <locationX>3088</locationX>
+        <locationY>8467</locationY>
         <actionName>DedupeRecordCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -151,8 +151,8 @@
     <actionCalls>
         <name>Extract_ProductIds_from_ProductOptions_0</name>
         <label>Extract Product Ids from Product Options</label>
-        <locationX>4142</locationX>
-        <locationY>5122</locationY>
+        <locationX>4040</locationX>
+        <locationY>5885</locationY>
         <actionName>ExtractStringsFromCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -189,8 +189,8 @@
     <actionCalls>
         <name>Get_ConsumptionSchedule_Ids</name>
         <label>Get Consumption Schedule Ids</label>
-        <locationX>2757</locationX>
-        <locationY>4879</locationY>
+        <locationX>2655</locationX>
+        <locationY>5642</locationY>
         <actionName>ExtractStringsFromCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -221,12 +221,12 @@
     <actionCalls>
         <name>Get_ConsumptionSchedules</name>
         <label>Get Consumption Schedules</label>
-        <locationX>3028</locationX>
-        <locationY>4118</locationY>
+        <locationX>2926</locationX>
+        <locationY>4881</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>SelectConsumptionSchedule</targetReference>
+            <targetReference>ConsumptionSchedulesAvailable_Decision_0</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>U__sObjects</typeName>
@@ -247,12 +247,12 @@
     <actionCalls>
         <name>Get_ConsumptionSchedules_0</name>
         <label>Get Consumption Schedules</label>
-        <locationX>2598</locationX>
-        <locationY>5112</locationY>
+        <locationX>2496</locationX>
+        <locationY>5875</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>PickExistingConsumptionSchedule</targetReference>
+            <targetReference>ConsumptionSchedulesAvailable_Decision</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>U__sObjects</typeName>
@@ -273,12 +273,12 @@
     <actionCalls>
         <name>Get_ConsumptionSchedules_0_0</name>
         <label>Get Consumption Schedules</label>
-        <locationX>2438</locationX>
-        <locationY>5112</locationY>
+        <locationX>2336</locationX>
+        <locationY>5875</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>PickExistingConsumptionSchedule</targetReference>
+            <targetReference>ConsumptionSchedulesAvailable_Decision</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>U__sObjects</typeName>
@@ -299,8 +299,8 @@
     <actionCalls>
         <name>Get_ProductConsumptionSchedule_Ids</name>
         <label>Get Product Consumption Schedule Ids</label>
-        <locationX>3026</locationX>
-        <locationY>3817</locationY>
+        <locationX>2924</locationX>
+        <locationY>4580</locationY>
         <actionName>ExtractStringsFromCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -331,8 +331,8 @@
     <actionCalls>
         <name>Get_Products</name>
         <label>Get Products</label>
-        <locationX>4139</locationX>
-        <locationY>5249</locationY>
+        <locationX>4037</locationX>
+        <locationY>6012</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -357,12 +357,12 @@
     <actionCalls>
         <name>Get_Remaining_UsageMeterProducts</name>
         <label>Get Remaining Usage Meter Products</label>
-        <locationX>4259</locationX>
-        <locationY>5794</locationY>
+        <locationX>4157</locationX>
+        <locationY>6557</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>PickExistingUsageProducts</targetReference>
+            <targetReference>UsageMetersAvailable_Decision</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>U__sObjects</typeName>
@@ -383,8 +383,8 @@
     <actionCalls>
         <name>Get_SlabConsumptionRates</name>
         <label>Get Consumption Rates</label>
-        <locationX>2306</locationX>
-        <locationY>4966</locationY>
+        <locationX>2204</locationX>
+        <locationY>5729</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -409,8 +409,8 @@
     <actionCalls>
         <name>Get_SlabConsumptionSchedules</name>
         <label>Get Slab Consumption Schedules</label>
-        <locationX>2163</locationX>
-        <locationY>5046</locationY>
+        <locationX>2061</locationX>
+        <locationY>5809</locationY>
         <actionName>ExtractStringsFromCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -447,8 +447,8 @@
     <actionCalls>
         <name>Get_UsageProducts</name>
         <label>Get Usage Products</label>
-        <locationX>4231</locationX>
-        <locationY>3450</locationY>
+        <locationX>4129</locationX>
+        <locationY>4213</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -473,8 +473,8 @@
     <actionCalls>
         <name>Join_Collections</name>
         <label>Join Collections</label>
-        <locationX>3189</locationX>
-        <locationY>7581</locationY>
+        <locationX>3087</locationX>
+        <locationY>8344</locationY>
         <actionName>JoinCollections</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -514,8 +514,8 @@
     <assignments>
         <name>Add_EmptyObject_to_List</name>
         <label>Add Empty Object to List</label>
-        <locationX>4492</locationX>
-        <locationY>3450</locationY>
+        <locationX>4390</locationX>
+        <locationY>4213</locationY>
         <assignmentItems>
             <assignToReference>Products_Usage</assignToReference>
             <operator>Add</operator>
@@ -530,8 +530,8 @@
     <assignments>
         <name>Add_to_CreateQueue_UsageMeter_0_0</name>
         <label>Add to Create Queue</label>
-        <locationX>2391</locationX>
-        <locationY>7841</locationY>
+        <locationX>2289</locationX>
+        <locationY>8604</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates_Created</assignToReference>
             <operator>Add</operator>
@@ -546,8 +546,8 @@
     <assignments>
         <name>Add_to_CreateQueue_UsageMeter_0_0_0</name>
         <label>Add to Create Queue</label>
-        <locationX>3429</locationX>
-        <locationY>2955</locationY>
+        <locationX>3327</locationX>
+        <locationY>3718</locationY>
         <assignmentItems>
             <assignToReference>PriceBookEntry.Id</assignToReference>
             <operator>Assign</operator>
@@ -566,8 +566,8 @@
     <assignments>
         <name>Add_to_PBE_Queue</name>
         <label>Add to PBE Queue</label>
-        <locationX>3431</locationX>
-        <locationY>1889</locationY>
+        <locationX>3329</locationX>
+        <locationY>2652</locationY>
         <assignmentItems>
             <assignToReference>PBE_Existing_Loop.PriceBookName__c</assignToReference>
             <operator>Assign</operator>
@@ -589,8 +589,8 @@
     <assignments>
         <name>Add_to_Queue_and_Advance</name>
         <label>Add to Queue and Advance</label>
-        <locationX>3067</locationX>
-        <locationY>6911</locationY>
+        <locationX>2965</locationX>
+        <locationY>7674</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates</assignToReference>
             <operator>Add</operator>
@@ -605,8 +605,8 @@
     <assignments>
         <name>Add_to_UpdateQueue_ConsumptionRate</name>
         <label>Add to Update Queue</label>
-        <locationX>2391</locationX>
-        <locationY>7573</locationY>
+        <locationX>2289</locationX>
+        <locationY>8336</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates_Updated</assignToReference>
             <operator>Add</operator>
@@ -621,8 +621,8 @@
     <assignments>
         <name>Add_to_UpdateQueue_ConsumptionRate_0</name>
         <label>Add to Update Queue</label>
-        <locationX>3429</locationX>
-        <locationY>2687</locationY>
+        <locationX>3327</locationX>
+        <locationY>3450</locationY>
         <assignmentItems>
             <assignToReference>PriceBookEntries_Updated</assignToReference>
             <operator>Add</operator>
@@ -637,8 +637,8 @@
     <assignments>
         <name>Add_Updated_LastRate_to_Queue</name>
         <label>Add Updated Last Rate to Queue</label>
-        <locationX>2967</locationX>
-        <locationY>7014</locationY>
+        <locationX>2865</locationX>
+        <locationY>7777</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates</assignToReference>
             <operator>RemovePosition</operator>
@@ -660,8 +660,8 @@
     <assignments>
         <name>Advance_ProductOption</name>
         <label>Advance Product Option</label>
-        <locationX>4259</locationX>
-        <locationY>6109</locationY>
+        <locationX>4157</locationX>
+        <locationY>6872</locationY>
         <assignmentItems>
             <assignToReference>Counter_ProductOptions</assignToReference>
             <operator>Add</operator>
@@ -676,8 +676,8 @@
     <assignments>
         <name>Clean_Ids</name>
         <label>Clean Ids</label>
-        <locationX>3921</locationX>
-        <locationY>2644</locationY>
+        <locationX>3819</locationX>
+        <locationY>3407</locationY>
         <assignmentItems>
             <assignToReference>PBE_Parent_Loop.Id</assignToReference>
             <operator>Assign</operator>
@@ -703,8 +703,8 @@
     <assignments>
         <name>Clean_PriceBookEntries</name>
         <label>Clean PriceBookEntries</label>
-        <locationX>4081</locationX>
-        <locationY>2820</locationY>
+        <locationX>3979</locationX>
+        <locationY>3583</locationY>
         <assignmentItems>
             <assignToReference>PriceBookEntries</assignToReference>
             <operator>Assign</operator>
@@ -716,8 +716,8 @@
     <assignments>
         <name>Clear_ConsumptionRateQueue</name>
         <label>Clear Consumption Rate Queue</label>
-        <locationX>2796</locationX>
-        <locationY>6411</locationY>
+        <locationX>2694</locationX>
+        <locationY>7174</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates</assignToReference>
             <operator>Assign</operator>
@@ -729,21 +729,21 @@
     <assignments>
         <name>Clear_ConsumptionSchedules</name>
         <label>Clear Consumption Schedules</label>
-        <locationX>3292</locationX>
-        <locationY>4183</locationY>
+        <locationX>3190</locationX>
+        <locationY>4946</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedules</assignToReference>
             <operator>Assign</operator>
         </assignmentItems>
         <connector>
-            <targetReference>SelectConsumptionSchedule</targetReference>
+            <targetReference>ConsumptionSchedulesAvailable_Decision_0</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Clear_Name_and_UsageType</name>
         <label>Clear Name and Usage Type</label>
-        <locationX>4888</locationX>
-        <locationY>3453</locationY>
+        <locationX>4786</locationX>
+        <locationY>4216</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage.Name</assignToReference>
             <operator>Assign</operator>
@@ -759,8 +759,8 @@
     <assignments>
         <name>Clear_ProductConsumptionSchedule_CreateQueue</name>
         <label>Clear Product Consumption Schedule Create Queue</label>
-        <locationX>2250</locationX>
-        <locationY>5422</locationY>
+        <locationX>2148</locationX>
+        <locationY>6185</locationY>
         <assignmentItems>
             <assignToReference>ProductConsumptionSchedules_Created</assignToReference>
             <operator>Assign</operator>
@@ -772,8 +772,8 @@
     <assignments>
         <name>Clear_ProductOption_CreateQueue</name>
         <label>Clear Product Option Create Queue</label>
-        <locationX>3993</locationX>
-        <locationY>6264</locationY>
+        <locationX>3891</locationX>
+        <locationY>7027</locationY>
         <assignmentItems>
             <assignToReference>ProductOptions_Create</assignToReference>
             <operator>Assign</operator>
@@ -785,8 +785,8 @@
     <assignments>
         <name>Clear_Queues_ConsumptionRate</name>
         <label>Clear Queues (Consumption Rate)</label>
-        <locationX>2796</locationX>
-        <locationY>7704</locationY>
+        <locationX>2694</locationX>
+        <locationY>8467</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRates_Created</assignToReference>
             <operator>Assign</operator>
@@ -802,8 +802,8 @@
     <assignments>
         <name>CreateSOQL_ConsumptionRates</name>
         <label>Create SOQL - Consumption Rates</label>
-        <locationX>2440</locationX>
-        <locationY>4966</locationY>
+        <locationX>2338</locationX>
+        <locationY>5729</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -853,8 +853,8 @@
     <assignments>
         <name>CreateSOQL_ConsumptionSchedules</name>
         <label>Create SOQL - Consumption Schedules</label>
-        <locationX>3026</locationX>
-        <locationY>3966</locationY>
+        <locationX>2924</locationX>
+        <locationY>4729</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -897,8 +897,8 @@
     <assignments>
         <name>CreateSOQL_ConsumptionSchedules_0</name>
         <label>Create SOQL - Consumption Schedules</label>
-        <locationX>2599</locationX>
-        <locationY>4964</locationY>
+        <locationX>2497</locationX>
+        <locationY>5727</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -941,8 +941,8 @@
     <assignments>
         <name>CreateSOQL_ConsumptionSchedules_0_0_0</name>
         <label>Create SOQL - Consumption Schedules</label>
-        <locationX>2306</locationX>
-        <locationY>5112</locationY>
+        <locationX>2204</locationX>
+        <locationY>5875</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -985,8 +985,8 @@
     <assignments>
         <name>CreateSOQL_Products</name>
         <label>Create SOQL - Products</label>
-        <locationX>4006</locationX>
-        <locationY>5187</locationY>
+        <locationX>3904</locationX>
+        <locationY>5950</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -1029,8 +1029,8 @@
     <assignments>
         <name>CreateSOQL_ProductsRemaining</name>
         <label>Create SOQL - Products Remaining</label>
-        <locationX>4259</locationX>
-        <locationY>5645</locationY>
+        <locationX>4157</locationX>
+        <locationY>6408</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -1080,8 +1080,8 @@
     <assignments>
         <name>CreateSOQL_UsageProduct</name>
         <label>Create SOQL - Usage Product</label>
-        <locationX>4104</locationX>
-        <locationY>3450</locationY>
+        <locationX>4002</locationX>
+        <locationY>4213</locationY>
         <assignmentItems>
             <assignToReference>SOQL</assignToReference>
             <operator>Assign</operator>
@@ -1110,8 +1110,8 @@
     <assignments>
         <name>Default_BillingFrequency_and_Type</name>
         <label>Default Billing Frequency and Type</label>
-        <locationX>3608</locationX>
-        <locationY>1293</locationY>
+        <locationX>3244</locationX>
+        <locationY>1903</locationY>
         <assignmentItems>
             <assignToReference>Product_Main.SBQQ__ChargeType__c</assignToReference>
             <operator>Assign</operator>
@@ -1140,15 +1140,29 @@
                 <stringValue>Renewable</stringValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__SubscriptionPricing__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Fixed Price</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__SubscriptionTerm__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
         <connector>
-            <targetReference>ProductExists_Decision</targetReference>
+            <targetReference>Set_ChargeType_Recurring</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Force_Slab_ConsumptionSchedule</name>
         <label>Force Slab on Consumption Schedule</label>
-        <locationX>2796</locationX>
-        <locationY>6221</locationY>
+        <locationX>2694</locationX>
+        <locationY>6984</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedule.Type</assignToReference>
             <operator>Assign</operator>
@@ -1167,8 +1181,8 @@
     <assignments>
         <name>Ger_Last_ProcessingOrder</name>
         <label>Ger Last Processing Order</label>
-        <locationX>3536</locationX>
-        <locationY>6554</locationY>
+        <locationX>3434</locationX>
+        <locationY>7317</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate_Last</assignToReference>
             <operator>Assign</operator>
@@ -1183,8 +1197,8 @@
     <assignments>
         <name>Inherit_from_Parent_Main</name>
         <label>Inherit from Parent (Main)</label>
-        <locationX>4888</locationX>
-        <locationY>3611</locationY>
+        <locationX>4786</locationX>
+        <locationY>4374</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage.IsActive</assignToReference>
             <operator>Assign</operator>
@@ -1213,8 +1227,8 @@
     <assignments>
         <name>Initialize_ConsumptionRate</name>
         <label>Initialize Consumption Rate</label>
-        <locationX>3073</locationX>
-        <locationY>6108</locationY>
+        <locationX>2971</locationX>
+        <locationY>6871</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate.ProcessingOrder</assignToReference>
             <operator>Assign</operator>
@@ -1250,8 +1264,8 @@
     <assignments>
         <name>Initialize_ConsumptionSchedule</name>
         <label>Initialize Consumption Schedule</label>
-        <locationX>2657</locationX>
-        <locationY>5424</locationY>
+        <locationX>2555</locationX>
+        <locationY>6187</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedule.BillingTerm</assignToReference>
             <operator>Assign</operator>
@@ -1312,8 +1326,8 @@
     <assignments>
         <name>Initialize_ConsumptionSchedule_0</name>
         <label>Initialize Consumption Schedule</label>
-        <locationX>3173</locationX>
-        <locationY>4055</locationY>
+        <locationX>3071</locationX>
+        <locationY>4818</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedule.BillingTerm</assignToReference>
             <operator>Assign</operator>
@@ -1367,8 +1381,8 @@
     <assignments>
         <name>Initialize_EmptyUsageProduct</name>
         <label>Initialize Empty Usage Product</label>
-        <locationX>4358</locationX>
-        <locationY>3450</locationY>
+        <locationX>4256</locationX>
+        <locationY>4213</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage_Empty.Name</assignToReference>
             <operator>Assign</operator>
@@ -1451,8 +1465,8 @@
     <assignments>
         <name>Initialize_LastConsumptionRate</name>
         <label>Initialize Last Consumption Rate</label>
-        <locationX>3073</locationX>
-        <locationY>6266</locationY>
+        <locationX>2971</locationX>
+        <locationY>7029</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate_Last.ProcessingOrder</assignToReference>
             <operator>Assign</operator>
@@ -1608,8 +1622,8 @@
     <assignments>
         <name>Initialize_PBE</name>
         <label>Initialize PBE</label>
-        <locationX>3428</locationX>
-        <locationY>2198</locationY>
+        <locationX>3326</locationX>
+        <locationY>2961</locationY>
         <assignmentItems>
             <assignToReference>PriceBookEntry.Id</assignToReference>
             <operator>Assign</operator>
@@ -1660,8 +1674,8 @@
     <assignments>
         <name>Initialize_ProductConsumptionSchedule</name>
         <label>Initialize Product Consumption Schedule</label>
-        <locationX>3173</locationX>
-        <locationY>3908</locationY>
+        <locationX>3071</locationX>
+        <locationY>4671</locationY>
         <assignmentItems>
             <assignToReference>ProductConsumptionSchedule.Id</assignToReference>
             <operator>Assign</operator>
@@ -1681,8 +1695,8 @@
     <assignments>
         <name>Initialize_ProductOption_0</name>
         <label>Initialize Product Option</label>
-        <locationX>4562</locationX>
-        <locationY>2820</locationY>
+        <locationX>4460</locationX>
+        <locationY>3583</locationY>
         <assignmentItems>
             <assignToReference>ProductOption_UsageProduct.SBQQ__ConfiguredSKU__c</assignToReference>
             <operator>Assign</operator>
@@ -1739,8 +1753,8 @@
     <assignments>
         <name>Link_ConsumptionRate_to_ConsumptionSchedule</name>
         <label>Link to Consumption Schedule</label>
-        <locationX>2391</locationX>
-        <locationY>7705</locationY>
+        <locationX>2289</locationX>
+        <locationY>8468</locationY>
         <assignmentItems>
             <assignToReference>Loop_through_ConsumptionRates.ConsumptionScheduleId</assignToReference>
             <operator>Assign</operator>
@@ -1755,8 +1769,8 @@
     <assignments>
         <name>Link_Product</name>
         <label>Link to Product</label>
-        <locationX>3430</locationX>
-        <locationY>2819</locationY>
+        <locationX>3328</locationX>
+        <locationY>3582</locationY>
         <assignmentItems>
             <assignToReference>PriceBookEntry.Product2Id</assignToReference>
             <operator>Assign</operator>
@@ -1799,8 +1813,8 @@
     <assignments>
         <name>Link_Product_to_Bucket</name>
         <label>Link Product to Bucket</label>
-        <locationX>3699</locationX>
-        <locationY>6264</locationY>
+        <locationX>3597</locationX>
+        <locationY>7027</locationY>
         <assignmentItems>
             <assignToReference>ProductOption.SBQQ__ConfiguredSKU__c</assignToReference>
             <operator>Assign</operator>
@@ -1864,8 +1878,8 @@
     <assignments>
         <name>Link_Product_to_ProductConsumptionSchedule</name>
         <label>Link Product to Product Consumption Schedule</label>
-        <locationX>1891</locationX>
-        <locationY>5490</locationY>
+        <locationX>1789</locationX>
+        <locationY>6253</locationY>
         <assignmentItems>
             <assignToReference>ProductConsumptionSchedule.ProductId</assignToReference>
             <operator>Assign</operator>
@@ -1894,8 +1908,8 @@
     <assignments>
         <name>Load_ConsumptionSchedule_0</name>
         <label>Load Consumption Schedule</label>
-        <locationX>2377</locationX>
-        <locationY>5422</locationY>
+        <locationX>2275</locationX>
+        <locationY>6185</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedules</assignToReference>
             <operator>Assign</operator>
@@ -1910,8 +1924,8 @@
     <assignments>
         <name>Load_ConsumptionSchedule_0_0</name>
         <label>Load Consumption Schedule</label>
-        <locationX>2250</locationX>
-        <locationY>5600</locationY>
+        <locationX>2148</locationX>
+        <locationY>6363</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedules</assignToReference>
             <operator>Assign</operator>
@@ -1930,8 +1944,8 @@
     <assignments>
         <name>Load_UsageProducts</name>
         <label>Load Usage Products</label>
-        <locationX>4118</locationX>
-        <locationY>6264</locationY>
+        <locationX>4016</locationX>
+        <locationY>7027</locationY>
         <assignmentItems>
             <assignToReference>Products_UsageMeter</assignToReference>
             <operator>Assign</operator>
@@ -1944,10 +1958,89 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Set_ChargeModel_Cards</name>
+        <label>Set Charge Model Cards</label>
+        <locationX>3608</locationX>
+        <locationY>852</locationY>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>One-Time</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>One-off sale. You can pay in instalments by choosing &quot;Invoice Plan&quot; for the Billing Frequency.</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:arrowdown</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Subscription</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Fixed recurring charge</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:loop</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Usage</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Charge based on consumption</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ChargeModel_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:watchlist</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ExistingChargeModel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Product_Main.ChargeModel__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SelectChargeModel_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Set_ChargeType_OneTime</name>
         <label>Set Charge Type One-Time</label>
-        <locationX>3730</locationX>
-        <locationY>1232</locationY>
+        <locationX>3620</locationX>
+        <locationY>2029</locationY>
         <assignmentItems>
             <assignToReference>Product_Main.SBQQ__ChargeType__c</assignToReference>
             <operator>Assign</operator>
@@ -1962,8 +2055,8 @@
     <assignments>
         <name>Set_ChargeType_Recurring</name>
         <label>Set Charge Type Recurring</label>
-        <locationX>3486</locationX>
-        <locationY>1237</locationY>
+        <locationX>3387</locationX>
+        <locationY>2028</locationY>
         <assignmentItems>
             <assignToReference>Product_Main.SBQQ__ChargeType__c</assignToReference>
             <operator>Assign</operator>
@@ -1978,8 +2071,8 @@
     <assignments>
         <name>Set_ConsumptionRate_Parameters</name>
         <label>Set Consumption Rate Parameters</label>
-        <locationX>3067</locationX>
-        <locationY>7412</locationY>
+        <locationX>2965</locationX>
+        <locationY>8175</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate.LowerBound</assignToReference>
             <operator>Assign</operator>
@@ -2043,8 +2136,8 @@
     <assignments>
         <name>Set_ConsumptionSchedule_to_Active</name>
         <label>Set Consumption Schedule to Active</label>
-        <locationX>1890</locationX>
-        <locationY>5335</locationY>
+        <locationX>1788</locationX>
+        <locationY>6098</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedule</assignToReference>
             <operator>Assign</operator>
@@ -2073,8 +2166,8 @@
     <assignments>
         <name>Set_ConsumptionSchedule_Values</name>
         <label>Set Values</label>
-        <locationX>3068</locationX>
-        <locationY>5577</locationY>
+        <locationX>2966</locationX>
+        <locationY>6340</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionSchedule.MatchingAttribute</assignToReference>
             <operator>Assign</operator>
@@ -2117,8 +2210,8 @@
     <assignments>
         <name>Set_ExistingUsageProduct</name>
         <label>Set Existing Usage Product</label>
-        <locationX>4034</locationX>
-        <locationY>3325</locationY>
+        <locationX>3932</locationX>
+        <locationY>4088</locationY>
         <assignmentItems>
             <assignToReference>Products_Usage_Selected</assignToReference>
             <operator>Add</operator>
@@ -2133,8 +2226,8 @@
     <assignments>
         <name>Set_IncludedTier</name>
         <label>Set Included Tier</label>
-        <locationX>2796</locationX>
-        <locationY>6585</locationY>
+        <locationX>2694</locationX>
+        <locationY>7348</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate.ProcessingOrder</assignToReference>
             <operator>Assign</operator>
@@ -2195,8 +2288,8 @@
     <assignments>
         <name>Set_Message_OnlyOneConsumptionScheduleAllowed</name>
         <label>Set Message Only One Consumption Schedule Allowed</label>
-        <locationX>2429</locationX>
-        <locationY>4279</locationY>
+        <locationX>2327</locationX>
+        <locationY>5042</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionScheduleEditor_Message</assignToReference>
             <operator>Assign</operator>
@@ -2211,8 +2304,8 @@
     <assignments>
         <name>Set_New_LastRate</name>
         <label>Set New Last Rate</label>
-        <locationX>3067</locationX>
-        <locationY>6774</locationY>
+        <locationX>2965</locationX>
+        <locationY>7537</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate_Last.ProcessingOrder</assignToReference>
             <operator>Assign</operator>
@@ -2262,8 +2355,8 @@
     <assignments>
         <name>Set_Option_to_UsageMeter</name>
         <label>Set Option to Usage Meter</label>
-        <locationX>4411</locationX>
-        <locationY>6265</locationY>
+        <locationX>4309</locationX>
+        <locationY>7028</locationY>
         <assignmentItems>
             <assignToReference>ProductOption_UsageType</assignToReference>
             <operator>Assign</operator>
@@ -2278,8 +2371,8 @@
     <assignments>
         <name>Set_OverageTier</name>
         <label>Set Overage Tier</label>
-        <locationX>2796</locationX>
-        <locationY>6747</locationY>
+        <locationX>2694</locationX>
+        <locationY>7510</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate.ProcessingOrder</assignToReference>
             <operator>Assign</operator>
@@ -2337,8 +2430,8 @@
     <assignments>
         <name>Set_Product_to_Main</name>
         <label>Set Product to Main</label>
-        <locationX>3606</locationX>
-        <locationY>2668</locationY>
+        <locationX>3504</locationX>
+        <locationY>3431</locationY>
         <assignmentItems>
             <assignToReference>Product</assignToReference>
             <operator>Assign</operator>
@@ -2360,8 +2453,8 @@
     <assignments>
         <name>Set_Product_to_Usage</name>
         <label>Set Product to Usage</label>
-        <locationX>3740</locationX>
-        <locationY>2818</locationY>
+        <locationX>3638</locationX>
+        <locationY>3581</locationY>
         <assignmentItems>
             <assignToReference>Product</assignToReference>
             <operator>Assign</operator>
@@ -2384,8 +2477,8 @@
     <assignments>
         <name>Set_ProductUsage_as_Main</name>
         <label>Set Product Usage as Main</label>
-        <locationX>3173</locationX>
-        <locationY>3315</locationY>
+        <locationX>3071</locationX>
+        <locationY>4078</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage</assignToReference>
             <operator>Assign</operator>
@@ -2400,8 +2493,8 @@
     <assignments>
         <name>Set_Usage_as_NewParent_0</name>
         <label>Set Usage as New Parent</label>
-        <locationX>4408</locationX>
-        <locationY>4670</locationY>
+        <locationX>4306</locationX>
+        <locationY>5433</locationY>
         <assignmentItems>
             <assignToReference>Product_Main</assignToReference>
             <operator>Assign</operator>
@@ -2416,8 +2509,8 @@
     <assignments>
         <name>Set_UsageProduct_Defaults</name>
         <label>Set Usage Product Defaults</label>
-        <locationX>5085</locationX>
-        <locationY>3177</locationY>
+        <locationX>4983</locationX>
+        <locationY>3942</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage.SBQQ__BillingFrequency__c</assignToReference>
             <operator>Assign</operator>
@@ -2460,15 +2553,117 @@
                 <stringValue>Fixed Price</stringValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Usage.ChargeModel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Usage</stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_ProductUsage</targetReference>
         </connector>
     </assignments>
     <assignments>
+        <name>Set_UsageType_Cards</name>
+        <label>Set Usage Type Cards</label>
+        <locationX>3379</locationX>
+        <locationY>1366</locationY>
+        <assignmentItems>
+            <assignToReference>UsageType_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Credit</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Fixed recurring fee for a period of time that grants a usage allowance. Overage is charged if exceeded.</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:contract_payment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Bucket</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Accumulates usage from multiple Standard usage products</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:strategy</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Labels</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Standard</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Descriptions</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Tracks consumption for one or more units of measure (separately)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>UsageType_Icons</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>utility:graph</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ExistingUsageType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Product_Main.UsageType__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SelectUsageType</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_ChargeModel</name>
+        <label>Update Charge Model</label>
+        <locationX>3610</locationX>
+        <locationY>1153</locationY>
+        <assignmentItems>
+            <assignToReference>Product_Main.ChargeModel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ChargeModel_Select.value</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ChargeType_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Update_LastRate</name>
         <label>Update Last Rate</label>
-        <locationX>2967</locationX>
-        <locationY>7167</locationY>
+        <locationX>2865</locationX>
+        <locationY>7930</locationY>
         <assignmentItems>
             <assignToReference>ConsumptionRate_Last.UpperBound</assignToReference>
             <operator>Assign</operator>
@@ -2483,8 +2678,8 @@
     <assignments>
         <name>Update_Meter_Values</name>
         <label>Update Meter Values</label>
-        <locationX>5085</locationX>
-        <locationY>6265</locationY>
+        <locationX>4983</locationX>
+        <locationY>7028</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage.Name</assignToReference>
             <operator>Assign</operator>
@@ -2515,10 +2710,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Update_Product</name>
-        <label>Update Product</label>
-        <locationX>3610</locationX>
-        <locationY>986</locationY>
+        <name>Update_RecurringCharges</name>
+        <label>Update Recurring Charges</label>
+        <locationX>3518</locationX>
+        <locationY>1903</locationY>
         <assignmentItems>
             <assignToReference>Product_Main.SBQQ__SubscriptionTerm__c</assignToReference>
             <operator>Assign</operator>
@@ -2526,6 +2721,43 @@
                 <elementReference>SubscriptionTerm</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__SubscriptionType__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SubscriptionType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__BillingFrequency__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>BillingFrequency</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__BillingType__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>BillingType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Product_Main.SBQQ__SubscriptionPricing__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Fixed Price</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_ChargeType_Recurring</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_UsageCharges</name>
+        <label>Update Usage Charges</label>
+        <locationX>3380</locationX>
+        <locationY>1760</locationY>
         <assignmentItems>
             <assignToReference>Product_Main.UsageTerm__c</assignToReference>
             <operator>Assign</operator>
@@ -2561,50 +2793,15 @@
                 <elementReference>OverageSurcharge</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Product_Main.SBQQ__SubscriptionType__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>SubscriptionType</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Product_Main.SBQQ__BillingFrequency__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>BillingFrequency</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Product_Main.SBQQ__BillingType__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>BillingType</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Product_Main.ChargeModel__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>ChargeModel</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Product_Main.UsageType__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>UsageType</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
-            <targetReference>ChargeType</targetReference>
+            <targetReference>SelectRecurringCharges</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Update_UsageProduct_Details</name>
         <label>Update Usage Product Details</label>
-        <locationX>4888</locationX>
-        <locationY>3177</locationY>
+        <locationX>4786</locationX>
+        <locationY>3942</locationY>
         <assignmentItems>
             <assignToReference>Product_Usage.Name</assignToReference>
             <operator>Assign</operator>
@@ -2628,6 +2825,22 @@
         </assignmentItems>
         <connector>
             <targetReference>Set_UsageProduct_Defaults</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_UsageType</name>
+        <label>Update Usage Type</label>
+        <locationX>3244</locationX>
+        <locationY>1492</locationY>
+        <assignmentItems>
+            <assignToReference>Product_Main.UsageType__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>UsageType_Select.value</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_UsageCredit_2</targetReference>
         </connector>
     </assignments>
     <choices>
@@ -2666,8 +2879,8 @@
         <name>Extract_Rest_PBE</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Extract Rest of PBE</label>
-        <locationX>3872</locationX>
-        <locationY>3151</locationY>
+        <locationX>3770</locationX>
+        <locationY>3914</locationY>
         <assignNextValueToReference>currentItem_Extract_Rest_PBE</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>PriceBookEntries_Created</collectionReference>
@@ -2687,8 +2900,8 @@
         <name>Extract_Standard_PBE</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Extract Standard PBE</label>
-        <locationX>3741</locationX>
-        <locationY>2987</locationY>
+        <locationX>3639</locationX>
+        <locationY>3750</locationY>
         <assignNextValueToReference>currentItem_Extract_Rest_PBE</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>PriceBookEntries_Created</collectionReference>
@@ -2707,8 +2920,8 @@
     <decisions>
         <name>AddMore_ConsumptionRates_Decision</name>
         <label>Add More?</label>
-        <locationX>3182</locationX>
-        <locationY>7415</locationY>
+        <locationX>3080</locationX>
+        <locationY>8178</locationY>
         <defaultConnector>
             <targetReference>Join_Collections</targetReference>
         </defaultConnector>
@@ -2730,48 +2943,34 @@
         </rules>
     </decisions>
     <decisions>
-        <name>ChargeType</name>
+        <name>ChargeType_0</name>
         <label>Charge Type</label>
         <locationX>3602</locationX>
-        <locationY>1134</locationY>
+        <locationY>1291</locationY>
         <defaultConnector>
-            <targetReference>Default_BillingFrequency_and_Type</targetReference>
+            <targetReference>Set_UsageType_Cards</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Usage</defaultConnectorLabel>
         <rules>
-            <name>Recurring</name>
-            <conditionLogic>1 OR (2 AND 3)</conditionLogic>
+            <name>Subscription</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Product_Main.ChargeModel__c</leftValueReference>
+                <leftValueReference>ChargeModel_Select.value</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Subscription</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Product_Main.ChargeModel__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Usage</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Product_Main.UsageType__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Credit</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
-                <targetReference>Set_ChargeType_Recurring</targetReference>
+                <targetReference>SelectRecurringCharges</targetReference>
             </connector>
-            <label>Recurring</label>
+            <label>Subscription</label>
         </rules>
         <rules>
-            <name>OneTime</name>
+            <name>OneTime_0</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Product_Main.ChargeModel__c</leftValueReference>
+                <leftValueReference>ChargeModel_Select.value</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>One-Time</stringValue>
@@ -2786,8 +2985,8 @@
     <decisions>
         <name>ConsumptionRatesFound</name>
         <label>Consumption Rates Found?</label>
-        <locationX>2157</locationX>
-        <locationY>4916</locationY>
+        <locationX>2055</locationX>
+        <locationY>5679</locationY>
         <defaultConnector>
             <targetReference>Initialize_ConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -2811,8 +3010,8 @@
     <decisions>
         <name>ConsumptionSchedule_Selected_Decision</name>
         <label>Consumption Schedule Selected?</label>
-        <locationX>3060</locationX>
-        <locationY>4968</locationY>
+        <locationX>2958</locationX>
+        <locationY>5731</locationY>
         <defaultConnector>
             <targetReference>SelectConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -2836,8 +3035,8 @@
     <decisions>
         <name>ConsumptionSchedule_Selected_Decision_0</name>
         <label>Consumption Schedule Selected?</label>
-        <locationX>2824</locationX>
-        <locationY>4300</locationY>
+        <locationX>2722</locationX>
+        <locationY>5063</locationY>
         <defaultConnector>
             <targetReference>SelectConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -2861,8 +3060,8 @@
     <decisions>
         <name>ConsumptionScheduleAction_Router</name>
         <label>Action</label>
-        <locationX>3051</locationX>
-        <locationY>4582</locationY>
+        <locationX>2949</locationX>
+        <locationY>5345</locationY>
         <defaultConnector>
             <targetReference>UsageType_Decision_0</targetReference>
         </defaultConnector>
@@ -2931,8 +3130,8 @@
     <decisions>
         <name>ConsumptionScheduleAction_Router_0</name>
         <label>Action</label>
-        <locationX>4248</locationX>
-        <locationY>5477</locationY>
+        <locationX>4146</locationX>
+        <locationY>6240</locationY>
         <defaultConnectorLabel>Next</defaultConnectorLabel>
         <rules>
             <name>New_UsageMeter</name>
@@ -2992,8 +3191,8 @@
     <decisions>
         <name>ConsumptionScheduleExists</name>
         <label>Consumption Schedule Exists?</label>
-        <locationX>3060</locationX>
-        <locationY>5725</locationY>
+        <locationX>2958</locationX>
+        <locationY>6488</locationY>
         <defaultConnector>
             <targetReference>Create_ConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -3015,10 +3214,85 @@
         </rules>
     </decisions>
     <decisions>
+        <name>ConsumptionSchedulesAvailable_Decision</name>
+        <label>Consumption Schedules Available?</label>
+        <locationX>2503</locationX>
+        <locationY>6032</locationY>
+        <defaultConnector>
+            <targetReference>Initialize_ConsumptionSchedule</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ConsumptionSchedulesAvailable</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ConsumptionSchedules</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PickExistingConsumptionSchedule</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ConsumptionSchedulesAvailable_Decision_0</name>
+        <label>Consumption Schedules Available?</label>
+        <locationX>3054</locationX>
+        <locationY>4949</locationY>
+        <defaultConnector>
+            <targetReference>Is_UsageCredit</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ConsumptionSchedulesAvailable_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ConsumptionSchedules</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SelectConsumptionSchedule</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>EditPicture_Decision</name>
+        <label>Edit Picture</label>
+        <locationX>3601</locationX>
+        <locationY>676</locationY>
+        <defaultConnector>
+            <targetReference>Set_ChargeModel_Cards</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_EditPicture</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>EditPicture.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>EditPictureScreen</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Existing_ConsumptionRates</name>
         <label>Existing Consumption Rates?</label>
-        <locationX>3183</locationX>
-        <locationY>6424</locationY>
+        <locationX>3081</locationX>
+        <locationY>7187</locationY>
         <defaultConnector>
             <targetReference>ConsumptionRateDisplay</targetReference>
         </defaultConnector>
@@ -3067,8 +3341,8 @@
     <decisions>
         <name>Has_UsageMeters</name>
         <label>Has Usage Meters?</label>
-        <locationX>4250</locationX>
-        <locationY>5036</locationY>
+        <locationX>4147</locationX>
+        <locationY>5665</locationY>
         <defaultConnector>
             <targetReference>SelectUsageMeters</targetReference>
         </defaultConnector>
@@ -3084,7 +3358,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Extract_ProductIds_from_ProductOptions_0</targetReference>
+                <targetReference>Count_ProductOptions</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -3092,8 +3366,8 @@
     <decisions>
         <name>HasConsumptionSchedules</name>
         <label>Has Consumption Schedules</label>
-        <locationX>2431</locationX>
-        <locationY>4774</locationY>
+        <locationX>2329</locationX>
+        <locationY>5537</locationY>
         <defaultConnector>
             <targetReference>CreateSOQL_ConsumptionRates</targetReference>
         </defaultConnector>
@@ -3117,8 +3391,8 @@
     <decisions>
         <name>HasConsumptionSchedules_0</name>
         <label>Has Consumption Schedules</label>
-        <locationX>2590</locationX>
-        <locationY>4775</locationY>
+        <locationX>2488</locationX>
+        <locationY>5538</locationY>
         <defaultConnector>
             <targetReference>CreateSOQL_ConsumptionSchedules_0</targetReference>
         </defaultConnector>
@@ -3142,8 +3416,8 @@
     <decisions>
         <name>Is_LastRate_Blank</name>
         <label>Is Last Rate Blank?</label>
-        <locationX>3059</locationX>
-        <locationY>7280</locationY>
+        <locationX>2957</locationX>
+        <locationY>8043</locationY>
         <defaultConnector>
             <targetReference>Update_LastRate</targetReference>
         </defaultConnector>
@@ -3167,8 +3441,8 @@
     <decisions>
         <name>Is_UsageCredit</name>
         <label>Is Usage Credit?</label>
-        <locationX>2514</locationX>
-        <locationY>4589</locationY>
+        <locationX>2412</locationX>
+        <locationY>5352</locationY>
         <defaultConnector>
             <targetReference>HasConsumptionSchedules_0</targetReference>
         </defaultConnector>
@@ -3192,8 +3466,8 @@
     <decisions>
         <name>Is_UsageCredit_0</name>
         <label>Is Usage Credit?</label>
-        <locationX>2788</locationX>
-        <locationY>6039</locationY>
+        <locationX>2686</locationX>
+        <locationY>6802</locationY>
         <defaultConnector>
             <targetReference>Initialize_ConsumptionRate</targetReference>
         </defaultConnector>
@@ -3217,8 +3491,8 @@
     <decisions>
         <name>Is_UsageCredit_0_0</name>
         <label>Is Usage Credit?</label>
-        <locationX>3333</locationX>
-        <locationY>6038</locationY>
+        <locationX>3231</locationX>
+        <locationY>6801</locationY>
         <defaultConnector>
             <targetReference>Initialize_ConsumptionRate</targetReference>
         </defaultConnector>
@@ -3240,10 +3514,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Is_UsageCredit_2</name>
+        <label>Is Usage Credit?</label>
+        <locationX>3236</locationX>
+        <locationY>1622</locationY>
+        <defaultConnector>
+            <targetReference>Default_BillingFrequency_and_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_UsageCredit_2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UsageType_Select.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SelectUsageCharges</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>LinkedTo_ProductConsumptionSchedules</name>
         <label>Linked to Product Consumption Schedules?</label>
-        <locationX>3165</locationX>
-        <locationY>3752</locationY>
+        <locationX>3063</locationX>
+        <locationY>4515</locationY>
         <defaultConnector>
             <targetReference>Initialize_ProductConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -3267,8 +3566,8 @@
     <decisions>
         <name>LinkedTo_ProductConsumptionSchedules_0</name>
         <label>Linked to Product Consumption Schedules?</label>
-        <locationX>4747</locationX>
-        <locationY>3911</locationY>
+        <locationX>4645</locationX>
+        <locationY>4674</locationY>
         <defaultConnector>
             <targetReference>Initialize_ProductConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -3289,8 +3588,8 @@
     <decisions>
         <name>LinkedTo_UsageProductOption</name>
         <label>Linked to Usage Product Option?</label>
-        <locationX>3829</locationX>
-        <locationY>3451</locationY>
+        <locationX>3727</locationX>
+        <locationY>4214</locationY>
         <defaultConnector>
             <targetReference>CreateSOQL_UsageProduct</targetReference>
         </defaultConnector>
@@ -3314,8 +3613,8 @@
     <decisions>
         <name>NewConsumptionRate_Decision</name>
         <label>New Consumption Rate?</label>
-        <locationX>2209</locationX>
-        <locationY>7707</locationY>
+        <locationX>2107</locationX>
+        <locationY>8470</locationY>
         <defaultConnector>
             <targetReference>Add_to_UpdateQueue_ConsumptionRate</targetReference>
         </defaultConnector>
@@ -3346,8 +3645,8 @@
     <decisions>
         <name>NewPriceBookEntry_Decision</name>
         <label>New Price Book Entry?</label>
-        <locationX>3247</locationX>
-        <locationY>2821</locationY>
+        <locationX>3145</locationX>
+        <locationY>3584</locationY>
         <defaultConnector>
             <targetReference>Add_to_UpdateQueue_ConsumptionRate_0</targetReference>
         </defaultConnector>
@@ -3378,8 +3677,8 @@
     <decisions>
         <name>ProductAction_Router</name>
         <label>Action</label>
-        <locationX>4747</locationX>
-        <locationY>3613</locationY>
+        <locationX>4645</locationX>
+        <locationY>4376</locationY>
         <defaultConnector>
             <targetReference>Get_ProductConsumptionSchedule_0</targetReference>
         </defaultConnector>
@@ -3418,8 +3717,8 @@
     <decisions>
         <name>ProductExists_Decision</name>
         <label>Product Exists?</label>
-        <locationX>3600</locationX>
-        <locationY>1461</locationY>
+        <locationX>3497</locationX>
+        <locationY>2223</locationY>
         <defaultConnector>
             <targetReference>Create_ProductMain</targetReference>
         </defaultConnector>
@@ -3443,24 +3742,49 @@
     <decisions>
         <name>Refresh_Preview</name>
         <label>Refresh Preview</label>
-        <locationX>3601</locationX>
-        <locationY>683</locationY>
+        <locationX>3473</locationX>
+        <locationY>853</locationY>
         <defaultConnector>
-            <targetReference>SelectChargeModel</targetReference>
+            <targetReference>Set_ChargeModel_Cards</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes_RefreshPreview</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>PreviewButton.value</leftValueReference>
+                <leftValueReference>PreviewButton_0.value</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Preview</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>InputGeneralDetails</targetReference>
+                <targetReference>EditPictureScreen</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>UsageMetersAvailable_Decision</name>
+        <label>Usage Meters Available?</label>
+        <locationX>4303</locationX>
+        <locationY>6670</locationY>
+        <defaultConnector>
+            <targetReference>Set_Option_to_UsageMeter</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_UsageMetersAvailable</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Products_UsageMeter</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PickExistingUsageProducts</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -3468,12 +3792,24 @@
     <decisions>
         <name>UsageType_Decision</name>
         <label>Usage Type</label>
-        <locationX>3597</locationX>
-        <locationY>3318</locationY>
+        <locationX>3495</locationX>
+        <locationY>4081</locationY>
         <defaultConnector>
             <targetReference>Set_ProductUsage_as_Main</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Standard</defaultConnectorLabel>
+        <rules>
+            <name>None</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Product_Main.UsageType__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>None</label>
+        </rules>
         <rules>
             <name>Meter</name>
             <conditionLogic>and</conditionLogic>
@@ -3530,8 +3866,8 @@
     <decisions>
         <name>UsageType_Decision_0</name>
         <label>Usage Type</label>
-        <locationX>4251</locationX>
-        <locationY>4582</locationY>
+        <locationX>4149</locationX>
+        <locationY>5345</locationY>
         <defaultConnectorLabel>Other</defaultConnectorLabel>
         <rules>
             <name>Bucket_0</name>
@@ -3574,8 +3910,8 @@
     <decisions>
         <name>Use_ExistingConsumptionSchedule</name>
         <label>Use Existing</label>
-        <locationX>2510</locationX>
-        <locationY>5425</locationY>
+        <locationX>2408</locationX>
+        <locationY>6188</locationY>
         <defaultConnector>
             <targetReference>Initialize_ConsumptionSchedule</targetReference>
         </defaultConnector>
@@ -3599,8 +3935,8 @@
     <decisions>
         <name>Use_ExistingUsageMeter</name>
         <label>Use Existing</label>
-        <locationX>4251</locationX>
-        <locationY>6267</locationY>
+        <locationX>4149</locationX>
+        <locationY>7030</locationY>
         <defaultConnector>
             <targetReference>Set_Option_to_UsageMeter</targetReference>
         </defaultConnector>
@@ -3761,8 +4097,8 @@
     <loops>
         <name>Loop_through_ConsumptionRates</name>
         <label>Loop through Consumption Rates</label>
-        <locationX>2568</locationX>
-        <locationY>7704</locationY>
+        <locationX>2466</locationX>
+        <locationY>8467</locationY>
         <collectionReference>ConsumptionRates</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3775,8 +4111,8 @@
     <loops>
         <name>Loop_through_ConsumptionSchedules</name>
         <label>Loop through Consumption Schedules</label>
-        <locationX>2038</locationX>
-        <locationY>5422</locationY>
+        <locationX>1936</locationX>
+        <locationY>6185</locationY>
         <collectionReference>ConsumptionSchedules</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3789,8 +4125,8 @@
     <loops>
         <name>Loop_through_UsageProducts</name>
         <label>Loop through Usage Products</label>
-        <locationX>3850</locationX>
-        <locationY>6264</locationY>
+        <locationX>3748</locationX>
+        <locationY>7027</locationY>
         <collectionReference>Products_UsageMeter</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3803,8 +4139,8 @@
     <loops>
         <name>PB_All_Loop</name>
         <label>PB All</label>
-        <locationX>3605</locationX>
-        <locationY>2198</locationY>
+        <locationX>3503</locationX>
+        <locationY>2961</locationY>
         <collectionReference>Get_PriceBooks</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3817,8 +4153,8 @@
     <loops>
         <name>PBE_Existing_Loop</name>
         <label>PBE Existing</label>
-        <locationX>3606</locationX>
-        <locationY>1889</locationY>
+        <locationX>3504</locationX>
+        <locationY>2652</locationY>
         <collectionReference>Get_ExistingPriceBookEntries</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3831,8 +4167,8 @@
     <loops>
         <name>PBE_Parent_Loop</name>
         <label>PBE Parent</label>
-        <locationX>3921</locationX>
-        <locationY>2820</locationY>
+        <locationX>3819</locationX>
+        <locationY>3583</locationY>
         <collectionReference>Get_Parent_PriceBookEntries</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3845,8 +4181,8 @@
     <loops>
         <name>PBE_Processed_Loop</name>
         <label>PBE Processed</label>
-        <locationX>3606</locationX>
-        <locationY>2818</locationY>
+        <locationX>3504</locationX>
+        <locationY>3581</locationY>
         <collectionReference>PriceBookEntries</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3859,8 +4195,8 @@
     <loops>
         <name>Search_LastRate</name>
         <label>Search Last Rate</label>
-        <locationX>3366</locationX>
-        <locationY>6554</locationY>
+        <locationX>3264</locationX>
+        <locationY>7317</locationY>
         <collectionReference>ConsumptionRates</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -3892,8 +4228,8 @@
     <recordCreates>
         <name>Create_ConsumptionRates</name>
         <label>Create Consumption Rates</label>
-        <locationX>2561</locationX>
-        <locationY>6930</locationY>
+        <locationX>2459</locationX>
+        <locationY>7693</locationY>
         <connector>
             <targetReference>Load_ConsumptionSchedule_0_0</targetReference>
         </connector>
@@ -3902,8 +4238,8 @@
     <recordCreates>
         <name>Create_ConsumptionSchedule</name>
         <label>Create Consumption Schedule</label>
-        <locationX>2987</locationX>
-        <locationY>5932</locationY>
+        <locationX>2885</locationX>
+        <locationY>6695</locationY>
         <connector>
             <targetReference>Is_UsageCredit_0</targetReference>
         </connector>
@@ -3912,8 +4248,8 @@
     <recordCreates>
         <name>Create_PBE_Rest</name>
         <label>Create PBE (Rest)</label>
-        <locationX>3742</locationX>
-        <locationY>3151</locationY>
+        <locationX>3640</locationX>
+        <locationY>3914</locationY>
         <connector>
             <targetReference>Update_PBE</targetReference>
         </connector>
@@ -3922,8 +4258,8 @@
     <recordCreates>
         <name>Create_PBE_Standard</name>
         <label>Create PBE (Standard)</label>
-        <locationX>3872</locationX>
-        <locationY>2987</locationY>
+        <locationX>3770</locationX>
+        <locationY>3750</locationY>
         <connector>
             <targetReference>Extract_Rest_PBE</targetReference>
         </connector>
@@ -3932,8 +4268,8 @@
     <recordCreates>
         <name>Create_ProductMain</name>
         <label>Create Product</label>
-        <locationX>3706</locationX>
-        <locationY>1571</locationY>
+        <locationX>3604</locationX>
+        <locationY>2334</locationY>
         <connector>
             <targetReference>Get_ExistingPriceBookEntries</targetReference>
         </connector>
@@ -3942,8 +4278,8 @@
     <recordCreates>
         <name>Create_ProductOptions</name>
         <label>Create Product Options</label>
-        <locationX>3850</locationX>
-        <locationY>4749</locationY>
+        <locationX>3748</locationX>
+        <locationY>5512</locationY>
         <connector>
             <targetReference>Get_LinkedUsageMeters</targetReference>
         </connector>
@@ -3952,8 +4288,8 @@
     <recordCreates>
         <name>Create_ProductUsage</name>
         <label>Create Product</label>
-        <locationX>5085</locationX>
-        <locationY>2820</locationY>
+        <locationX>4983</locationX>
+        <locationY>3583</locationY>
         <connector>
             <targetReference>Initialize_ProductOption_0</targetReference>
         </connector>
@@ -3962,8 +4298,8 @@
     <recordCreates>
         <name>Create_UsageProductOption_0</name>
         <label>Create Usage Product Option</label>
-        <locationX>4392</locationX>
-        <locationY>2820</locationY>
+        <locationX>4290</locationX>
+        <locationY>3583</locationY>
         <connector>
             <targetReference>Get_Parent_PriceBookEntries</targetReference>
         </connector>
@@ -3972,8 +4308,8 @@
     <recordCreates>
         <name>Link_ConsumptionSchedule_to_Product</name>
         <label>Link Consumption Schedule to Product</label>
-        <locationX>2039</locationX>
-        <locationY>3603</locationY>
+        <locationX>1937</locationX>
+        <locationY>4366</locationY>
         <connector>
             <targetReference>Get_ProductConsumptionSchedule</targetReference>
         </connector>
@@ -3982,8 +4318,8 @@
     <recordDeletes>
         <name>Delete_ProductConsumptionSchedule</name>
         <label>Delete Product Consumption Schedule</label>
-        <locationX>2956</locationX>
-        <locationY>4353</locationY>
+        <locationX>2854</locationX>
+        <locationY>5116</locationY>
         <connector>
             <targetReference>SelectConsumptionSchedule</targetReference>
         </connector>
@@ -3992,8 +4328,8 @@
     <recordLookups>
         <name>Get_ConsumptionRates</name>
         <label>Get Consumption Rates</label>
-        <locationX>3073</locationX>
-        <locationY>6422</locationY>
+        <locationX>2971</locationX>
+        <locationY>7185</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Existing_ConsumptionRates</targetReference>
@@ -4019,8 +4355,8 @@
     <recordLookups>
         <name>Get_ConsumptionSchedule</name>
         <label>Get Consumption Schedule</label>
-        <locationX>3068</locationX>
-        <locationY>5194</locationY>
+        <locationX>2966</locationX>
+        <locationY>5957</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>SetConsumptionScheduleValues</targetReference>
@@ -4050,8 +4386,8 @@
     <recordLookups>
         <name>Get_ExistingPriceBookEntries</name>
         <label>Get Existing Price Book Entries</label>
-        <locationX>3606</locationX>
-        <locationY>1725</locationY>
+        <locationX>3504</locationX>
+        <locationY>2488</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>PBE_Existing_Loop</targetReference>
@@ -4078,11 +4414,11 @@
     <recordLookups>
         <name>Get_LinkedUsageMeters</name>
         <label>Get Linked Usage Meters</label>
-        <locationX>4257</locationX>
-        <locationY>4749</locationY>
+        <locationX>4155</locationX>
+        <locationY>5512</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Count_ProductOptions</targetReference>
+            <targetReference>Has_UsageMeters</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -4108,8 +4444,8 @@
     <recordLookups>
         <name>Get_Parent_PriceBookEntries</name>
         <label>Get Parent Pricebook Entries</label>
-        <locationX>4246</locationX>
-        <locationY>2820</locationY>
+        <locationX>4144</locationX>
+        <locationY>3583</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Clean_PriceBookEntries</targetReference>
@@ -4134,8 +4470,8 @@
     <recordLookups>
         <name>Get_PriceBooks</name>
         <label>Get Price Books</label>
-        <locationX>3605</locationX>
-        <locationY>2059</locationY>
+        <locationX>3503</locationX>
+        <locationY>2822</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>PB_All_Loop</targetReference>
@@ -4191,8 +4527,8 @@
     <recordLookups>
         <name>Get_ProductConsumptionSchedule</name>
         <label>Get Product Consumption Schedule</label>
-        <locationX>3173</locationX>
-        <locationY>3603</locationY>
+        <locationX>3071</locationX>
+        <locationY>4366</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>LinkedTo_ProductConsumptionSchedules</targetReference>
@@ -4214,8 +4550,8 @@
     <recordLookups>
         <name>Get_ProductConsumptionSchedule_0</name>
         <label>Get Product Consumption Schedule</label>
-        <locationX>4755</locationX>
-        <locationY>3773</locationY>
+        <locationX>4653</locationX>
+        <locationY>4536</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>LinkedTo_ProductConsumptionSchedules_0</targetReference>
@@ -4237,8 +4573,8 @@
     <recordLookups>
         <name>Get_StandardPriceBookId</name>
         <label>Get Standard Price Book Id</label>
-        <locationX>3605</locationX>
-        <locationY>2987</locationY>
+        <locationX>3503</locationX>
+        <locationY>3750</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Extract_Standard_PBE</targetReference>
@@ -4260,8 +4596,8 @@
     <recordLookups>
         <name>Get_UsageProduct_Existing</name>
         <label>Get Usage Product</label>
-        <locationX>3906</locationX>
-        <locationY>3325</locationY>
+        <locationX>3804</locationX>
+        <locationY>4088</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Set_ExistingUsageProduct</targetReference>
@@ -4292,8 +4628,8 @@
     <recordLookups>
         <name>Get_UsageProductOption_Existing</name>
         <label>Get Usage Product Option</label>
-        <locationX>3703</locationX>
-        <locationY>3449</locationY>
+        <locationX>3601</locationX>
+        <locationY>4212</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>LinkedTo_UsageProductOption</targetReference>
@@ -4322,8 +4658,8 @@
     <recordLookups>
         <name>Load_UsageProduct</name>
         <label>Load Usage Product</label>
-        <locationX>4759</locationX>
-        <locationY>3450</locationY>
+        <locationX>4653</locationX>
+        <locationY>4213</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>ProductAction_Router</targetReference>
@@ -4346,8 +4682,8 @@
     <recordUpdates>
         <name>Activate_ConsumptionSchedule</name>
         <label>Activate Consumption Schedule</label>
-        <locationX>2039</locationX>
-        <locationY>5215</locationY>
+        <locationX>1937</locationX>
+        <locationY>5978</locationY>
         <connector>
             <targetReference>Link_ConsumptionSchedule_to_Product</targetReference>
         </connector>
@@ -4356,8 +4692,8 @@
     <recordUpdates>
         <name>Update_ConsumptionRates</name>
         <label>Update Consumption Rates</label>
-        <locationX>2561</locationX>
-        <locationY>7087</locationY>
+        <locationX>2459</locationX>
+        <locationY>7850</locationY>
         <connector>
             <targetReference>Create_ConsumptionRates</targetReference>
         </connector>
@@ -4366,8 +4702,8 @@
     <recordUpdates>
         <name>Update_ConsumptionSchedule</name>
         <label>Update Consumption Schedule</label>
-        <locationX>2796</locationX>
-        <locationY>7028</locationY>
+        <locationX>2694</locationX>
+        <locationY>7791</locationY>
         <connector>
             <targetReference>Clear_Queues_ConsumptionRate</targetReference>
         </connector>
@@ -4376,8 +4712,8 @@
     <recordUpdates>
         <name>Update_ConsumptionSchedule_0</name>
         <label>Update Consumption Schedule</label>
-        <locationX>3148</locationX>
-        <locationY>5931</locationY>
+        <locationX>3046</locationX>
+        <locationY>6694</locationY>
         <connector>
             <targetReference>Is_UsageCredit_0_0</targetReference>
         </connector>
@@ -4386,8 +4722,8 @@
     <recordUpdates>
         <name>Update_PBE</name>
         <label>Update PBE</label>
-        <locationX>3605</locationX>
-        <locationY>3151</locationY>
+        <locationX>3503</locationX>
+        <locationY>3914</locationY>
         <connector>
             <targetReference>UsageType_Decision</targetReference>
         </connector>
@@ -4396,8 +4732,8 @@
     <recordUpdates>
         <name>Update_ProductMain</name>
         <label>Update Product</label>
-        <locationX>3511</locationX>
-        <locationY>1572</locationY>
+        <locationX>3409</locationX>
+        <locationY>2335</locationY>
         <connector>
             <targetReference>Get_ExistingPriceBookEntries</targetReference>
         </connector>
@@ -4406,8 +4742,8 @@
     <screens>
         <name>ConsumptionRateDisplay</name>
         <label>Consumption Rate Display</label>
-        <locationX>3191</locationX>
-        <locationY>6645</locationY>
+        <locationX>3089</locationX>
+        <locationY>7408</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -4601,15 +4937,140 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>EditPictureScreen</name>
+        <label>Edit Picture</label>
+        <locationX>3482</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Refresh_Preview</targetReference>
+        </connector>
+        <fields>
+            <name>Image_Display_0</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Image&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>EditPictureScreen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>EditPictureScreen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Product_Main.ImageURL__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Product_Main.ImageWidth__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Product_Main.ImageHeight__c</objectFieldReference>
+                </fields>
+                <fields>
+                    <name>PreviewButton_0</name>
+                    <extensionName>c:fsc_flowButtonBar</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>alignment</name>
+                        <value>
+                            <stringValue>left</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>orientation</name>
+                        <value>
+                            <stringValue>horizontal</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>showLines</name>
+                        <value>
+                            <stringValue>neither</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>actionMode</name>
+                        <value>
+                            <stringValue>navigation</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>buttons</name>
+                        <value>
+                            <stringValue>[{&quot;label&quot;:&quot;Preview&quot;,&quot;value&quot;:&quot;Preview&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:preview&quot;,&quot;index&quot;:0}]</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>EditPictureScreen_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ImagePreview</name>
+                    <extensionName>flowruntime:image</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>imageName</name>
+                        <value>
+                            <elementReference>Product_Main.ImageURL__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>imageHeight</name>
+                        <value>
+                            <elementReference>Product_Main.ImageHeight__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>imageWidth</name>
+                        <value>
+                            <elementReference>Product_Main.ImageWidth__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>InputGeneralDetails</name>
-        <label>General Details</label>
+        <label>Select General Details</label>
         <locationX>3609</locationX>
         <locationY>509</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Refresh_Preview</targetReference>
+            <targetReference>EditPicture_Decision</targetReference>
         </connector>
         <fields>
             <name>GeneralDetails_0</name>
@@ -4674,121 +5135,42 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>Image_Display</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Image&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>InputGeneralDetails_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>InputGeneralDetails_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Product_Main.ImageURL__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Product_Main.ImageWidth__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Product_Main.ImageHeight__c</objectFieldReference>
-                </fields>
-                <fields>
-                    <name>PreviewButton</name>
-                    <extensionName>c:fsc_flowButtonBar</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>alignment</name>
-                        <value>
-                            <stringValue>left</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>orientation</name>
-                        <value>
-                            <stringValue>horizontal</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>showLines</name>
-                        <value>
-                            <stringValue>neither</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>actionMode</name>
-                        <value>
-                            <stringValue>navigation</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>buttons</name>
-                        <value>
-                            <stringValue>[{&quot;label&quot;:&quot;Preview&quot;,&quot;value&quot;:&quot;Preview&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:preview&quot;,&quot;index&quot;:0}]</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>InputGeneralDetails_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>ImagePreview_0</name>
-                    <extensionName>c:FSC_DisplayImageViaURL</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>align</name>
-                        <value>
-                            <stringValue>center</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>height</name>
-                        <value>
-                            <elementReference>Product_Main.ImageHeight__c</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>url</name>
-                        <value>
-                            <elementReference>Product_Main.ImageURL__c</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>width</name>
-                        <value>
-                            <elementReference>Product_Main.ImageWidth__c</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
+            <name>EditPicture</name>
+            <extensionName>c:fsc_flowButtonBar</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>alignment</name>
+                <value>
+                    <stringValue>right</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>orientation</name>
+                <value>
+                    <stringValue>horizontal</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showLines</name>
+                <value>
+                    <stringValue>neither</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>actionMode</name>
+                <value>
+                    <stringValue>navigation</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>buttons</name>
+                <value>
+                    <stringValue>[{&quot;label&quot;:&quot;Edit Picture&quot;,&quot;value&quot;:&quot;Yes&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:image&quot;,&quot;index&quot;:0}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -4796,14 +5178,46 @@
     <screens>
         <name>PickExistingConsumptionSchedule</name>
         <label>Pick Existing Consumption Schedule</label>
-        <locationX>2518</locationX>
-        <locationY>5254</locationY>
+        <locationX>2416</locationX>
+        <locationY>6057</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
             <targetReference>Use_ExistingConsumptionSchedule</targetReference>
         </connector>
+        <fields>
+            <name>ProductDisplay_1</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Product2Id</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Usage Product</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>PricebookEntry</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>Product_Usage.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <fields>
             <name>Existing_Display</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Would you like to use an existing Consumption Schedule?&lt;/strong&gt;&lt;/p&gt;</fieldText>
@@ -4949,8 +5363,8 @@
     <screens>
         <name>PickExistingUsageProducts</name>
         <label>Pick Existing Usage Products</label>
-        <locationX>4259</locationX>
-        <locationY>5957</locationY>
+        <locationX>4157</locationX>
+        <locationY>6720</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -5096,8 +5510,8 @@
     <screens>
         <name>PriceSelection</name>
         <label>Price Selection</label>
-        <locationX>3606</locationX>
-        <locationY>2522</locationY>
+        <locationX>3504</locationX>
+        <locationY>3285</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -5188,8 +5602,8 @@
     <screens>
         <name>ProductOptionEditor</name>
         <label>Product Option Editor</label>
-        <locationX>4618</locationX>
-        <locationY>3450</locationY>
+        <locationX>4516</locationX>
+        <locationY>4213</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -5341,8 +5755,8 @@
     <screens>
         <name>ProductOptionEditor_0</name>
         <label>Product Option Editor</label>
-        <locationX>4888</locationX>
-        <locationY>3313</locationY>
+        <locationX>4786</locationX>
+        <locationY>4076</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -5399,15 +5813,15 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>SelectChargeModel</name>
-        <label>Charge Model</label>
-        <locationX>3609</locationX>
-        <locationY>852</locationY>
+        <name>SelectChargeModel_0</name>
+        <label>Select Charge Model</label>
+        <locationX>3610</locationX>
+        <locationY>1010</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Update_Product</targetReference>
+            <targetReference>Update_ChargeModel</targetReference>
         </connector>
         <fields>
             <name>Commercialization_Display</name>
@@ -5415,298 +5829,102 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>ChargeModel</name>
-            <choiceReferences>ChargeModel_Choice</choiceReferences>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Product_Main.ChargeModel__c</elementReference>
-            </defaultValue>
-            <fieldText>Charge Model</fieldText>
-            <fieldType>DropdownBox</fieldType>
+            <name>ChargeModel_Select</name>
+            <extensionName>c:fsc_quickChoiceFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>displayMode</name>
+                <value>
+                    <stringValue>Visual</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>navOnSelect</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>includeIcons</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>inputMode</name>
+                <value>
+                    <stringValue>Dual String Collections</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectName</name>
+                <value>
+                    <stringValue>Product2</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldName</name>
+                <value>
+                    <stringValue>ChargeModel__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>numberOfColumns</name>
+                <value>
+                    <stringValue>1</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>iconSize</name>
+                <value>
+                    <stringValue>small</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceIcons</name>
+                <value>
+                    <elementReference>ChargeModel_Icons</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isResponsive</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>masterLabel</name>
+                <value>
+                    <stringValue>Charge Model</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceLabels</name>
+                <value>
+                    <elementReference>ChargeModel_Labels</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceValues</name>
+                <value>
+                    <elementReference>ChargeModel_Descriptions</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>ExistingChargeModel</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
-        </fields>
-        <fields>
-            <name>UsageType</name>
-            <choiceReferences>Credit_Choice</choiceReferences>
-            <choiceReferences>Standard_Choice</choiceReferences>
-            <choiceReferences>Bucket_Choice</choiceReferences>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Product_Main.UsageType__c</elementReference>
-            </defaultValue>
-            <fieldText>Usage Type</fieldText>
-            <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>ChargeModel</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Usage</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>RecurringCharges_Display</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Recurring Charges&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>UsageType</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Credit</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>SelectChargeModel_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>SelectChargeModel_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>SubscriptionTerm</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.SBQQ__SubscriptionTerm__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Subscription Term</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                </fields>
-                <fields>
-                    <name>SubscriptionType</name>
-                    <choiceReferences>SubscriptionType_Choice</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.SBQQ__SubscriptionType__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Subscription Type</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>SelectChargeModel_Section1_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>BillingFrequency</name>
-                    <choiceReferences>BillingFrequency_Choice</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.SBQQ__BillingFrequency__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Billing Frequency</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>BillingType</name>
-                    <choiceReferences>BillingType_Choice</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.SBQQ__BillingType__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Billing Type</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>1 OR (2 AND 3)</conditionLogic>
-                <conditions>
-                    <leftValueReference>ChargeModel</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Subscription</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>ChargeModel</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Usage</stringValue>
-                    </rightValue>
-                </conditions>
-                <conditions>
-                    <leftValueReference>UsageType</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Credit</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>UsageCharges_Display</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Usage Charges&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>UsageType</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Credit</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
-        </fields>
-        <fields>
-            <name>SelectChargeModel_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>SelectChargeModel_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>UsageTerm</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.UsageTerm__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Usage Term</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>UsageType</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <stringValue>Credit</stringValue>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <fields>
-                    <name>OverageSurcharge</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.OverageSurcharge__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Overage Surcharge (%)</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                </fields>
-                <fields>
-                    <name>CarryoverFactor</name>
-                    <dataType>Number</dataType>
-                    <defaultValue>
-                        <elementReference>Product_Main.CarryoverFactor__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Carryover Factor (%)</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                    <scale>0</scale>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>Product_Main.CarryoverLimit__c</objectFieldReference>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>SelectChargeModel_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>CreditTypes</name>
-                    <extensionName>flowruntime:dependentPicklists</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>dependencyWrapperApiName</name>
-                        <value>
-                            <stringValue>Product2</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>topPicklistApiName</name>
-                        <value>
-                            <stringValue>CreditCarryoverType__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>middlePicklistApiName</name>
-                        <value>
-                            <stringValue>CreditDistributionAmend__c</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>topRequired</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>middleRequired</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>topValue</name>
-                        <value>
-                            <elementReference>Product_Main.CreditCarryoverType__c</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>middleValue</name>
-                        <value>
-                            <elementReference>Product_Main.CreditDistributionAmend__c</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <visibilityRule>
-                <conditionLogic>and</conditionLogic>
-                <conditions>
-                    <leftValueReference>UsageType</leftValueReference>
-                    <operator>EqualTo</operator>
-                    <rightValue>
-                        <stringValue>Credit</stringValue>
-                    </rightValue>
-                </conditions>
-            </visibilityRule>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -5714,14 +5932,46 @@
     <screens>
         <name>SelectConsumptionSchedule</name>
         <label>Select Consumption Schedule</label>
-        <locationX>3165</locationX>
-        <locationY>4291</locationY>
+        <locationX>3063</locationX>
+        <locationY>5054</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
             <targetReference>ConsumptionScheduleAction_Router</targetReference>
         </connector>
+        <fields>
+            <name>ProductDisplay_2</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Product2Id</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Usage Product</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>PricebookEntry</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>Product_Usage.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <fields>
             <name>ConsumptionScheduleEditor_Display</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Consumption Schedule Editor&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Change which Consumption Schedules are linked to this product&lt;/p&gt;</fieldText>
@@ -5871,16 +6121,272 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>SelectRecurringCharges</name>
+        <label>Select Recurring Charges</label>
+        <locationX>3518</locationX>
+        <locationY>1760</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_RecurringCharges</targetReference>
+        </connector>
+        <fields>
+            <name>RecurringCharges_Display</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Recurring Charges&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>SelectRecurringCharges_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>SelectRecurringCharges_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>SubscriptionTerm</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.SBQQ__SubscriptionTerm__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Subscription Term</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>SubscriptionType</name>
+                    <choiceReferences>SubscriptionType_Choice</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.SBQQ__SubscriptionType__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Subscription Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>SelectRecurringCharges_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>BillingFrequency</name>
+                    <choiceReferences>BillingFrequency_Choice</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.SBQQ__BillingFrequency__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Billing Frequency</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>BillingType</name>
+                    <choiceReferences>BillingType_Choice</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.SBQQ__BillingType__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Billing Type</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>SelectUsageCharges</name>
+        <label>Select Usage Charges</label>
+        <locationX>3380</locationX>
+        <locationY>1620</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_UsageCharges</targetReference>
+        </connector>
+        <fields>
+            <name>UsageCharges_Display_1</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Usage Charges&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>SelectUsageCharges_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>SelectUsageCharges_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>UsageTerm</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.UsageTerm__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Usage Term</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>OverageSurcharge</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.OverageSurcharge__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Overage Surcharge (%)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>CarryoverFactor</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Product_Main.CarryoverFactor__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Carryover Factor (%)</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <fieldType>ObjectProvided</fieldType>
+                    <isRequired>false</isRequired>
+                    <objectFieldReference>Product_Main.CarryoverLimit__c</objectFieldReference>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>SelectUsageCharges_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>CreditTypes</name>
+                    <extensionName>flowruntime:dependentPicklists</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value>
+                            <stringValue>Product2</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value>
+                            <stringValue>CreditCarryoverType__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value>
+                            <stringValue>CreditDistributionAmend__c</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topValue</name>
+                        <value>
+                            <elementReference>Product_Main.CreditCarryoverType__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleValue</name>
+                        <value>
+                            <elementReference>Product_Main.CreditDistributionAmend__c</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>SelectUsageMeters</name>
         <label>Select Usage Meters</label>
-        <locationX>4257</locationX>
-        <locationY>5293</locationY>
+        <locationX>4155</locationX>
+        <locationY>6056</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
             <targetReference>ConsumptionScheduleAction_Router_0</targetReference>
         </connector>
+        <fields>
+            <name>ProductDisplay_3</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Product2Id</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Usage Bucket</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>PricebookEntry</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>recordId</name>
+                <value>
+                    <elementReference>Product_Usage.Id</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <fields>
             <name>UsageMeterEditor_Display</name>
             <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Usage Meter Editor&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Change which Usage Meters are linked to this product&lt;/p&gt;</fieldText>
@@ -6024,10 +6530,127 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>SelectUsageType</name>
+        <label>Select Usage Type</label>
+        <locationX>3244</locationX>
+        <locationY>1366</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Update_UsageType</targetReference>
+        </connector>
+        <fields>
+            <name>UsageCharges_Display</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;Usage Charges&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>UsageType_Select</name>
+            <extensionName>c:fsc_quickChoiceFSC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>displayMode</name>
+                <value>
+                    <stringValue>Visual</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>navOnSelect</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>includeIcons</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>inputMode</name>
+                <value>
+                    <stringValue>Dual String Collections</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectName</name>
+                <value>
+                    <stringValue>Product2</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldName</name>
+                <value>
+                    <stringValue>ChargeModel__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>numberOfColumns</name>
+                <value>
+                    <stringValue>1</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>iconSize</name>
+                <value>
+                    <stringValue>medium</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isResponsive</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>masterLabel</name>
+                <value>
+                    <stringValue>Usage Type</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceLabels</name>
+                <value>
+                    <elementReference>UsageType_Labels</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceValues</name>
+                <value>
+                    <elementReference>UsageType_Descriptions</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>choiceIcons</name>
+                <value>
+                    <elementReference>UsageType_Icons</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>ExistingUsageType</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>SetConsumptionScheduleValues</name>
         <label>Set Consumption Schedule Values</label>
-        <locationX>3068</locationX>
-        <locationY>5424</locationY>
+        <locationX>2966</locationX>
+        <locationY>6187</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -6130,8 +6753,8 @@
     <screens>
         <name>UsageMeterEditor</name>
         <label>Usage Meter Editor</label>
-        <locationX>4739</locationX>
-        <locationY>6265</locationY>
+        <locationX>4637</locationX>
+        <locationY>7028</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -6165,6 +6788,27 @@
         <value>
             <booleanValue>true</booleanValue>
         </value>
+    </variables>
+    <variables>
+        <name>ChargeModel_Descriptions</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ChargeModel_Icons</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ChargeModel_Labels</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>ChooseConsumptionSchedule_Message</name>
@@ -6446,6 +7090,20 @@
         <value>
             <booleanValue>false</booleanValue>
         </value>
+    </variables>
+    <variables>
+        <name>ExistingChargeModel</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ExistingUsageType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>Objects_ID_String</name>
@@ -6731,5 +7389,26 @@
         <value>
             <numberValue>1.0</numberValue>
         </value>
+    </variables>
+    <variables>
+        <name>UsageType_Descriptions</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>UsageType_Icons</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>UsageType_Labels</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>
