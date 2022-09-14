@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL( blng__HoldBilling__c, &quot;Yes&quot;),
+  IMAGE(&quot;https://i.ibb.co/ZgLzVJ5/dot-cross.png&quot;, &quot;Billing Held&quot;, 20, 20),
+
+  IF(  ISBLANK(blng__NextBillingDate__c),&quot;&quot;,
+    IF( blng__NextBillingDate__c ==  Order.EarliestNextBillingDate__c,
+      IMAGE(&quot;https://i.ibb.co/W5X2HyT/dot-tick.png&quot;, &quot;Yes&quot;, 20, 20),
+      IMAGE(&quot;https://i.ibb.co/K6pfkPr/dot-line.png&quot;, &quot;No&quot;, 20, 20)
+    )
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Due?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
