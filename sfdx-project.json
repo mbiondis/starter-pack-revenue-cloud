@@ -3,21 +3,42 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "Revenue Cloud Starter Pack",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "package": "Starter Pack for Revenue Cloud",
+            "versionName": "Summer '22",
+            "versionNumber": "1.0.2.NEXT",
             "dependencies": [
                 {
-                    "package": "salesforce-cpq@234.4"
+                    "package": "Salesforce CPQ (Winter '22) [234.2]"
                 },
                 {
-                    "package": "salesforce-billing@234.2"
+                    "package": "Salesforce Billing (Winter '22) [234.1]"
                 },
                 {
-                    "package": "advanced-approvals@234.0"
+                    "package": "Advanced Approvals (Winter '22) [234.0]"
                 },
                 {
-                    "package": "flow-refresh-and-close"
+                    "package": "Flow Actions Base Pack"
+                },
+                {
+                    "package": "Flow Screen Components Base Pack"
+                },
+                {
+                    "package": "Collection Actions for Flow"
+                },
+                {
+                    "package": "SOQL Build And Execute"
+                },
+                {
+                    "package": "Convert CSV to Records"
+                },
+                {
+                    "package": "Datatable"
+                },
+                {
+                    "package": "File Upload Improved"
+                },
+                {
+                    "package": "Hybrid Usage for Revenue Cloud"
                 }
             ]
         }
@@ -27,14 +48,27 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "53.0",
     "packageAliases": {
-        "Revenue Cloud Starter Pack": "0Ho8d000000wk32CAA",
-        "salesforce-cpq@234.4": "04t4N000000GkQ3QAK",
-        "salesforce-billing@234.2": "04t0K000001RuKpQAK",
-        "advanced-approvals@234.0": "04t4W000002d9sPQAQ",
-        "flow-refresh-and-close": "04t8d000000cfMwAAI",
-        "get-records-by-apex": "04t8d000000cfMrAAI",
-        "flow-actions-base-pack": "04t8b000001Eh4YAAS",
-        "dunning-collections": "04t3i000002SXYUAA4",
-        "launch-flow-modal": "04t2E000003VsuMQAS"
+        "Starter Pack for Revenue Cloud": "0Ho8d000000wk32CAA",
+        "Salesforce CPQ (Winter '22) [234.2]": "04t4N000000GkN9QAK",
+        "Salesforce Billing (Winter '22) [234.1]": "04t0K000001RuKGQA0",
+        "Advanced Approvals (Winter '22) [234.0]": "04t4W000002d9sPQAQ",
+        "Flow Actions Base Pack": "04t8b000001Eh4YAAS",
+        "Flow Screen Components Base Pack": "04t5G000003rUyAQAU",
+        "Direct Navigation": "04t5G000004PuWpQAK",
+        "Collection Actions for Flow": "04t5G000003rUwTQAU",
+        "SOQL Build And Execute": "04t5G000003rUoPQAU",
+        "Convert CSV to Records": "04t5G000003rUvfQAE",
+        "Datatable": "04t5G000003rUyKQAU",
+        "File Upload Improved": "04t5G000003rUtjQAE",
+        "Image Preview URL": "04t6F000001ZLV6",
+        "Navigate Everywhere": "04t5G000003rUhrQAE",
+        "Hybrid Usage for Revenue Cloud": "04t8d000000ckQxAAI",
+        "Revenue Cloud Starter Pack @0.1.0.4": "04t8d000000ciFMAAY",
+        "Starter Pack for Revenue Cloud@1.0.0-1": "04t8d000000ckIDAAY",
+        "Starter Pack for Revenue Cloud@1.0.0-2": "04t8d000000cki7AAA",
+        "Starter Pack for Revenue Cloud@1.0.0-3": "04t8d000000cm4YAAQ",
+        "Starter Pack for Revenue Cloud@1.0.0-4": "04t8d000000cmtEAAQ",
+        "Starter Pack for Revenue Cloud@1.0.0-5": "04t8d000000cn9pAAA",
+        "Starter Pack for Revenue Cloud@1.0.2-1": "04t8d000000coPwAAI"
     }
 }
