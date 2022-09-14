@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AdditionalDiscountUnit__c</fullName>
+    <externalId>false</externalId>
+    <label>Additional Discount Unit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Percent</fullName>
+                <default>false</default>
+                <label>Percent</label>
+            </value>
+            <value>
+                <fullName>Amount</fullName>
+                <default>false</default>
+                <label>Amount</label>
+            </value>
+            <value>
+                <fullName>Unit Override</fullName>
+                <default>false</default>
+                <label>Unit Override</label>
+            </value>
+            <value>
+                <fullName>Total Override</fullName>
+                <default>false</default>
+                <label>Total Override</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

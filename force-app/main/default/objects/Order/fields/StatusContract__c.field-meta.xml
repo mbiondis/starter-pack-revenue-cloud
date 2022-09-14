@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusContract__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;/flow/RevenueCloud_Order_TriggerAction?recordId=&apos; &amp; Id &amp; &apos;&amp;ActionType=Contract&apos; &amp; &apos;&amp;retURL=&apos; &amp; Id,
+
+  IF( SBQQ__Contracted__c ,IMAGE(&quot;https://i.ibb.co/1R5WykQ/btn-contracted.png&quot;,&quot;Contracted&quot;,20,60),
+                           IMAGE(&quot;https://i.ibb.co/bQzt4hV/btn-uncontracted.png&quot;, &quot;Uncontracted&quot;,20,60)
+  )
+
+, &quot;_self&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status (Contract)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>StatusApproval__c</fullName>
+    <deprecated>false</deprecated>
     <externalId>false</externalId>
     <formula>CASE(  ApprovalStatus__c  ,
     &quot;Draft&quot;, IMAGE(&quot;https://i.ibb.co/vqQsJv5/btn-draft.png&quot;,&quot;Draft&quot;,20,60),
     &quot;In Review&quot;, IMAGE(&quot;https://i.ibb.co/vqQsJv5/btn-draft.png&quot;,&quot;In Review&quot;,20,60),
     &quot;Approved&quot;, IMAGE(&quot;https://i.ibb.co/FYbdpn8/btn-approved.png&quot;, &quot;Approved&quot;,20,60),
     &quot;Denied&quot;, IMAGE(&quot;https://i.ibb.co/0YgW4t4/btn-denied.png&quot;, &quot;Denied&quot;,20,60),
-    &quot;&quot;
+    IMAGE(&quot;https://i.ibb.co/chyFjNg/btn-not-requested.png&quot;,&quot;Not Requested&quot;,20,60)
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Status (Approval)</label>
